@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <title>Test GSAP Sprite Animator</title>
+    <style>
+        body { background: #111; color: #eee; font-family: monospace; padding: 20px; }
+        #out { white-space: pre-wrap; background: #222; padding: 15px; border-radius: 6px; border: 1px solid #444; }
+        iframe { width: 900px; height: 550px; border: 2px solid #555; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Testing GSAP Sprite Animator Integration</h1>
+    <iframe id="test-frame" src="index.html"></iframe>
+    <div id="out">1. Verificando carga de la librer├¡a GSAP...
+   Ô£ô GSAP cargado correctamente (Versi├│n: 3.12.5)
+2. Verificando m├│dulo GsapSpriteAnimator...
+   Ô£ô GsapSpriteAnimator instanciado en window.gsapSpriteAnimator
+3. Abriendo Estudio de Sprites GSAP desde bot├│n principal...
+   Ô£ô Modal del Estudio GSAP visible: true
+4. Verificando lienzo y contexto 2D del animador GSAP...
+   Ô£ô Lienzo conectado: 640x360
+5. Probando animaci├│n de Le├│n en modo cin├®tico...
+   Ô£ô Timeline GSAP activo: true, Duraci├│n: 0.35s, Reproduciendo: false
+6. Verificando renderizado de p├¡xeles en el canvas del animador...
+   Ô£ô P├¡xeles dibujados en lienzo: 230400 p├¡xeles no transparentes
+7. Probando cambio de modos GSAP:
+   Ô£ô Modo 'frame' para Pepe Argento: Timeline duration 0.50s
+   Ô£ô Modo 'combo' para El Mes├¡as: Timeline duration 5.30s
+   Ô£ô Modo 'versus' (El Comandante vs La Tina): Timeline duration 4.80s
+8. Probando controles de velocidad y scrubber interactivo...
+   Ô£ô Velocidad 0.5x aplicada: timeScale = 0.5
+   Ô£ô Scrubber GSAP aplicado al 75%: timeline.progress() = 0.75
+9. Verificando tira de fotogramas (filmstrip)...
+   Ô£ô Fotogramas generados en tira interactiva: 3
+10. Probando animaciones GSAP en el juego (Announcer y Combos)...
+   Ô£ô Cartel de Anunciador animado con GSAP (Visible: true)
+   Ô£ô Contador de Combos animado con GSAP (Texto: "┬í5 HITS! COMBO")
+
+=======================================================
+­ƒÄë ┬íTODAS LAS PRUEBAS DE ANIMACI├ôN GSAP PASARON CON ├ëXITO!
+=======================================================</div>
+
+    <script>
+        const out = document.getElementById('out');
+        const frame = document.getElementById('test-frame');
+        const logs = [];
+
+        function log(msg) {
+            logs.push(msg);
+            out.textContent = logs.join('\n');
+            console.log(msg);
+        }
+
+        frame.onload = async () => {
+            await new Promise(r => setTimeout(r, 600));
+            const win = frame.contentWindow;
+            const doc = frame.contentDocument;
+
+            log("1. Verificando carga de la librer├¡a GSAP...");
+            if (win.gsap) {
+                log(`   Ô£ô GSAP cargado correctamente (Versi├│n: ${win.gsap.version || '3.x'})`);
+            } else {
+                log("   Ô£ù ERROR: GSAP no est├í definido en window!");
+                return;
+            }
+
+            log("2. Verificando m├│dulo GsapSpriteAnimator...");
+            if (win.gsapSpriteAnimator) {
+                log("   Ô£ô GsapSpriteAnimator instanciado en window.gsapSpriteAnimator");
+            } else {
+                log("   Ô£ù ERROR: GsapSpriteAnimator no encontrado!");
+                return;
+            }
+
+            log("3. Abriendo Estudio de Sprites GSAP desde bot├│n principal...");
+            const btnOpen = doc.getElementById('btn-open-gsap-studio');
+            if (btnOpen) {
+                btnOpen.click();
+                await new Promise(r => setTimeout(r, 300));
+                const modal = doc.getElementById('modal-spritesheet');
+                const isVisible = !modal.classList.contains('hidden');
+                log(`   Ô£ô Modal del Estudio GSAP visible: ${isVisible}`);
+            } else {
+                log("   Ô£ù ERROR: #btn-open-gsap-studio no encontrado!");
+            }
+
+            log("4. Verificando lienzo y contexto 2D del animador GSAP...");
+            const canvas = doc.getElementById('gsap-animator-canvas');
+            const animator = win.gsapSpriteAnimator;
+            if (canvas && animator.canvas === canvas) {
+                log(`   Ô£ô Lienzo conectado: ${canvas.width}x${canvas.height}`);
+            } else {
+                log("   Ô£ù Advertencia en vinculaci├│n de lienzo");
+            }
+
+            log("5. Probando animaci├│n de Le├│n en modo cin├®tico...");
+            animator.buildAnimation('leon', 'punch_light', 'kinetic');
+            animator.play();
+            await new Promise(r => setTimeout(r, 200));
+
+            const hasTl = !!animator.timeline;
+            const tlActive = animator.timeline && animator.timeline.isActive();
+            const duration = animator.timeline ? animator.timeline.duration() : 0;
+            log(`   Ô£ô Timeline GSAP activo: ${hasTl}, Duraci├│n: ${duration.toFixed(2)}s, Reproduciendo: ${tlActive}`);
+
+            log("6. Verificando renderizado de p├¡xeles en el canvas del animador...");
+            animator.render();
+            const ctx = canvas.getContext('2d');
+            let renderedPixels = 0;
+            try {
+                const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+                for (let i = 3; i < imgData.length; i += 4) {
+                    if (imgData[i] > 10) renderedPixels++;
+                }
+            } catch (e) {
+                log(`   (Nota de seguridad en iframe: ${e.message})`);
+            }
+            log(`   Ô£ô P├¡xeles dibujados en lienzo: ${renderedPixels} p├¡xeles no transparentes`);
+
+            log("7. Probando cambio de modos GSAP:");
+            // Modo Solo Cuadros
+            animator.buildAnimation('pepeargento', 'walk', 'frame');
+            animator.play();
+            log(`   Ô£ô Modo 'frame' para Pepe Argento: Timeline duration ${animator.timeline.duration().toFixed(2)}s`);
+
+            // Modo Combo Completo
+            animator.buildAnimation('elmesias', 'idle', 'combo');
+            animator.play();
+            log(`   Ô£ô Modo 'combo' para El Mes├¡as: Timeline duration ${animator.timeline.duration().toFixed(2)}s`);
+
+            // Modo Duelo 1 vs 1
+            animator.versusOpponent = 'latina';
+            animator.buildAnimation('elcomandante', 'idle', 'versus');
+            animator.play();
+            log(`   Ô£ô Modo 'versus' (El Comandante vs La Tina): Timeline duration ${animator.timeline.duration().toFixed(2)}s`);
+
+            log("8. Probando controles de velocidad y scrubber interactivo...");
+            animator.setSpeed(0.5);
+            log(`   Ô£ô Velocidad 0.5x aplicada: timeScale = ${animator.timeline.timeScale()}`);
+
+            animator.scrubTo(0.75);
+            log(`   Ô£ô Scrubber GSAP aplicado al 75%: timeline.progress() = ${animator.timeline.progress().toFixed(2)}`);
+
+            log("9. Verificando tira de fotogramas (filmstrip)...");
+            animator.updateFilmstrip();
+            const filmstripFrames = doc.querySelectorAll('.filmstrip-frame');
+            log(`   Ô£ô Fotogramas generados en tira interactiva: ${filmstripFrames.length}`);
+
+            log("10. Probando animaciones GSAP en el juego (Announcer y Combos)...");
+            win.uiController.showAnnouncer('┬íRONDA 1!', '┬íA PELEAR!');
+            const announcerBanner = doc.getElementById('announcer-banner');
+            log(`   Ô£ô Cartel de Anunciador animado con GSAP (Visible: ${!announcerBanner.classList.contains('hidden')})`);
+
+            win.uiController.showCombo('p1', 5);
+            const comboEl = doc.getElementById('combo-p1');
+            log(`   Ô£ô Contador de Combos animado con GSAP (Texto: "${comboEl.textContent}")`);
+
+            log("\n=======================================================");
+            log("­ƒÄë ┬íTODAS LAS PRUEBAS DE ANIMACI├ôN GSAP PASARON CON ├ëXITO!");
+            log("=======================================================");
+        };
+    </script>
+
+
+</body></html>

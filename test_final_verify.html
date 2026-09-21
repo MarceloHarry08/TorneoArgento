@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Verification</title>
+</head>
+<body>
+    <iframe id="f" src="index.html" style="width: 1280px; height: 720px;"></iframe>
+    <div id="results">Verifying...</div>
+    <script>
+        const iframe = document.getElementById('f');
+        iframe.onload = async () => {
+            const win = iframe.contentWindow;
+            const doc = iframe.contentDocument;
+            const logs = [];
+
+            try {
+                // Click start vs
+                doc.getElementById('btn-start-vs').click();
+                await new Promise(r => setTimeout(r, 100));
+
+                doc.getElementById('btn-confirm-select').click();
+                await new Promise(r => setTimeout(r, 800));
+
+                const phaserCanvas = doc.getElementById('phaserCanvas');
+                const gameCanvas = doc.getElementById('gameCanvas');
+
+                logs.push("Phaser Canvas: " + phaserCanvas.width + "x" + phaserCanvas.height + " (Client: " + phaserCanvas.clientWidth + "x" + phaserCanvas.clientHeight + ")");
+                logs.push("Game Canvas: " + gameCanvas.width + "x" + gameCanvas.height + " (Client: " + gameCanvas.clientWidth + "x" + gameCanvas.clientHeight + ")");
+
+                const scene = win.phaserAnimationEngine.scene;
+                logs.push("Phaser scene active: " + win.phaserAnimationEngine.isActive);
+
+                if (scene) {
+                    const p1 = scene.p1Sprite;
+                    const p2 = scene.p2Sprite;
+                    logs.push("P1: visible=" + p1.visible + " at (" + Math.round(p1.x) + "," + Math.round(p1.y) + ") anim=" + (p1.anims.currentAnim ? p1.anims.currentAnim.key : 'none'));
+                    logs.push("P2: visible=" + p2.visible + " at (" + Math.round(p2.x) + "," + Math.round(p2.y) + ") anim=" + (p2.anims.currentAnim ? p2.anims.currentAnim.key : 'none'));
+                }
+
+                // Check pixel rendering
+                const pctx = phaserCanvas.getContext('2d');
+                const pData = pctx.getImageData(0, 0, phaserCanvas.width, phaserCanvas.height).data;
+                let fighterPixels = 0;
+                for (let i = 3; i < pData.length; i += 4) {
+                    if (pData[i] > 10) fighterPixels++;
+                }
+                logs.push("Fighter rendered pixels on phaserCanvas: " + fighterPixels);
+
+                const gctx = gameCanvas.getContext('2d');
+                const gData = gctx.getImageData(0, 0, gameCanvas.width, gameCanvas.height).data;
+                let stagePixels = 0;
+                for (let i = 3; i < gData.length; i += 4) {
+                    if (gData[i] > 10) stagePixels++;
+                }
+                logs.push("Stage rendered pixels on gameCanvas: " + stagePixels);
+
+                // Run 15 update/render frames
+                for (let f = 0; f < 15; f++) {
+                    win.gameEngine.update(0.016);
+                    win.gameEngine.render();
+                }
+                logs.push("15 game frames simulated with zero exceptions");
+
+                // Test YouTube-accurate Tone.js songs
+                const songs = ['hadaelmago', 'demusicaligera', 'homero', 'hacelopormi', 'fanky', 'labalada'];
+                for (const s of songs) {
+                    win.audioEngine.startBgm(s);
+                    logs.push("Playing: " + win.audioEngine.songs[s].title + " (Tempo: " + win.audioEngine.songs[s].tempo + " BPM)");
+                    await new Promise(r => setTimeout(r, 60));
+                }
+                win.audioEngine.stopBgm();
+                logs.push("All 6 songs tested successfully");
+
+                document.getElementById('results').innerHTML = "SUCCESS:<br>" + logs.join("<br>");
+            } catch(e) {
+                document.getElementById('results').innerHTML = "ERROR: " + e.message + "<br>" + e.stack;
+            }
+        };
+    </script>
+</body>
+</html>

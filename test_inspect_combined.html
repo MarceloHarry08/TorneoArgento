@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><title>Inspect Combined Canvases</title></head>
+<body>
+    <iframe id="f" src="index.html" style="width: 960px; height: 540px;"></iframe>
+    <div id="out" style="white-space: pre; font-family: monospace;"></div>
+    <script>
+        const iframe = document.getElementById('f');
+        iframe.onload = async () => {
+            const win = iframe.contentWindow;
+            const doc = iframe.contentDocument;
+            const out = document.getElementById('out');
+            const lines = [];
+
+            // Click start vs
+            doc.getElementById('btn-start-vs').click();
+            await new Promise(r => setTimeout(r, 200));
+            doc.getElementById('btn-confirm-select').click();
+            await new Promise(r => setTimeout(r, 1000));
+
+            const gCanvas = doc.getElementById('gameCanvas');
+            const pCanvas = doc.getElementById('phaserCanvas');
+
+            lines.push("gCanvas size: " + gCanvas.width + "x" + gCanvas.height + " style display: " + gCanvas.style.display);
+            lines.push("pCanvas size: " + pCanvas.width + "x" + pCanvas.height + " style display: " + pCanvas.style.display);
+
+            // Check where p1 and p2 are
+            const p1 = win.gameEngine.p1;
+            const p2 = win.gameEngine.p2;
+            lines.push(`P1: id=${p1.id}, x=${p1.x}, y=${p1.y}, facing=${p1.facing}`);
+            lines.push(`P2: id=${p2.id}, x=${p2.x}, y=${p2.y}, facing=${p2.facing}`);
+
+            const scene = win.phaserAnimationEngine.scene;
+            lines.push("Scene exists: " + !!scene);
+            if (scene) {
+                const s1 = scene.p1Sprite;
+                const s2 = scene.p2Sprite;
+                lines.push(`s1: visible=${s1.visible}, x=${s1.x}, y=${s1.y}, scale=${s1.scaleX}, alpha=${s1.alpha}, depth=${s1.depth}, tint=${s1.tintTopLeft}`);
+                lines.push(`s1 anim: ` + (s1.anims ? (s1.anims.currentAnim ? s1.anims.currentAnim.key : 'no current anim') : 'no anims'));
+                lines.push(`s1 frame: ` + (s1.frame ? s1.frame.name + ` (w=${s1.frame.width}, h=${s1.frame.height}, cutX=${s1.frame.cutX}, cutY=${s1.frame.cutY})` : 'no frame'));
+
+                lines.push(`s2: visible=${s2.visible}, x=${s2.x}, y=${s2.y}, scale=${s2.scaleX}, alpha=${s2.alpha}, depth=${s2.depth}, tint=${s2.tintTopLeft}`);
+                lines.push(`s2 anim: ` + (s2.anims ? (s2.anims.currentAnim ? s2.anims.currentAnim.key : 'no current anim') : 'no anims'));
+                lines.push(`s2 frame: ` + (s2.frame ? s2.frame.name + ` (w=${s2.frame.width}, h=${s2.frame.height}, cutX=${s2.frame.cutX}, cutY=${s2.frame.cutY})` : 'no frame'));
+            }
+
+            // Check bounding client rect of both canvases
+            const gRect = gCanvas.getBoundingClientRect();
+            const pRect = pCanvas.getBoundingClientRect();
+            lines.push(`gRect: top=${gRect.top}, left=${gRect.left}, width=${gRect.width}, height=${gRect.height}`);
+            lines.push(`pRect: top=${pRect.top}, left=${pRect.left}, width=${pRect.width}, height=${pRect.height}`);
+
+            // Check elements at point (p1.x, p1.y - 40)
+            const elAtP1 = doc.elementFromPoint(pRect.left + p1.x * (pRect.width / 640), pRect.top + (p1.y - 40) * (pRect.height / 360));
+            lines.push("Element at P1 position: " + (elAtP1 ? `${elAtP1.tagName}#${elAtP1.id}.${elAtP1.className}` : 'none'));
+
+            out.innerText = lines.join("\n");
+        };
+    </script>
+</body>
+</html>

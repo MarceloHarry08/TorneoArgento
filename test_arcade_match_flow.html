@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test Arcade Match Flow</title></head>
+<body>
+    <iframe id="f" src="index.html" style="width: 960px; height: 540px;"></iframe>
+    <div id="out" style="white-space: pre; font-family: monospace;"></div>
+    <script>
+        const iframe = document.getElementById('f');
+        iframe.onload = async () => {
+            const win = iframe.contentWindow;
+            const doc = iframe.contentDocument;
+            const out = document.getElementById('out');
+            const lines = [];
+
+            try {
+                // 1. Click Arcade
+                lines.push("1. Clicking btn-start-arcade...");
+                doc.getElementById('btn-start-arcade').click();
+                await new Promise(r => setTimeout(r, 300));
+                lines.push("Current screen charSelect hidden: " + doc.getElementById('screen-char-select').classList.contains('hidden'));
+
+                // 2. Select a character, e.g. Pepe Argento
+                const pepeCard = doc.querySelector('.grid-char-card[data-key="pepeargento"]');
+                if (pepeCard) {
+                    lines.push("2. Clicking Pepe Argento card...");
+                    pepeCard.click();
+                    await new Promise(r => setTimeout(r, 200));
+                }
+
+                // 3. Confirm selection
+                lines.push("3. Clicking btn-confirm-select...");
+                doc.getElementById('btn-confirm-select').click();
+                await new Promise(r => setTimeout(r, 400));
+                lines.push("Tower screen hidden: " + doc.getElementById('screen-arcade-tower').classList.contains('hidden'));
+
+                // 4. Click Start Tower Match
+                lines.push("4. Clicking btn-start-tower-match...");
+                doc.getElementById('btn-start-tower-match').click();
+                await new Promise(r => setTimeout(r, 1000));
+
+                lines.push("GameState: " + win.gameEngine.gameState);
+                lines.push("P1: " + win.gameEngine.p1.id + ", P2: " + win.gameEngine.p2.id);
+
+                // Check scene
+                const scene = win.phaserAnimationEngine.scene;
+                lines.push("Scene exists: " + !!scene);
+                if (scene) {
+                    lines.push("s1: visible=" + scene.p1Sprite.visible + ", anim=" + (scene.p1Sprite.anims.currentAnim ? scene.p1Sprite.anims.currentAnim.key : 'none') + ", tex=" + scene.p1Sprite.texture.key);
+                    lines.push("s2: visible=" + scene.p2Sprite.visible + ", anim=" + (scene.p2Sprite.anims.currentAnim ? scene.p2Sprite.anims.currentAnim.key : 'none') + ", tex=" + scene.p2Sprite.texture.key);
+                }
+
+                // Check pixel data on phaserCanvas
+                const pCanvas = doc.getElementById('phaserCanvas');
+                const pctx = pCanvas.getContext('2d');
+                const p1Data = pctx.getImageData(scene.p1Sprite.x - 30, scene.p1Sprite.y - 70, 60, 60).data;
+                let p1Pixels = 0;
+                for (let i = 3; i < p1Data.length; i += 4) if (p1Data[i] > 20) p1Pixels++;
+
+                const p2Data = pctx.getImageData(scene.p2Sprite.x - 30, scene.p2Sprite.y - 70, 60, 60).data;
+                let p2Pixels = 0;
+                for (let i = 3; i < p2Data.length; i += 4) if (p2Data[i] > 20) p2Pixels++;
+
+                lines.push(`P1 visible pixels on phaserCanvas: ${p1Pixels}, P2 visible pixels: ${p2Pixels}`);
+
+                out.innerText = lines.join("\n");
+            } catch(e) {
+                out.innerText = "ERROR: " + e.message + "\n" + e.stack;
+            }
+        };
+    </script>
+</body>
+</html>

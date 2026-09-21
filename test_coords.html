@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head><title>Inspect Spritesheet Coordinates</title></head>
+<body>
+    <div id="out" style="white-space: pre; font-family: monospace;"></div>
+    <script>
+        const out = document.getElementById('out');
+        const lines = [];
+
+        async function inspect(name, url, frames) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.naturalWidth;
+                    canvas.height = img.naturalHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+
+                    lines.push(`=== ${name} (${img.naturalWidth}x${img.naturalHeight}) ===`);
+                    for (const [key, frameDef] of Object.entries(frames)) {
+                        const frameList = Array.isArray(frameDef) ? frameDef : [frameDef];
+                        frameList.forEach((f, idx) => {
+                            if (!f || typeof f.sx === 'undefined') return;
+                            const d = ctx.getImageData(f.sx, f.sy, f.sw, f.sh).data;
+                            let nonZero = 0;
+                            let sampleColors = [];
+                            for (let i = 0; i < d.length; i += 4) {
+                                if (d[i+3] > 20) {
+                                    nonZero++;
+                                    if (sampleColors.length < 3) {
+                                        sampleColors.push(`rgb(${d[i]},${d[i+1]},${d[i+2]})`);
+                                    }
+                                }
+                            }
+                            lines.push(`  ${key}[${idx}]: (${f.sx}, ${f.sy}, ${f.sw}x${f.sh}) -> ${nonZero} non-trans pixels / total ${f.sw*f.sh} (${Math.round(nonZero/(f.sw*f.sh)*100)}%) Samples: ${sampleColors.join(' ')}`);
+                        });
+                    }
+                    resolve();
+                };
+                img.onerror = () => {
+                    lines.push(`=== FAILED TO LOAD ${url} ===`);
+                    resolve();
+                };
+                img.src = url;
+            });
+        }
+
+        async function run() {
+            // Check Leon frames on leon_spritesheet.png
+            const leonFrames = {
+                idle: [{ sx: 8, sy: 105, sw: 28, sh: 42 }, { sx: 38, sy: 105, sw: 28, sh: 42 }],
+                walk: [{ sx: 6, sy: 150, sw: 26, sh: 42 }],
+                punch_light: [{ sx: 6, sy: 290, sw: 28, sh: 42 }]
+            };
+            await inspect('LEON', 'assets/sprites/leon_spritesheet.png', leonFrames);
+
+            // Check standard frames on latina_spritesheet.png
+            const standardFrames = {
+                idle: [{ sx: 15, sy: 78, sw: 70, sh: 86 }, { sx: 135, sy: 78, sw: 70, sh: 86 }, { sx: 255, sy: 78, sw: 70, sh: 86 }],
+                walk: [{ sx: 15, sy: 168, sw: 68, sh: 88 }],
+                punch_light: [{ sx: 15, sy: 356, sw: 85, sh: 88 }]
+            };
+            await inspect('LATINA', 'assets/sprites/latina_spritesheet.png', standardFrames);
+
+            // Check Pepe Argento
+            await inspect('PEPE', 'assets/sprites/pepeargento_spritesheet.png', standardFrames);
+
+            out.innerText = lines.join("\n");
+        }
+        run();
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test All 16 Characters Phaser Anims</title></head>
+<body>
+    <iframe id="f" src="index.html" style="width: 800px; height: 600px;"></iframe>
+    <div id="out" style="white-space: pre; font-family: monospace;"></div>
+    <script>
+        const iframe = document.getElementById('f');
+        iframe.onload = async () => {
+            const out = document.getElementById('out');
+            const lines = [];
+            let attempts = 0;
+            const win = iframe.contentWindow;
+
+            while (attempts < 25) {
+                if (win.phaserAnimationEngine && win.phaserAnimationEngine.isActive && win.phaserAnimationEngine.scene) {
+                    break;
+                }
+                await new Promise(r => setTimeout(r, 200));
+                attempts++;
+            }
+
+            const scene = win.phaserAnimationEngine ? win.phaserAnimationEngine.scene : null;
+            if (!scene) {
+                out.innerText = "ERROR: Scene not ready after waiting!";
+                return;
+            }
+
+                const roster = win.ROSTER_KEYS || [];
+                lines.push(`Testing all ${roster.length} characters in Phaser...`);
+
+                for (const charKey of roster) {
+                    const loadedSheet = win.pixelRenderer && win.pixelRenderer.characterCanvases && win.pixelRenderer.characterCanvases[charKey];
+                    const genComplete = scene.generateCompleteCanvas(charKey);
+                    
+                    // Check pixels on generated fallback
+                    let genNonTrans = 0;
+                    if (genComplete) {
+                        const gctx = genComplete.getContext('2d');
+                        const gdata = gctx.getImageData(0, 0, genComplete.width, genComplete.height).data;
+                        for (let i = 3; i < gdata.length; i += 4) {
+                            if (gdata[i] > 20) genNonTrans++;
+                        }
+                    }
+
+                    scene.ensureCharacterAnims(charKey, true);
+                    const texKey = `char_${charKey}`;
+                    const tex = scene.textures.get(texKey);
+                    const animKey = `${charKey}_idle`;
+                    const animExists = scene.anims.exists(animKey);
+
+                    lines.push(`[${charKey.padEnd(15)}] SheetLoaded: ${!!loadedSheet}, FallbackCanvasPixels: ${genNonTrans}, Texture: ${!!tex}, Frames: ${tex ? Object.keys(tex.frames).length : 0}, Anim exists: ${animExists}`);
+                }
+
+                out.innerText = lines.join("\n");
+        };
+    </script>
+</body>
+</html>

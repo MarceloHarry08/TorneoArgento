@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORNEO ARGENTO 16-BIT | La Batalla Final</title>
+    <meta name="description" content="Juego de peleas arcade estilo 16-bit con los personajes más icónicos de la Argentina, combos, poderes especiales, escenarios míticos y Fatalities.">
+    <!-- Google Fonts for 16-Bit Pixel Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container" class="app-container">
+        <!-- CRT Overlay lines toggle -->
+        <div id="crt-overlay" class="crt-overlay"></div>
+
+        <!-- Canvas Container -->
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="640" height="360"></canvas>
+            <canvas id="phaserCanvas" width="640" height="360"></canvas>
+
+            <!-- IN-GAME HUD OVERLAY -->
+            <div id="hud-overlay" class="hud-container hidden">
+                <!-- TOP BAR: P1 Health, Timer, P2 Health -->
+                <div class="hud-top">
+                    <!-- Player 1 Status -->
+                    <div class="p1-status">
+                        <div class="portrait-box">
+                            <canvas id="hud-p1-portrait" width="40" height="40"></canvas>
+                        </div>
+                        <div class="info-box">
+                            <div class="name-row">
+                                <span id="p1-name" class="fighter-name">LEON</span>
+                                <div id="p1-rounds" class="rounds-container"></div>
+                            </div>
+                            <div class="bar-frame health-frame">
+                                <div id="p1-health" class="bar-fill health-fill" style="width: 100%;"></div>
+                                <div id="p1-health-chip" class="bar-fill health-chip" style="width: 100%;"></div>
+                            </div>
+                            <div class="bar-frame meter-frame">
+                                <div id="p1-meter" class="bar-fill meter-fill" style="width: 0%;"></div>
+                                <span class="meter-label">PODER</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Match Timer & Info -->
+                    <div class="timer-box">
+                        <div id="match-timer" class="timer-text">99</div>
+                        <div id="round-indicator" class="round-text">RONDA 1</div>
+                    </div>
+
+                    <!-- Player 2 Status -->
+                    <div class="p2-status">
+                        <div class="info-box align-right">
+                            <div class="name-row right">
+                                <div id="p2-rounds" class="rounds-container"></div>
+                                <span id="p2-name" class="fighter-name">LATINA</span>
+                            </div>
+                            <div class="bar-frame health-frame">
+                                <div id="p2-health" class="bar-fill health-fill right" style="width: 100%;"></div>
+                                <div id="p2-health-chip" class="bar-fill health-chip right" style="width: 100%;"></div>
+                            </div>
+                            <div class="bar-frame meter-frame">
+                                <div id="p2-meter" class="bar-fill meter-fill right" style="width: 0%;"></div>
+                                <span class="meter-label">PODER</span>
+                            </div>
+                        </div>
+                        <div class="portrait-box">
+                            <canvas id="hud-p2-portrait" width="40" height="40"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DYNAMIC COMBO DISPLAY & ANNOUNCER TEXT -->
+                <div id="combo-p1" class="combo-banner p1-combo hidden"></div>
+                <div id="combo-p2" class="combo-banner p2-combo hidden"></div>
+
+                <!-- ANNOUNCER BANNER (ROUND 1, FIGHT, LIQUIDALO, FATALITY, etc.) -->
+                <div id="announcer-banner" class="announcer-banner hidden">
+                    <h1 id="announcer-text" class="announcer-title">¡RONDA 1!</h1>
+                    <p id="announcer-subtext" class="announcer-sub">¡A PELEAR!</p>
+                </div>
+
+                <!-- FATALITY INPUT PROMPT BANNER -->
+                <div id="fatality-prompt" class="fatality-prompt hidden">
+                    <div class="fatality-title">¡LIQUIDÁLO / A!</div>
+                    <div id="fatality-command" class="fatality-cmd">↓ ↓ + L (PODER)</div>
+                    <div class="fatality-timer">TIEMPO: <span id="fatality-countdown">5</span>s</div>
+                </div>
+            </div>
+
+            <!-- MENU & OVERLAY SCREENS -->
+
+            <!-- TITLE SCREEN (ARGENTINE 16-BIT PATIO WITH ASADO & MATE) -->
+            <div id="screen-title" class="screen-overlay screen-title">
+                <!-- Ambient pixel smoke and steam overlays -->
+                <div class="mate-steam-fx"></div>
+                <div class="parrilla-smoke-fx"></div>
+                <div class="parrilla-ember-fx"></div>
+
+                <div class="title-logo-container">
+                    <div class="retro-badge">16-BIT EDITION</div>
+                    <h1 class="game-title">TORNEO ARGENTO</h1>
+                    <h2 class="game-subtitle">LA BATALLA FINAL</h2>
+                </div>
+
+                <div class="title-menu-box">
+                    <button id="btn-start-arcade" class="btn-menu-pill btn-arcade-1p" title="Torre Arcade 1P">
+                        <span class="pill-icon">🧉</span>
+                        <span class="pill-text">TORRE ARCADE (1P)</span>
+                    </button>
+                    <button id="btn-start-vs" class="btn-menu-pill btn-versus-2p" title="Versus Local 2P">
+                        <span class="pill-text">VERSUS LOCAL (2P)</span>
+                        <span class="pill-icon">⚽</span>
+                    </button>
+                    <button id="btn-open-gsap-studio" class="btn-menu-pill btn-gsap-studio" title="Estudio de Animación GSAP de Sprites">
+                        <span class="pill-icon">⚡</span>
+                        <span class="pill-text">ESTUDIO GSAP DE SPRITES</span>
+                        <span class="pill-icon-right">🎞️</span>
+                    </button>
+                    <button id="btn-open-movelist" class="btn-menu-pill btn-controls-guide" title="Guía de Controles">
+                        <span class="pill-icon">🎮</span>
+                        <span class="pill-text">GUÍA DE CONTROLES</span>
+                        <span class="pill-icon-right">🕹️</span>
+                    </button>
+                    <button id="btn-open-options" class="btn-menu-pill btn-options-audio" title="Opciones & Audio">
+                        <span class="pill-icon">💿</span>
+                        <span class="pill-text">OPCIONES & AUDIO</span>
+                        <span class="pill-icon-right">💿</span>
+                    </button>
+                </div>
+
+                <div class="title-footer">
+                    <span class="arg-flag">🇦🇷</span> PRESIONA CUALQUIER BOTÓN O ESPACIO PARA INICIAR <span class="arg-flag">🇦🇷</span>
+                </div>
+            </div>
+
+            <!-- CHARACTER SELECTION SCREEN -->
+            <div id="screen-char-select" class="screen-overlay screen-char-select hidden">
+                <div class="char-select-header">
+                    <h2 id="select-mode-title" class="select-title">SELECCIONA TU LUCHADOR</h2>
+                    <div class="difficulty-tag">DIFICULTAD: <span id="current-diff-display">PARRILLA (NORMAL)</span></div>
+                </div>
+
+                <div class="char-select-body">
+                    <!-- P1 Preview Panel -->
+                    <div class="char-preview p1-preview">
+                        <div class="preview-card">
+                            <canvas id="p1-big-portrait" width="120" height="140"></canvas>
+                            <h3 id="p1-select-name" class="preview-name">LEON</h3>
+                            <div id="p1-select-alias" class="preview-alias">Javier Milei</div>
+                            <div class="stat-bar-group">
+                                <div class="stat-item"><span class="stat-label">FUERZA</span><div class="stat-track"><div id="p1-stat-atk" class="stat-fill" style="width:80%"></div></div></div>
+                                <div class="stat-item"><span class="stat-label">VELOCIDAD</span><div class="stat-track"><div id="p1-stat-spd" class="stat-fill" style="width:85%"></div></div></div>
+                                <div class="stat-item"><span class="stat-label">PODER</span><div class="stat-track"><div id="p1-stat-spc" class="stat-fill" style="width:90%"></div></div></div>
+                            </div>
+                            <p id="p1-select-quote" class="preview-quote">"¡Viva la libertad carajo!"</p>
+                        </div>
+                    </div>
+
+                    <!-- Grid of 15 Characters -->
+                    <div class="char-grid-container">
+                        <div id="character-grid" class="character-grid"></div>
+                    </div>
+
+                    <!-- P2 Preview Panel -->
+                    <div class="char-preview p2-preview">
+                        <div class="preview-card">
+                            <canvas id="p2-big-portrait" width="120" height="140"></canvas>
+                            <h3 id="p2-select-name" class="preview-name">LATINA</h3>
+                            <div id="p2-select-alias" class="preview-alias">Cristina Kirchner</div>
+                            <div class="stat-bar-group">
+                                <div class="stat-item"><span class="stat-label">FUERZA</span><div class="stat-track"><div id="p2-stat-atk" class="stat-fill" style="width:75%"></div></div></div>
+                                <div class="stat-item"><span class="stat-label">VELOCIDAD</span><div class="stat-track"><div id="p2-stat-spd" class="stat-fill" style="width:70%"></div></div></div>
+                                <div class="stat-item"><span class="stat-label">PODER</span><div class="stat-track"><div id="p2-stat-spc" class="stat-fill" style="width:95%"></div></div></div>
+                            </div>
+                            <p id="p2-select-quote" class="preview-quote">"No nos fue tan mal..."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="char-select-footer">
+                    <button id="btn-back-to-title" class="btn-arcade small">VOLVER AL MENÚ</button>
+                    <div class="select-instructions">
+                        <span>P1: Usa A/D + J para confirmar | P2: Usa Flechas + Numpad 1</span>
+                    </div>
+                    <button id="btn-confirm-select" class="btn-arcade primary small">¡CONFIRMAR PELEA!</button>
+                </div>
+            </div>
+
+            <!-- ARCADE TOWER SCREEN -->
+            <div id="screen-arcade-tower" class="screen-overlay screen-tower hidden">
+                <div class="tower-header">
+                    <h2>TORRE DE COMBATE ARGENTO</h2>
+                    <p>¡Derrota a todos para llegar a la Mesaza Final!</p>
+                </div>
+
+                <div class="tower-body">
+                    <div id="tower-ladder" class="tower-ladder"></div>
+
+                    <div class="tower-player-status">
+                        <h3>TU LUCHADOR</h3>
+                        <canvas id="tower-p1-portrait" width="80" height="90"></canvas>
+                        <h4 id="tower-p1-name">LEON</h4>
+                        <div class="tower-vs">VS</div>
+                        <h4 id="tower-next-name" class="boss-highlight">OPONENTE 1</h4>
+                        <canvas id="tower-next-portrait" width="80" height="90"></canvas>
+                    </div>
+                </div>
+
+                <div class="tower-footer">
+                    <button id="btn-start-tower-match" class="btn-arcade primary">¡INICIAR COMBATE!</button>
+                </div>
+            </div>
+
+            <!-- PAUSE & MOVE LIST MODAL -->
+            <div id="modal-pause" class="screen-overlay modal-pause hidden">
+                <div class="pause-box">
+                    <div class="pause-header">
+                        <h2>CONTROLES & COMBOS</h2>
+                        <button id="btn-close-pause" class="btn-close">X</button>
+                    </div>
+
+                    <div id="pause-char-info" class="pause-fighter-section">
+                        <!-- Filled dynamically -->
+                    </div>
+
+                    <div class="controls-guide-grid">
+                        <div class="guide-col">
+                            <h3>🎮 JUGADOR 1 (CONTROLES PRINCIPALES)</h3>
+                            <ul>
+                                <li><kbd>←</kbd> / <kbd>→</kbd> : Moverse Izquierda / Derecha (Círculo Rojo)</li>
+                                <li><kbd>↑</kbd> : Saltar | <kbd>↓</kbd> : Agacharse</li>
+                                <li><kbd>Insert</kbd> : 🥊 Golpe Liviano (Jab rápido)</li>
+                                <li><kbd>Inicio</kbd> (Home) : 💥 Golpe Pesado (Gancho fuerte)</li>
+                                <li><kbd>Supr</kbd> (Delete) : 🛡️ CUBRIRSE (Bloqueo Defensivo -80% daño)</li>
+                                <li><kbd>Fin</kbd> (End) : ✨ Poder Especial 1</li>
+                                <li><kbd>Av Pág</kbd> (PageDown) : 🔮 Poder Especial 2</li>
+                                <li><kbd>Re Pág</kbd> (PageUp) : ⚡ ATAQUE SÚPER (Barra 100%)</li>
+                            </ul>
+                        </div>
+                        <div class="guide-col">
+                            <h3>⌨️ CONTROLES ALTERNATIVOS / VS LOCAL</h3>
+                            <ul>
+                                <li><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> : Moverse / Saltar / Agacharse (P1 secundario)</li>
+                                <li><kbd>J</kbd> : Golpe Liviano | <kbd>K</kbd> : Golpe Pesado</li>
+                                <li><kbd>U</kbd> / <kbd>O</kbd> / <kbd>L</kbd> : Poderes Especiales 1, 2 y 3</li>
+                                <li><kbd>I</kbd> : Súper Ataque 100%</li>
+                                <li><kbd>↓</kbd> + <kbd>Insert</kbd> / <kbd>Inicio</kbd> : Combos Direccionales MK</li>
+                                <li><kbd>Pausa</kbd> / <kbd>Esc</kbd> : Pausar pelea y ver lista de poderes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="movelist-detail" class="movelist-container">
+                        <!-- Loaded dynamically based on active player -->
+                    </div>
+
+                    <div class="pause-actions">
+                        <button id="btn-resume-game" class="btn-arcade primary">CONTINUAR PELEA</button>
+                        <button id="btn-quit-to-menu" class="btn-arcade danger">ABANDONAR AL MENÚ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPTIONS & AUDIO MODAL -->
+            <div id="modal-options" class="screen-overlay modal-options hidden">
+                <div class="pause-box options-box">
+                    <h2>OPCIONES DE JUEGO</h2>
+
+                    <div class="option-row">
+                        <label for="select-difficulty">DIFICULTAD DE LA IA:</label>
+                        <select id="select-difficulty" class="arcade-select">
+                            <option value="easy">FÁCIL (Para principiantes)</option>
+                            <option value="normal" selected>NORMAL (Parrilla)</option>
+                            <option value="hard">DIFÍCIL (Conurbano)</option>
+                            <option value="extremo">EXTREMO (Inflación 1000%)</option>
+                        </select>
+                    </div>
+
+                    <div class="option-row">
+                        <label for="select-stage">ESCENARIO FAVORITO:</label>
+                        <select id="select-stage" class="arcade-select">
+                            <option value="auto" selected>ALEATORIO / SEGÚN TORRE</option>
+                            <option value="obelisco">1. Obelisco de Buenos Aires</option>
+                            <option value="casarosada">2. Plaza de Mayo / Casa Rosada</option>
+                            <option value="glaciar">3. Glaciar Perito Moreno</option>
+                            <option value="caminito">4. Caminito (La Boca)</option>
+                            <option value="mesaza">5. Templo Inmortal de la Mesaza</option>
+                        </select>
+                    </div>
+
+                    <div class="option-row">
+                        <span class="option-label">EFECTO CRT (FILTRO VINTAGE):</span>
+                        <button id="btn-toggle-crt" class="btn-arcade active">ACTIVADO</button>
+                    </div>
+
+                    <div class="option-row">
+                        <label for="select-rock-song">HIMNO DE ROCK NACIONAL:</label>
+                        <select id="select-rock-song" class="arcade-select">
+                            <option value="auto" selected>AUTOMÁTICO / SEGÚN ESCENARIO</option>
+                            <option value="demusicaligera">1. De Música Ligera (Soda Stereo)</option>
+                            <option value="hadaelmago">2. La Leyenda del Hada y El Mago (Rata Blanca)</option>
+                            <option value="homero">3. Homero (Viejas Locas)</option>
+                            <option value="hacelopormi">4. Hacelo por Mí (Attaque 77)</option>
+                            <option value="fanky">5. Fanky (Charly García)</option>
+                            <option value="labalada">6. La Balada del Diablo y la Muerte (La Renga)</option>
+                        </select>
+                    </div>
+
+                    <div class="option-row">
+                        <span class="option-label">MÚSICA 16-BIT:</span>
+                        <button id="btn-toggle-music" class="btn-arcade active">ACTIVADO</button>
+                    </div>
+
+                    <div class="option-row">
+                        <span class="option-label">EFECTOS DE SONIDO (SFX):</span>
+                        <button id="btn-toggle-sfx" class="btn-arcade active">ACTIVADO</button>
+                    </div>
+
+                    <div class="pause-actions">
+                        <button id="btn-view-sprites-from-options" class="btn-arcade" style="border-color: #ffd700; color: #ffd700; margin-bottom: 8px;">🎨 VER GALERÍA DE SPRITES 16-BIT</button>
+                        <button id="btn-close-options" class="btn-arcade primary">GUARDAR Y SALIR</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VICTORY / FATALITY RESULT SCREEN -->
+            <div id="screen-victory" class="screen-overlay screen-victory hidden">
+                <div class="victory-box">
+                    <h1 id="victory-title" class="victory-title">¡VICTORIA!</h1>
+                    <canvas id="victory-portrait" width="100" height="120"></canvas>
+                    <h2 id="winner-name" class="winner-name">LEON</h2>
+                    <p id="victory-sub" class="victory-quote">"¡VIVA LA LIBERTAD CARAJO!"</p>
+
+                    <div id="fatality-achievement" class="fatality-badge hidden">
+                        ¡FATALITY EJECUTADO CON ÉXITO!
+                    </div>
+
+                    <div class="victory-buttons">
+                        <button id="btn-next-tower-stage" class="btn-arcade primary hidden">CONTINUAR EN LA TORRE</button>
+                        <button id="btn-rematch" class="btn-arcade primary">REVANCHA</button>
+                        <button id="btn-victory-char-select" class="btn-arcade">ELEGIR PERSONAJES</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IN-GAME PAUSE BUTTON -->
+            <button id="btn-in-game-pause" class="in-game-pause-btn hidden">MENU / COMBOS [ESC]</button>
+
+            <!-- VIRTUAL TOUCH CONTROLS FOR MOBILE / MOUSE (OPTIONAL D-PAD & ATTACK) -->
+            <div id="touch-controls" class="touch-controls hidden">
+                <div class="dpad-box">
+                    <button id="touch-left" class="touch-btn">←</button>
+                    <button id="touch-up" class="touch-btn">↑</button>
+                    <button id="touch-down" class="touch-btn">↓</button>
+                    <button id="touch-right" class="touch-btn">→</button>
+                </div>
+                <div class="action-box">
+                    <button id="touch-lp" class="touch-btn act">J</button>
+                    <button id="touch-hp" class="touch-btn act">K</button>
+                    <button id="touch-sp" class="touch-btn act spc">L</button>
+                    <button id="touch-su" class="touch-btn act sup">I</button>
+                </div>
+            </div>
+
+            <!-- GSAP SPRITE ANIMATOR & STUDIO MODAL -->
+            <div id="modal-spritesheet" class="screen-overlay modal-spritesheet hidden">
+                <div class="pause-box gsap-studio-box">
+                    <!-- Header -->
+                    <div class="gsap-studio-header">
+                        <div class="gsap-title-group">
+                            <span class="gsap-badge">⚡ GSAP 3 ANIMATOR</span>
+                            <h2 id="spritesheet-title" class="gsap-title">ESTUDIO DE ANIMACIÓN DE SPRITES GSAP</h2>
+                        </div>
+                        <div class="gsap-header-actions">
+                            <button id="btn-toggle-raw-sheet" class="btn-arcade small" title="Ver Hoja Completa de Sprites">🖼️ VER HOJA RAW</button>
+                            <button id="btn-close-spritesheet" class="btn-close" title="Cerrar Estudio">✕</button>
+                        </div>
+                    </div>
+
+                    <!-- Studio Controls Bar (Character, Action, Stage, Opponent) -->
+                    <div class="gsap-controls-bar">
+                        <div class="gsap-control-group">
+                            <label for="gsap-select-character">LUCHADOR:</label>
+                            <select id="gsap-select-character" class="arcade-select">
+                                <option value="leon">🦁 El León (Javier Milei)</option>
+                                <option value="pepeargento">👟 Pepe Argento (Francella)</option>
+                                <option value="elmesias">⚽ El Mesías (Lionel Messi #10)</option>
+                                <option value="elcomandante">💵 El Comandante (Ricardo Fort)</option>
+                                <option value="eleternauta">❄️ El Eternauta (Juan Salvo)</option>
+                                <option value="latina">🏛️ La Tina (Cristina Kirchner)</option>
+                                <option value="inmortal">👑 La Inmortal (Mirtha Legrand)</option>
+                                <option value="ojosazules">🐱 Ojos Azules (Mauricio Macri)</option>
+                                <option value="moria">🪶 La One (Moria Casán)</option>
+                                <option value="lasu">☎️ La Su (Susana Giménez)</option>
+                                <option value="oidoabsoluto">🎹 Oído Absoluto (Charly García)</option>
+                                <option value="pergolas">🕶️ Pérgolas (Mario Pergolini)</option>
+                                <option value="hugo">🚛 Hugo (Camioneros)</option>
+                                <option value="sangrejaponesa">⚔️ Sangre Japonesa (China Suárez)</option>
+                                <option value="lafaraona">👑 La Faraona (Martín Cirio)</option>
+                                <option value="badbitch">💅 Bad Bitch (Wanda Nara)</option>
+                            </select>
+                        </div>
+
+                        <div class="gsap-control-group">
+                            <label for="gsap-select-action">ACCIÓN / DIBUJO:</label>
+                            <select id="gsap-select-action" class="arcade-select">
+                                <option value="idle">Pose de Combate (Idle)</option>
+                                <option value="walk">Caminar (Paso adelante)</option>
+                                <option value="jump">Salto Acrobático</option>
+                                <option value="crouch">Agacharse</option>
+                                <option value="block">Bloqueo Defensivo</option>
+                                <option value="punch_light">Golpe Liviano (Jab)</option>
+                                <option value="punch_heavy">Golpe Pesado (Gancho)</option>
+                                <option value="kick_light">Patada Baja</option>
+                                <option value="kick_heavy">Patada Voladora</option>
+                                <option value="special">Poder Especial 16-Bit</option>
+                                <option value="hurt">Golpe Recibido (Impacto)</option>
+                                <option value="dizzy">Mareado (Dizzy Stun)</option>
+                                <option value="defeat">Caída KO (Derrota)</option>
+                                <option value="victory">Celebración de Victoria</option>
+                            </select>
+                        </div>
+
+                        <div class="gsap-control-group">
+                            <label for="gsap-select-bg">FONDO:</label>
+                            <select id="gsap-select-bg" class="arcade-select">
+                                <option value="dojo">Dojo Neón 16-Bit</option>
+                                <option value="obelisco">Obelisco de Noche</option>
+                                <option value="patio">Patio Parrilla</option>
+                                <option value="checkerboard">Cuadrícula Transparente</option>
+                            </select>
+                        </div>
+
+                        <div class="gsap-control-group" id="group-versus-opponent" style="display: none;">
+                            <label for="gsap-select-opponent">RIVAL (DUELO):</label>
+                            <select id="gsap-select-opponent" class="arcade-select">
+                                <option value="latina">🏛️ La Tina (CFK)</option>
+                                <option value="leon">🦁 El León (Milei)</option>
+                                <option value="pepeargento">👟 Pepe Argento</option>
+                                <option value="elmesias">⚽ El Mesías (Messi)</option>
+                                <option value="elcomandante">💵 El Comandante (Fort)</option>
+                                <option value="eleternauta">❄️ El Eternauta</option>
+                                <option value="inmortal">👑 La Inmortal (Mirtha)</option>
+                                <option value="ojosazules">🐱 Ojos Azules (Macri)</option>
+                                <option value="moria">🪶 La One (Moria)</option>
+                                <option value="lasu">☎️ La Su (Susana)</option>
+                                <option value="oidoabsoluto">🎹 Oído Absoluto (Charly)</option>
+                                <option value="pergolas">🕶️ Pérgolas (Pergolini)</option>
+                                <option value="hugo">🚛 Hugo (Camioneros)</option>
+                                <option value="sangrejaponesa">⚔️ Sangre Japonesa (China)</option>
+                                <option value="lafaraona">👑 La Faraona</option>
+                                <option value="badbitch">💅 Bad Bitch (Wanda)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Animation Mode Buttons -->
+                    <div class="gsap-mode-bar">
+                        <span class="gsap-mode-label">MODO GSAP:</span>
+                        <div class="gsap-mode-buttons">
+                            <button class="btn-gsap-mode" data-mode="frame" title="Animación secuencial cuadro a cuadro pura con GSAP Steps">🎞️ SOLO CUADROS</button>
+                            <button class="btn-gsap-mode active" data-mode="kinetic" title="Animación con física cinética, saltos, rebotes y estiramientos GSAP">🚀 MOVIMIENTO CINÉTICO</button>
+                            <button class="btn-gsap-mode" data-mode="combo" title="Secuencia coreografiada de golpes y poderes con GSAP Timeline">⚡ COMBO COMPLETO</button>
+                            <button class="btn-gsap-mode" data-mode="versus" title="Duelo entre 2 personajes sincronizados con Master Timeline de GSAP">⚔️ DUELO 1 VS 1</button>
+                        </div>
+                    </div>
+
+                    <!-- Canvas Viewport -->
+                    <div class="gsap-viewport-container">
+                        <canvas id="gsap-animator-canvas" width="640" height="360"></canvas>
+                        
+                        <!-- Floating Zoom Controls -->
+                        <div class="gsap-viewport-overlay">
+                            <div class="gsap-zoom-group">
+                                <span class="zoom-label">ZOOM:</span>
+                                <button class="btn-zoom-opt" data-zoom="1">1x</button>
+                                <button class="btn-zoom-opt active" data-zoom="2">2x</button>
+                                <button class="btn-zoom-opt" data-zoom="3">3x</button>
+                            </div>
+                        </div>
+
+                        <!-- Raw Sprite Sheet View (hidden by default) -->
+                        <div id="gsap-raw-sheet-container" class="gsap-raw-sheet hidden">
+                            <div style="margin-bottom: 8px;">
+                                <label for="select-spritesheet-view" style="font-family: 'Press Start 2P', cursive; font-size: 8px; color: #ffd700;">HOJA RAW:</label>
+                                <select id="select-spritesheet-view" class="arcade-select" style="min-width: 250px;">
+                                    <option value="character_sprite_sheet.png">🇦🇷 16 Personajes (Grid 4x4)</option>
+                                    <option value="assets/sprites/leon_spritesheet.png">🦁 El León (Javier Milei)</option>
+                                    <option value="assets/sprites/pepeargento_spritesheet.png">👟 Pepe Argento (Francella)</option>
+                                    <option value="assets/sprites/elmesias_spritesheet.png">⚽ El Mesías (Messi)</option>
+                                    <option value="assets/sprites/elcomandante_spritesheet.png">💵 El Comandante (Fort)</option>
+                                    <option value="assets/sprites/eleternauta_spritesheet.png">❄️ El Eternauta</option>
+                                    <option value="assets/sprites/latina_spritesheet.png">🏛️ La Tina (CFK)</option>
+                                    <option value="assets/sprites/inmortal_spritesheet.png">👑 La Inmortal (Mirtha)</option>
+                                    <option value="assets/sprites/ojosazules_spritesheet.png">🐱 Ojos Azules (Macri)</option>
+                                    <option value="assets/sprites/moria_spritesheet.png">🪶 La One (Moria)</option>
+                                    <option value="assets/sprites/lasu_spritesheet.png">☎️ La Su (Susana)</option>
+                                    <option value="assets/sprites/oidoabsoluto_spritesheet.png">🎹 Oído Absoluto (Charly)</option>
+                                    <option value="assets/sprites/pergolas_spritesheet.png">🕶️ Pérgolas (Pergolini)</option>
+                                    <option value="assets/sprites/hugo_spritesheet.png">🚛 Hugo (Camioneros)</option>
+                                    <option value="assets/sprites/sangrejaponesa_spritesheet.png">⚔️ Sangre Japonesa (China Suárez)</option>
+                                    <option value="assets/sprites/lafaraona_spritesheet.png">👑 La Faraona (Martín Cirio)</option>
+                                    <option value="assets/sprites/badbitch_spritesheet.png">💅 Bad Bitch (Wanda Nara)</option>
+                                </select>
+                            </div>
+                            <img id="spritesheet-display-img" src="character_sprite_sheet.png" alt="Sprite Sheet" class="raw-sheet-img">
+                        </div>
+                    </div>
+
+                    <!-- Transport / Playback Controls Bar -->
+                    <div class="gsap-transport-bar">
+                        <div class="gsap-transport-buttons">
+                            <button id="btn-gsap-prev-frame" class="btn-transport" title="Paso anterior">⏮️</button>
+                            <button id="btn-gsap-play-toggle" class="btn-transport play active" title="Reproducir / Pausar">⏸️ PAUSA</button>
+                            <button id="btn-gsap-next-frame" class="btn-transport" title="Paso siguiente">⏭️</button>
+                            <button id="btn-gsap-loop-toggle" class="btn-transport active" title="Alternar Bucle (Loop)">🔁 BUCLE</button>
+                        </div>
+
+                        <!-- GSAP Timeline Scrubber -->
+                        <div class="gsap-scrubber-group">
+                            <input type="range" id="gsap-timeline-slider" min="0" max="1" step="0.001" value="0" class="gsap-slider" title="Arrastra para avanzar o retroceder en la línea de tiempo de GSAP">
+                            <div id="gsap-time-display" class="gsap-time-text">⏱️ 0.00s / 1.00s | CUADRO: 1 / 3</div>
+                        </div>
+
+                        <!-- Speed Selector -->
+                        <div class="gsap-speed-group">
+                            <span class="speed-label">VELOCIDAD:</span>
+                            <div class="speed-buttons">
+                                <button class="btn-speed-opt" data-speed="0.25">0.25x</button>
+                                <button class="btn-speed-opt" data-speed="0.5">0.5x</button>
+                                <button class="btn-speed-opt active" data-speed="1.0">1x</button>
+                                <button class="btn-speed-opt" data-speed="1.5">1.5x</button>
+                                <button class="btn-speed-opt" data-speed="2.0">2x</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filmstrip of Individual Sprite Frames -->
+                    <div class="gsap-filmstrip-section">
+                        <div class="filmstrip-header">
+                            <span>🎞️ TIRA DE CUADROS DEL DIBUJO (Haz clic en cualquier cuadro para saltar a él con GSAP):</span>
+                        </div>
+                        <div id="gsap-filmstrip" class="filmstrip-scroll"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT MODULES -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/phaser.min.js"></script>
+    <script src="js/tone.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/pixelArt.js"></script>
+    <script src="js/characters.js"></script>
+    <script src="js/stages.js"></script>
+    <script src="js/fighter.js"></script>
+    <script src="js/phaserAnimationsEngine.js"></script>
+    <script src="js/gsapSpriteAnimator.js"></script>
+    <script src="js/gameEngine.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

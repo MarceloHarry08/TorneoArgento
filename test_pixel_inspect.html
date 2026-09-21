@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head><title>Check Sprite Texture Pixels</title></head>
+<body>
+    <iframe id="f" src="index.html" style="width: 800px; height: 600px;"></iframe>
+    <div id="output" style="white-space: pre; font-family: monospace;"></div>
+    <script>
+        const iframe = document.getElementById('f');
+        iframe.onload = async () => {
+            const win = iframe.contentWindow;
+            const doc = iframe.contentDocument;
+            const out = document.getElementById('output');
+            const lines = [];
+
+            try {
+                // Wait 1 sec for assets to load
+                await new Promise(r => setTimeout(r, 1000));
+
+                lines.push("characterCanvases keys: " + Object.keys(win.pixelRenderer.characterCanvases).join(', '));
+                
+                // Check if leon canvas has pixels
+                const leonCanvas = win.pixelRenderer.characterCanvases['leon'];
+                if (leonCanvas) {
+                    const lctx = leonCanvas.getContext('2d');
+                    const ldata = lctx.getImageData(0, 0, leonCanvas.width, leonCanvas.height).data;
+                    let nonTrans = 0;
+                    for (let i = 3; i < ldata.length; i += 4) {
+                        if (ldata[i] > 20) nonTrans++;
+                    }
+                    lines.push(`leonCanvas size: ${leonCanvas.width}x${leonCanvas.height}, nonTrans pixels: ${nonTrans}`);
+                } else {
+                    lines.push("leonCanvas is NULL!");
+                }
+
+                // Start match
+                doc.getElementById('btn-start-vs').click();
+                await new Promise(r => setTimeout(r, 200));
+                doc.getElementById('btn-confirm-select').click();
+                await new Promise(r => setTimeout(r, 1000));
+
+                const scene = win.phaserAnimationEngine.scene;
+                if (scene) {
+                    lines.push("Scene p1Key: " + scene.p1Key + ", p2Key: " + scene.p2Key);
+                    lines.push("p1Sprite visible: " + scene.p1Sprite.visible + ", frame: " + (scene.p1Sprite.frame ? scene.p1Sprite.frame.name : 'no frame'));
+                    lines.push("p1Sprite anim: " + (scene.p1Sprite.anims.currentAnim ? scene.p1Sprite.anims.currentAnim.key : 'none'));
+                    
+                    // Check frame dimensions and cut
+                    if (scene.p1Sprite.frame) {
+                        const f = scene.p1Sprite.frame;
+                        lines.push(`p1Sprite Frame cut: cutX=${f.cutX}, cutY=${f.cutY}, cutW=${f.cutWidth}, cutH=${f.cutHeight}`);
+                        lines.push(`p1Sprite Frame source size: ${f.source.width}x${f.source.height}`);
+                    }
+
+                    // Check texture in Phaser
+                    const tex = scene.textures.get(`char_${scene.p1Key}`);
+                    lines.push("Phaser texture exists: " + !!tex + ", frames count: " + (tex ? Object.keys(tex.frames).length : 0));
+                    if (tex) {
+                        lines.push("Phaser texture frame keys: " + Object.keys(tex.frames).slice(0, 10).join(', '));
+                    }
+
+                    // Now check phaserCanvas at the fighter's body location (above shadow, e.g. y = 250)
+                    const pCanvas = doc.getElementById('phaserCanvas');
+                    const pctx = pCanvas.getContext('2d');
+                    
+                    // Specifically check a box around p1: x from 150 to 210, y from 220 to 300 (body/head, NOT shadow)
+                    const bodyData = pctx.getImageData(150, 220, 60, 80).data;
+                    let bodyPixels = 0;
+                    for (let i = 3; i < bodyData.length; i += 4) {
+                        if (bodyData[i] > 20) bodyPixels++;
+                    }
+                    lines.push("P1 Body area (y: 220-300) visible pixels: " + bodyPixels);
+
+                    // Check shadow area: y from 310 to 320
+                    const shadowData = pctx.getImageData(150, 310, 60, 10).data;
+                    let shadowPixels = 0;
+                    for (let i = 3; i < shadowData.length; i += 4) {
+                        if (shadowData[i] > 20) shadowPixels++;
+                    }
+                    lines.push("P1 Shadow area (y: 310-320) visible pixels: " + shadowPixels);
+                }
+
+                out.innerText = lines.join("\n");
+            } catch (e) {
+                out.innerText = "ERROR: " + e.message + "\n" + e.stack;
+            }
+        };
+    </script>
+</body>
+</html>

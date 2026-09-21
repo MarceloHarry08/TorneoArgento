@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><title>Debug Leon and Latina Frames</title></head>
+<body>
+    <iframe id="f" src="index.html" style="width: 800px; height: 600px;"></iframe>
+    <div id="out" style="white-space: pre; font-family: monospace;"></div>
+    <script>
+        const iframe = document.getElementById('f');
+        iframe.onload = () => {
+            setTimeout(() => {
+                const win = iframe.contentWindow;
+                const scene = win.phaserAnimationEngine.scene;
+                const out = document.getElementById('out');
+                const lines = [];
+
+                ['leon', 'latina'].forEach(charKey => {
+                    const texKey = `char_${charKey}`;
+                    const tex = scene.textures.get(texKey);
+                    lines.push(`=== ${charKey} ===`);
+                    lines.push(`Texture key: ${texKey}, exists: ${!!tex}`);
+                    if (tex) {
+                        lines.push(`Frames in ${texKey}: ` + Object.keys(tex.frames).join(', '));
+                    }
+                    
+                    const animKey = `${charKey}_idle`;
+                    const anim = scene.anims.get(animKey);
+                    lines.push(`Anim ${animKey} exists: ${!!anim}`);
+                    if (anim) {
+                        lines.push(`Anim frames count: ${anim.frames.length}`);
+                        anim.frames.forEach((f, idx) => {
+                            lines.push(`  Frame ${idx}: textureKey=${f.textureKey}, frameKey=${f.textureFrame}`);
+                        });
+                    }
+                });
+
+                out.innerText = lines.join("\n");
+            }, 600);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html><head><title>Capture Console Logs</title></head>
+<body>
+    <iframe id="f" src="index.html" style="width: 800px; height: 600px;"></iframe>
+    <div id="logs" style="white-space: pre; font-family: monospace;">[log] Start VS button clicked<br>[log] UIController.showScreen called with: charSelect<br>[log] UIController.showScreen called with: hud</div>
+    <script>
+        const allLogs = [];
+        const winLog = (type, args) => {
+            allLogs.push(`[${type}] ` + Array.from(args).map(a => typeof a === 'object' ? JSON.stringify(a) : String(a)).join(' '));
+        };
+
+        const iframe = document.getElementById('f');
+        iframe.onload = async () => {
+            const win = iframe.contentWindow;
+            const doc = iframe.contentDocument;
+
+            // Hook console
+            ['log', 'warn', 'error'].forEach(type => {
+                const orig = win.console[type];
+                win.console[type] = function(...args) {
+                    winLog(type, args);
+                    orig.apply(win.console, args);
+                };
+            });
+
+            // Start VS match
+            try {
+                doc.getElementById('btn-start-vs').click();
+                await new Promise(r => setTimeout(r, 200));
+                doc.getElementById('btn-confirm-select').click();
+                await new Promise(r => setTimeout(r, 2000));
+
+                // Dispatch keypresses (A: Punch light, S: Punch heavy)
+                win.dispatchEvent(new KeyboardEvent('keydown', { code: 'KeyA' }));
+                await new Promise(r => setTimeout(r, 100));
+                win.dispatchEvent(new KeyboardEvent('keyup', { code: 'KeyA' }));
+                await new Promise(r => setTimeout(r, 500));
+            } catch(e) {
+                winLog('error', [e.message, e.stack]);
+            }
+
+            document.getElementById('logs').innerText = allLogs.length > 0 ? allLogs.join("\n") : "NO_LOGS_PERFECT";
+        };
+    </script>
+
+
+</body></html>

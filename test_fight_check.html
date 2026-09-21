@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; background: #111; }
+        iframe { width: 960px; height: 540px; border: none; }
+    </style>
+</head>
+<body>
+    <iframe id="game" src="index.html"></iframe>
+    <div id="debug" style="color: white; font-family: monospace; padding: 10px;"></div>
+    <script>
+        const iframe = document.getElementById('game');
+        iframe.onload = async () => {
+            const win = iframe.contentWindow;
+            const doc = iframe.contentDocument;
+            const debug = document.getElementById('debug');
+            
+            try {
+                // Click VS button
+                doc.getElementById('btn-start-vs').click();
+                await new Promise(r => setTimeout(r, 200));
+
+                // Click Confirm
+                doc.getElementById('btn-confirm-select').click();
+                await new Promise(r => setTimeout(r, 1200));
+
+                // Inspect state
+                const p1 = win.gameEngine ? win.gameEngine.p1 : null;
+                const p2 = win.gameEngine ? win.gameEngine.p2 : null;
+                const phaserScene = win.phaserAnimationEngine ? win.phaserAnimationEngine.scene : null;
+
+                const p1Sprite = phaserScene ? phaserScene.p1Sprite : null;
+                const p2Sprite = phaserScene ? phaserScene.p2Sprite : null;
+
+                const phaserCanvas = doc.getElementById('phaserCanvas');
+                const gameCanvas = doc.getElementById('gameCanvas');
+
+                debug.innerHTML = JSON.stringify({
+                    gameState: win.gameEngine ? win.gameEngine.gameState : 'no game engine',
+                    p1: p1 ? { id: p1.id, x: p1.x, y: p1.y, state: p1.state } : null,
+                    p2: p2 ? { id: p2.id, x: p2.x, y: p2.y, state: p2.state } : null,
+                    phaserActive: win.phaserAnimationEngine ? win.phaserAnimationEngine.isActive : null,
+                    p1Sprite: p1Sprite ? { visible: p1Sprite.visible, x: p1Sprite.x, y: p1Sprite.y, texture: p1Sprite.texture.key, anim: p1Sprite.anims ? (p1Sprite.anims.currentAnim ? p1Sprite.anims.currentAnim.key : 'none') : null, scale: p1Sprite.scaleX, alpha: p1Sprite.alpha } : null,
+                    p2Sprite: p2Sprite ? { visible: p2Sprite.visible, x: p2Sprite.x, y: p2Sprite.y, texture: p2Sprite.texture.key, anim: p2Sprite.anims ? (p2Sprite.anims.currentAnim ? p2Sprite.anims.currentAnim.key : 'none') : null, scale: p2Sprite.scaleX, alpha: p2Sprite.alpha } : null,
+                    phaserCanvasStyle: phaserCanvas ? { display: phaserCanvas.style.display, width: phaserCanvas.width, height: phaserCanvas.height, clientWidth: phaserCanvas.clientWidth, clientHeight: phaserCanvas.clientHeight } : null,
+                    gameCanvasStyle: gameCanvas ? { display: gameCanvas.style.display, width: gameCanvas.width, height: gameCanvas.height, clientWidth: gameCanvas.clientWidth, clientHeight: gameCanvas.clientHeight } : null
+                }, null, 2);
+            } catch (err) {
+                debug.innerHTML = "ERROR: " + err.message + "\n" + err.stack;
+            }
+        };
+    </script>
+</body>
+</html>
