@@ -191,6 +191,11 @@ func _populate_fighter_column(char_key: String, title_lbl: Label, container: VBo
 		_add_row(container, "Motosierra", "↓ ← + Piña Alta (K)", Color(1.0, 0.6, 0.2))
 		_add_row(container, "Micrófono (Atrae)", "↓ ← + Patada Baja (N)", Color(0.2, 0.9, 1.0))
 		_add_row(container, "Mordisco Astral", "↓ → + Patada Alta (M)", Color(1.0, 0.3, 0.3))
+	elif char_key in ["latina", "arquitecta_egipta"]:
+		_add_row(container, "Disparo de Pirámide", "↓ → + Piña Alta (INS)", Color(1.0, 0.9, 0.4))
+		_add_row(container, "Invisibilidad (5s)", "↓ ↓ + Bloqueo (RE PÁG)", Color(0.2, 0.9, 1.0))
+		_add_row(container, "Mina de Choripán", "↓ ← + Patada Baja (FIN)", Color(1.0, 0.6, 0.2))
+		_add_row(container, "Mano Fuck You Gigante", "← → + Piña Alta (INS)", Color(1.0, 0.3, 0.3))
 	else:
 		if moves.has("special1"):
 			_add_row(container, moves["special1"].get("name", "Especial 1"), "↓ → + Piña", Color(1.0, 0.9, 0.4))

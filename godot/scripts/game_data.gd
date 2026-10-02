@@ -55,18 +55,24 @@ var CHARACTERS = {
 	},
 	"latina": {
 		"id": "latina",
-		"name": "LATINA",
+		"name": "ARQUITECTA EGIPTA",
 		"alias": "Cristina Kirchner",
 		"quote": "¡No nos fue tan mal!",
 		"stats": { "atk": 78, "spd": 72, "spc": 96 },
 		"theme_color": Color("#4ea8de"),
 		"moves": {
-			"special1": { "id": "solar_ray", "name": "Rayo de Sol de Mayo", "type": "vertical_beam", "projType": "pyramids", "dmg": 18, "cost": 20, "desc": "Un rayo solar dorado calcinante desciende del cielo." },
-			"special2": { "id": "pyramid_barrage", "name": "Lluvia de Pirámides", "type": "projectile", "projType": "pyramids", "dmg": 16, "cost": 20, "desc": "Dispara pirámides místicas en abanico." },
-			"special3": { "id": "cadena_blast", "name": "Cadena Nacional Blast", "type": "projectile", "projType": "cadena", "dmg": 20, "cost": 25, "desc": "Onda expansiva de energía dorada con el sol patrio." },
-			"super": { "id": "pyramid_prison", "name": "Poder Piramidal Cósmico", "type": "super", "dmg": 44, "cost": 100, "desc": "Encierra al enemigo en una pirámide electrocutante." },
-			"fatality": { "name": "Cadena 24 Horas", "desc": "¡Atrapa al enemigo en un discurso infinito de 16-bits!" }
-		}
+			"special1": { "id": "piramide", "name": "Disparo de Pirámide", "type": "projectile", "dmg": 18, "cost": 20, "desc": "Dispara una pirámide dorada giratoria mística." },
+			"special2": { "id": "invisibility", "name": "Invisibilidad (5s)", "type": "buff", "dmg": 0, "cost": 20, "desc": "Desvanece el cuerpo a un 15% de opacidad durante 5 segundos." },
+			"special3": { "id": "choripan", "name": "Mina de Choripán", "type": "trap", "dmg": 26, "cost": 25, "desc": "Planta una trampa explosiva en el suelo que estalla al contacto." },
+			"super": { "id": "giant_hand", "name": "Mano Fuck You Gigante", "type": "super", "dmg": 28, "cost": 100, "desc": "Ataque frontal cuerpo a cuerpo gigante con drenaje masivo." },
+			"fatality": { "name": "Aplastamiento Piramidal", "desc": "¡Una colosal pirámide cae del cielo aplastando al rival!" }
+		},
+		"combos": [
+			{ "name": "Disparo de Pirámide", "input": "↓ → + Piña Alta (INS)", "hits": 2 },
+			{ "name": "Invisibilidad (5s)", "input": "↓ ↓ + Bloqueo (RE PÁG)", "hits": 0 },
+			{ "name": "Mina de Choripán", "input": "↓ ← + Patada Baja (FIN)", "hits": 1 },
+			{ "name": "Mano Fuck You Gigante", "input": "← → + Piña Alta (INS)", "hits": 3 }
+		]
 	},
 	"ojosazules": {
 		"id": "ojosazules",
