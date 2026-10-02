@@ -2,6 +2,15 @@
 node_modules/
 package-lock.json
 
+# Godot 4+ specific ignores
+.godot/
+*.translation
+/android/
+
+# IDE & Editor
+.vscode/
+.idea/
+
 # Logs
 *.log
 npm-debug.log*

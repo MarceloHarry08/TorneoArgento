@@ -1,0 +1,452 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/battle_hud.gd" id="1_hud"]
+[ext_resource type="FontFile" path="res://assets/ui/PressStart2P.ttf" id="2_font"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_portrait_frame"]
+bg_color = Color(0.08, 0.06, 0.14, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.65, 0.1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_frame"]
+bg_color = Color(0.08, 0.08, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 0.8)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chip_fill"]
+bg_color = Color(1, 0.2, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp_fill"]
+bg_color = Color(0, 1, 0.35, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_meter_frame"]
+bg_color = Color(0.05, 0.05, 0.08, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.4, 0.5, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_meter_fill"]
+bg_color = Color(0, 0.9, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_timer_box"]
+bg_color = Color(0.04, 0.03, 0.08, 0.88)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.75, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.9)
+shadow_size = 6
+content_margin_left = 6.0
+content_margin_top = 3.0
+content_margin_right = 6.0
+content_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fatality_box"]
+bg_color = Color(0.4, 0, 0.05, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0, 0.2, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(1, 0, 0.2, 0.6)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmd_badge"]
+bg_color = Color(0, 0, 0, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.95, 0.75, 0.1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+content_margin_left = 6.0
+content_margin_top = 2.0
+content_margin_right = 6.0
+content_margin_bottom = 2.0
+
+[node name="BattleHUD" type="CanvasLayer"]
+layer = 15
+script = ExtResource("1_hud")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopBar" type="HBoxContainer" parent="HUD"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="P1Status" type="HBoxContainer" parent="HUD/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="PortraitBox" type="PanelContainer" parent="HUD/TopBar/P1Status"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_portrait_frame")
+
+[node name="Portrait" type="TextureRect" parent="HUD/TopBar/P1Status/PortraitBox"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+texture_filter = 1
+
+[node name="InfoBox" type="VBoxContainer" parent="HUD/TopBar/P1Status"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="NameRow" type="HBoxContainer" parent="HUD/TopBar/P1Status/InfoBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="NameLabel" type="Label" parent="HUD/TopBar/P1Status/InfoBox/NameRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 9
+text = "LEON"
+
+[node name="RoundsBox" type="HBoxContainer" parent="HUD/TopBar/P1Status/InfoBox/NameRow"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HealthFrame" type="PanelContainer" parent="HUD/TopBar/P1Status/InfoBox"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bar_frame")
+
+[node name="ChipBar" type="ProgressBar" parent="HUD/TopBar/P1Status/InfoBox/HealthFrame"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_chip_fill")
+value = 100.0
+show_percentage = false
+
+[node name="HPBar" type="ProgressBar" parent="HUD/TopBar/P1Status/InfoBox/HealthFrame"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_hp_fill")
+value = 100.0
+show_percentage = false
+
+[node name="MeterFrame" type="PanelContainer" parent="HUD/TopBar/P1Status/InfoBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_meter_frame")
+
+[node name="MeterBar" type="ProgressBar" parent="HUD/TopBar/P1Status/InfoBox/MeterFrame"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_meter_fill")
+value = 50.0
+show_percentage = false
+
+[node name="MeterLabel" type="Label" parent="HUD/TopBar/P1Status/InfoBox/MeterFrame"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = -2.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.9)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 5
+text = "PODER"
+
+[node name="TimerBox" type="PanelContainer" parent="HUD/TopBar"]
+custom_minimum_size = Vector2(52, 42)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_timer_box")
+
+[node name="VBox" type="VBoxContainer" parent="HUD/TopBar/TimerBox"]
+layout_mode = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="TimerLabel" type="Label" parent="HUD/TopBar/TimerBox/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 20
+text = "99"
+horizontal_alignment = 1
+
+[node name="RoundLabel" type="Label" parent="HUD/TopBar/TimerBox/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 6
+text = "RONDA 1"
+horizontal_alignment = 1
+
+[node name="P2Status" type="HBoxContainer" parent="HUD/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="InfoBox" type="VBoxContainer" parent="HUD/TopBar/P2Status"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="NameRow" type="HBoxContainer" parent="HUD/TopBar/P2Status/InfoBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 2
+
+[node name="RoundsBox" type="HBoxContainer" parent="HUD/TopBar/P2Status/InfoBox/NameRow"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="NameLabel" type="Label" parent="HUD/TopBar/P2Status/InfoBox/NameRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 9
+text = "LATINA"
+
+[node name="HealthFrame" type="PanelContainer" parent="HUD/TopBar/P2Status/InfoBox"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bar_frame")
+
+[node name="ChipBar" type="ProgressBar" parent="HUD/TopBar/P2Status/InfoBox/HealthFrame"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_chip_fill")
+fill_mode = 1
+value = 100.0
+show_percentage = false
+
+[node name="HPBar" type="ProgressBar" parent="HUD/TopBar/P2Status/InfoBox/HealthFrame"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_hp_fill")
+fill_mode = 1
+value = 100.0
+show_percentage = false
+
+[node name="MeterFrame" type="PanelContainer" parent="HUD/TopBar/P2Status/InfoBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_meter_frame")
+
+[node name="MeterBar" type="ProgressBar" parent="HUD/TopBar/P2Status/InfoBox/MeterFrame"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_meter_fill")
+fill_mode = 1
+value = 50.0
+show_percentage = false
+
+[node name="MeterLabel" type="Label" parent="HUD/TopBar/P2Status/InfoBox/MeterFrame"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = -2.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.9)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 5
+text = "PODER"
+
+[node name="PortraitBox" type="PanelContainer" parent="HUD/TopBar/P2Status"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_portrait_frame")
+
+[node name="Portrait" type="TextureRect" parent="HUD/TopBar/P2Status/PortraitBox"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+texture_filter = 1
+
+[node name="Combos" type="Control" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="P1ComboLabel" type="Label" parent="HUD/Combos"]
+visible = false
+layout_mode = 1
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 220.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.9, 0.1, 1)
+theme_override_colors/font_shadow_color = Color(0.8, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 13
+text = "¡3 HITS! COMBO"
+
+[node name="P2ComboLabel" type="Label" parent="HUD/Combos"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 80.0
+offset_right = -40.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.9, 0.1, 1)
+theme_override_colors/font_shadow_color = Color(0.8, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 13
+text = "¡3 HITS! COMBO"
+horizontal_alignment = 2
+
+[node name="AnnouncerBanner" type="CenterContainer" parent="HUD"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -60.0
+offset_right = 200.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="HUD/AnnouncerBanner"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="AnnouncerTitle" type="Label" parent="HUD/AnnouncerBanner/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0.3, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 26
+text = "¡RONDA 1!"
+horizontal_alignment = 1
+
+[node name="AnnouncerSub" type="Label" parent="HUD/AnnouncerBanner/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 12
+text = "¡A PELEAR!"
+horizontal_alignment = 1
+
+[node name="FatalityPrompt" type="Panel" parent="HUD"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -105.0
+offset_right = 160.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fatality_box")
+
+[node name="VBox" type="VBoxContainer" parent="HUD/FatalityPrompt"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="HUD/FatalityPrompt/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.1, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 14
+text = "¡LIQUIDÁLO / A!"
+horizontal_alignment = 1
+
+[node name="CommandLabel" type="Label" parent="HUD/FatalityPrompt/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_cmd_badge")
+text = "↓ ↓ + PODER (FIN / RE PÁG)"
+horizontal_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="HUD/FatalityPrompt/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+text = "TIEMPO: 5s"
+horizontal_alignment = 1

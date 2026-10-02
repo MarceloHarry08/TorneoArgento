@@ -1,0 +1,224 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/pause_menu.gd" id="1_pause"]
+[ext_resource type="FontFile" path="res://assets/ui/PressStart2P.ttf" id="2_font"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glass"]
+bg_color = Color(0.04, 0.03, 0.08, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.75, 0.1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.9)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_movelist_box"]
+bg_color = Color(0.08, 0.07, 0.14, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.3, 0.45, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 8.0
+content_margin_top = 6.0
+content_margin_right = 8.0
+content_margin_bottom = 6.0
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 25
+visible = false
+script = ExtResource("1_pause")
+
+[node name="Dimmer" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="PauseBox" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -150.0
+offset_right = 270.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_glass")
+
+[node name="Margin" type="MarginContainer" parent="PauseBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="MainView" type="VBoxContainer" parent="PauseBox/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="PauseBox/Margin/MainView"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 13
+text = "JUEGO PAUSADO"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="PauseBox/Margin/MainView"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "TORNEO ARGENTO 16-BIT"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PauseBox/Margin/MainView"]
+layout_mode = 2
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="PauseBox/Margin/MainView"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="BtnResume" type="Button" parent="PauseBox/Margin/MainView/ButtonsVBox"]
+custom_minimum_size = Vector2(250, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+text = "CONTINUAR PELEA"
+
+[node name="BtnCombos" type="Button" parent="PauseBox/Margin/MainView/ButtonsVBox"]
+custom_minimum_size = Vector2(250, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+text = "VER COMBOS Y PODERES (P1 & P2)"
+
+[node name="BtnCRT" type="Button" parent="PauseBox/Margin/MainView/ButtonsVBox"]
+custom_minimum_size = Vector2(250, 22)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "Filtro CRT: ACTIVADO"
+
+[node name="BtnAudio" type="Button" parent="PauseBox/Margin/MainView/ButtonsVBox"]
+custom_minimum_size = Vector2(250, 22)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "Música 16-Bit: ACTIVADO"
+
+[node name="BtnQuit" type="Button" parent="PauseBox/Margin/MainView/ButtonsVBox"]
+custom_minimum_size = Vector2(250, 22)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.35, 0.35, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "VOLVER AL MENÚ PRINCIPAL"
+
+[node name="HintLabel" type="Label" parent="PauseBox/Margin/MainView"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 6
+text = "[BARRA ESPACIADORA / ESC] Salir de pausa"
+horizontal_alignment = 1
+
+[node name="CombosView" type="VBoxContainer" parent="PauseBox/Margin"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="CombosTitle" type="Label" parent="PauseBox/Margin/CombosView"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 9
+text = "LISTA DE MOVIMIENTOS & COMBOS"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PauseBox/Margin/CombosView"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_movelist_box")
+
+[node name="ColumnsHBox" type="HBoxContainer" parent="PauseBox/Margin/CombosView/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="P1Box" type="VBoxContainer" parent="PauseBox/Margin/CombosView/ScrollContainer/ColumnsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="P1Title" type="Label" parent="PauseBox/Margin/CombosView/ScrollContainer/ColumnsHBox/P1Box"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "JUGADOR 1"
+horizontal_alignment = 1
+
+[node name="P1Movelist" type="VBoxContainer" parent="PauseBox/Margin/CombosView/ScrollContainer/ColumnsHBox/P1Box"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="VSeparator" type="VSeparator" parent="PauseBox/Margin/CombosView/ScrollContainer/ColumnsHBox"]
+layout_mode = 2
+
+[node name="P2Box" type="VBoxContainer" parent="PauseBox/Margin/CombosView/ScrollContainer/ColumnsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="P2Title" type="Label" parent="PauseBox/Margin/CombosView/ScrollContainer/ColumnsHBox/P2Box"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "JUGADOR 2"
+horizontal_alignment = 1
+
+[node name="P2Movelist" type="VBoxContainer" parent="PauseBox/Margin/CombosView/ScrollContainer/ColumnsHBox/P2Box"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="BtnBackFromCombos" type="Button" parent="PauseBox/Margin/CombosView"]
+custom_minimum_size = Vector2(230, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+text = "← VOLVER AL MENÚ DE PAUSA"

@@ -1,0 +1,441 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/title_menu.gd" id="1_title"]
+[ext_resource type="Texture2D" path="res://assets/menu_bg.jpg" id="2_bg"]
+[ext_resource type="FontFile" path="res://assets/ui/PressStart2P.ttf" id="3_font"]
+[ext_resource type="Shader" path="res://scripts/crt_shader.gdshader" id="4_crt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+bg_color = Color(0.06, 0.04, 0.1, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.75, 0.1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_size = 12
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_crt"]
+shader = ExtResource("4_crt")
+shader_parameter/scanline_count = 180.0
+shader_parameter/scanline_intensity = 0.12
+shader_parameter/vignette_intensity = 0.2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_badge"]
+bg_color = Color(0.9, 0.15, 0.3, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.9, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+content_margin_left = 8.0
+content_margin_top = 2.0
+content_margin_right = 8.0
+content_margin_bottom = 2.0
+
+[node name="TitleMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_title")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkVignette" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.03, 0.08, 0.5)
+
+[node name="SmokeParticles" type="CPUParticles2D" parent="."]
+position = Vector2(500, 310)
+amount = 25
+lifetime = 2.5
+emission_shape = 3
+emission_rect_extents = Vector2(40, 5)
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(-15, -20)
+initial_velocity_min = 20.0
+initial_velocity_max = 45.0
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+color = Color(1, 0.9, 0.8, 0.18)
+
+[node name="HeaderContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 18.0
+offset_bottom = 105.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="TitleBox" type="VBoxContainer" parent="HeaderContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="RetroBadge" type="Label" parent="HeaderContainer/TitleBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_badge")
+text = "★ 16-BIT EDITION ★"
+horizontal_alignment = 1
+
+[node name="GameTitle" type="Label" parent="HeaderContainer/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.2, 0.4, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+text = "TORNEO ARGENTO"
+horizontal_alignment = 1
+
+[node name="GameSubtitle" type="Label" parent="HeaderContainer/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 11
+text = "LA BATALLA FINAL"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -60.0
+offset_right = 140.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBox" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="BtnArcade" type="Button" parent="CenterContainer/MenuBox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 10
+text = "🧉 TORRE ARCADE (1P)"
+
+[node name="BtnVersus" type="Button" parent="CenterContainer/MenuBox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 10
+text = "⚽ VERSUS LOCAL (2P)"
+
+[node name="BtnTraining" type="Button" parent="CenterContainer/MenuBox"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 9
+text = "🥊 MODO ENTRENAMIENTO"
+
+[node name="BtnOptions" type="Button" parent="CenterContainer/MenuBox"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 9
+text = "💿 OPCIONES & CONTROLES"
+
+[node name="FooterContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 6
+
+[node name="FooterLabel" type="Label" parent="FooterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.3, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 8
+text = "🇦🇷 FLECHAS: MOVER • ENTER/ESPACIO: SELECCIONAR 🇦🇷"
+horizontal_alignment = 1
+
+[node name="Modals" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="OptionsModal" type="Panel" parent="Modals"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -152.0
+offset_right = 270.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="Margin" type="MarginContainer" parent="Modals/OptionsModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="Modals/OptionsModal/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ModalTitle" type="Label" parent="Modals/OptionsModal/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 10
+text = "OPCIONES DE JUEGO & CONTROLES ARCADE"
+horizontal_alignment = 1
+
+[node name="Columns" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="LeftCol" type="VBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="ColTitle1" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 7
+text = "⚙️ AJUSTES & AUDIO"
+horizontal_alignment = 1
+
+[node name="DiffRow" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/DiffRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "DIFICULTAD IA:"
+
+[node name="DiffOption" type="OptionButton" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/DiffRow"]
+custom_minimum_size = Vector2(130, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+
+[node name="StageRow" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/StageRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "ESCENARIO:"
+
+[node name="StageOption" type="OptionButton" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/StageRow"]
+custom_minimum_size = Vector2(130, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+
+[node name="SongRow" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/SongRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "ROCK NACIONAL:"
+
+[node name="SongOption" type="OptionButton" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/SongRow"]
+custom_minimum_size = Vector2(130, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+
+[node name="CRTRow" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/CRTRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "FILTRO CRT TV:"
+
+[node name="BtnToggleCRT" type="Button" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/CRTRow"]
+custom_minimum_size = Vector2(85, 18)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "DESACTIVADO"
+
+[node name="MusicRow" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/MusicRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "MÚSICA 16-BIT:"
+
+[node name="BtnToggleMusic" type="Button" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/MusicRow"]
+custom_minimum_size = Vector2(85, 18)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "DESACTIVADO"
+
+[node name="SFXRow" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/SFXRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "EFECTOS SFX:"
+
+[node name="BtnToggleSFX" type="Button" parent="Modals/OptionsModal/Margin/VBox/Columns/LeftCol/SFXRow"]
+custom_minimum_size = Vector2(85, 18)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 6
+text = "ACTIVADO"
+
+[node name="RightCol" type="VBoxContainer" parent="Modals/OptionsModal/Margin/VBox/Columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="ColTitle2" type="Label" parent="Modals/OptionsModal/Margin/VBox/Columns/RightCol"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 7
+text = "🎮 GUÍA DE CONTROLES"
+horizontal_alignment = 1
+
+[node name="ControlsBox" type="PanelContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/RightCol"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Margin" type="MarginContainer" parent="Modals/OptionsModal/Margin/VBox/Columns/RightCol/ControlsBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 4
+
+[node name="ControlsText" type="RichTextLabel" parent="Modals/OptionsModal/Margin/VBox/Columns/RightCol/ControlsBox/Margin"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_font")
+theme_override_font_sizes/normal_font_size = 5
+bbcode_enabled = true
+text = "[color=#00e5ff]MOVIMIENTO:[/color]
+• [color=#ffd700]Flechas[/color]: Caminar / Saltar / Agacharse
+
+[color=#00e5ff]COMBATE (6 BOTONES ARCADE):[/color]
+• [color=#ffd700]INSERT[/color]: Piña Alta (Gancho)
+• [color=#ffd700]INICIO[/color]: Piña Baja (Jab)
+• [color=#ffd700]SUPR[/color]: Patada Alta
+• [color=#ffd700]FIN[/color]: Patada Baja
+• [color=#ffd700]RE PÁG[/color]: Guardia / Bloqueo
+• [color=#ffd700]AV PÁG[/color]: Correr / Dash
+
+[color=#ff5577]SISTEMA & MENÚS:[/color]
+• [color=#ffffff]ESPACIO[/color]: Menú Pausa / Menú Principal
+• [color=#ffffff]CONTRABARRA (\)[/color]: Regresar Atrás"
+
+[node name="CloseRow" type="HBoxContainer" parent="Modals/OptionsModal/Margin/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="BtnCloseOptions" type="Button" parent="Modals/OptionsModal/Margin/VBox/CloseRow"]
+custom_minimum_size = Vector2(140, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.2, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 7
+text = "GUARDAR Y CERRAR"
+
+[node name="CRT_Overlay" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_crt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

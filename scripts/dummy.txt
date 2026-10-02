@@ -1,0 +1,3 @@
+const fs = require('fs');
+const { PNG } = require('c:/Users/marce/.gemini/antigravity-ide/scratch/torneo-argento 2/node_modules/pngjs');
+// Wait, pngjs doesn't read jpeg directly, let's use powershell System.Drawing to convert JPG to PNG!

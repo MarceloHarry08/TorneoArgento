@@ -1,0 +1,2530 @@
+{
+  "leon": {
+    "punch_high": [
+      "res://assets/characters/leon/punch_high/frame_00.png",
+      "res://assets/characters/leon/punch_high/frame_01.png",
+      "res://assets/characters/leon/punch_high/frame_02.png",
+      "res://assets/characters/leon/punch_high/frame_03.png",
+      "res://assets/characters/leon/punch_high/frame_04.png",
+      "res://assets/characters/leon/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/leon/punch_low/frame_00.png",
+      "res://assets/characters/leon/punch_low/frame_01.png",
+      "res://assets/characters/leon/punch_low/frame_02.png",
+      "res://assets/characters/leon/punch_low/frame_03.png",
+      "res://assets/characters/leon/punch_low/frame_04.png",
+      "res://assets/characters/leon/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/leon/kick_high/frame_00.png",
+      "res://assets/characters/leon/kick_high/frame_01.png",
+      "res://assets/characters/leon/kick_high/frame_02.png",
+      "res://assets/characters/leon/kick_high/frame_03.png",
+      "res://assets/characters/leon/kick_high/frame_04.png",
+      "res://assets/characters/leon/kick_high/frame_05.png",
+      "res://assets/characters/leon/kick_high/frame_06.png",
+      "res://assets/characters/leon/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/leon/kick_low/frame_00.png",
+      "res://assets/characters/leon/kick_low/frame_01.png",
+      "res://assets/characters/leon/kick_low/frame_02.png",
+      "res://assets/characters/leon/kick_low/frame_03.png",
+      "res://assets/characters/leon/kick_low/frame_04.png",
+      "res://assets/characters/leon/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/leon/walk_forward/frame_00.png",
+      "res://assets/characters/leon/walk_forward/frame_01.png",
+      "res://assets/characters/leon/walk_forward/frame_02.png",
+      "res://assets/characters/leon/walk_forward/frame_03.png",
+      "res://assets/characters/leon/walk_forward/frame_04.png",
+      "res://assets/characters/leon/walk_forward/frame_05.png",
+      "res://assets/characters/leon/walk_forward/frame_06.png",
+      "res://assets/characters/leon/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/leon/walk_backward/frame_00.png",
+      "res://assets/characters/leon/walk_backward/frame_01.png",
+      "res://assets/characters/leon/walk_backward/frame_02.png",
+      "res://assets/characters/leon/walk_backward/frame_03.png",
+      "res://assets/characters/leon/walk_backward/frame_04.png",
+      "res://assets/characters/leon/walk_backward/frame_05.png",
+      "res://assets/characters/leon/walk_backward/frame_06.png",
+      "res://assets/characters/leon/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/leon/jump/frame_00.png",
+      "res://assets/characters/leon/jump/frame_01.png",
+      "res://assets/characters/leon/jump/frame_02.png",
+      "res://assets/characters/leon/jump/frame_03.png",
+      "res://assets/characters/leon/jump/frame_04.png",
+      "res://assets/characters/leon/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/leon/crouch/frame_00.png",
+      "res://assets/characters/leon/crouch/frame_01.png",
+      "res://assets/characters/leon/crouch/frame_02.png",
+      "res://assets/characters/leon/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/leon/block/frame_00.png",
+      "res://assets/characters/leon/block/frame_01.png",
+      "res://assets/characters/leon/block/frame_02.png",
+      "res://assets/characters/leon/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/leon/special/frame_00.png",
+      "res://assets/characters/leon/special/frame_01.png",
+      "res://assets/characters/leon/special/frame_02.png",
+      "res://assets/characters/leon/special/frame_03.png",
+      "res://assets/characters/leon/special/frame_04.png",
+      "res://assets/characters/leon/special/frame_05.png",
+      "res://assets/characters/leon/special/frame_06.png",
+      "res://assets/characters/leon/special/frame_07.png",
+      "res://assets/characters/leon/special/frame_08.png",
+      "res://assets/characters/leon/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/leon/super/frame_00.png",
+      "res://assets/characters/leon/super/frame_01.png",
+      "res://assets/characters/leon/super/frame_02.png",
+      "res://assets/characters/leon/super/frame_03.png",
+      "res://assets/characters/leon/super/frame_04.png",
+      "res://assets/characters/leon/super/frame_05.png",
+      "res://assets/characters/leon/super/frame_06.png",
+      "res://assets/characters/leon/super/frame_07.png",
+      "res://assets/characters/leon/super/frame_08.png",
+      "res://assets/characters/leon/super/frame_09.png",
+      "res://assets/characters/leon/super/frame_10.png",
+      "res://assets/characters/leon/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/leon/fatality/frame_00.png",
+      "res://assets/characters/leon/fatality/frame_01.png",
+      "res://assets/characters/leon/fatality/frame_02.png",
+      "res://assets/characters/leon/fatality/frame_03.png",
+      "res://assets/characters/leon/fatality/frame_04.png",
+      "res://assets/characters/leon/fatality/frame_05.png",
+      "res://assets/characters/leon/fatality/frame_06.png",
+      "res://assets/characters/leon/fatality/frame_07.png",
+      "res://assets/characters/leon/fatality/frame_08.png",
+      "res://assets/characters/leon/fatality/frame_09.png",
+      "res://assets/characters/leon/fatality/frame_10.png",
+      "res://assets/characters/leon/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/leon/victory/frame_00.png",
+      "res://assets/characters/leon/victory/frame_01.png",
+      "res://assets/characters/leon/victory/frame_02.png",
+      "res://assets/characters/leon/victory/frame_03.png",
+      "res://assets/characters/leon/victory/frame_04.png",
+      "res://assets/characters/leon/victory/frame_05.png",
+      "res://assets/characters/leon/victory/frame_06.png",
+      "res://assets/characters/leon/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/leon/defeat/frame_00.png",
+      "res://assets/characters/leon/defeat/frame_01.png",
+      "res://assets/characters/leon/defeat/frame_02.png",
+      "res://assets/characters/leon/defeat/frame_03.png",
+      "res://assets/characters/leon/defeat/frame_04.png",
+      "res://assets/characters/leon/defeat/frame_05.png",
+      "res://assets/characters/leon/defeat/frame_06.png",
+      "res://assets/characters/leon/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/leon/hurt/frame_00.png",
+      "res://assets/characters/leon/hurt/frame_01.png",
+      "res://assets/characters/leon/hurt/frame_02.png",
+      "res://assets/characters/leon/hurt/frame_03.png",
+      "res://assets/characters/leon/hurt/frame_04.png",
+      "res://assets/characters/leon/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/leon/fatality_victim/frame_00.png",
+      "res://assets/characters/leon/fatality_victim/frame_01.png",
+      "res://assets/characters/leon/fatality_victim/frame_02.png",
+      "res://assets/characters/leon/fatality_victim/frame_03.png",
+      "res://assets/characters/leon/fatality_victim/frame_04.png",
+      "res://assets/characters/leon/fatality_victim/frame_05.png",
+      "res://assets/characters/leon/fatality_victim/frame_06.png",
+      "res://assets/characters/leon/fatality_victim/frame_07.png",
+      "res://assets/characters/leon/fatality_victim/frame_08.png",
+      "res://assets/characters/leon/fatality_victim/frame_09.png",
+      "res://assets/characters/leon/fatality_victim/frame_10.png",
+      "res://assets/characters/leon/fatality_victim/frame_11.png"
+    ]
+  },
+  "latina": {
+    "punch_high": [
+      "res://assets/characters/latina/punch_high/frame_00.png",
+      "res://assets/characters/latina/punch_high/frame_01.png",
+      "res://assets/characters/latina/punch_high/frame_02.png",
+      "res://assets/characters/latina/punch_high/frame_03.png",
+      "res://assets/characters/latina/punch_high/frame_04.png",
+      "res://assets/characters/latina/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/latina/punch_low/frame_00.png",
+      "res://assets/characters/latina/punch_low/frame_01.png",
+      "res://assets/characters/latina/punch_low/frame_02.png",
+      "res://assets/characters/latina/punch_low/frame_03.png",
+      "res://assets/characters/latina/punch_low/frame_04.png",
+      "res://assets/characters/latina/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/latina/kick_high/frame_00.png",
+      "res://assets/characters/latina/kick_high/frame_01.png",
+      "res://assets/characters/latina/kick_high/frame_02.png",
+      "res://assets/characters/latina/kick_high/frame_03.png",
+      "res://assets/characters/latina/kick_high/frame_04.png",
+      "res://assets/characters/latina/kick_high/frame_05.png",
+      "res://assets/characters/latina/kick_high/frame_06.png",
+      "res://assets/characters/latina/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/latina/kick_low/frame_00.png",
+      "res://assets/characters/latina/kick_low/frame_01.png",
+      "res://assets/characters/latina/kick_low/frame_02.png",
+      "res://assets/characters/latina/kick_low/frame_03.png",
+      "res://assets/characters/latina/kick_low/frame_04.png",
+      "res://assets/characters/latina/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/latina/walk_forward/frame_00.png",
+      "res://assets/characters/latina/walk_forward/frame_01.png",
+      "res://assets/characters/latina/walk_forward/frame_02.png",
+      "res://assets/characters/latina/walk_forward/frame_03.png",
+      "res://assets/characters/latina/walk_forward/frame_04.png",
+      "res://assets/characters/latina/walk_forward/frame_05.png",
+      "res://assets/characters/latina/walk_forward/frame_06.png",
+      "res://assets/characters/latina/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/latina/walk_backward/frame_00.png",
+      "res://assets/characters/latina/walk_backward/frame_01.png",
+      "res://assets/characters/latina/walk_backward/frame_02.png",
+      "res://assets/characters/latina/walk_backward/frame_03.png",
+      "res://assets/characters/latina/walk_backward/frame_04.png",
+      "res://assets/characters/latina/walk_backward/frame_05.png",
+      "res://assets/characters/latina/walk_backward/frame_06.png",
+      "res://assets/characters/latina/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/latina/jump/frame_00.png",
+      "res://assets/characters/latina/jump/frame_01.png",
+      "res://assets/characters/latina/jump/frame_02.png",
+      "res://assets/characters/latina/jump/frame_03.png",
+      "res://assets/characters/latina/jump/frame_04.png",
+      "res://assets/characters/latina/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/latina/crouch/frame_00.png",
+      "res://assets/characters/latina/crouch/frame_01.png",
+      "res://assets/characters/latina/crouch/frame_02.png",
+      "res://assets/characters/latina/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/latina/block/frame_00.png",
+      "res://assets/characters/latina/block/frame_01.png",
+      "res://assets/characters/latina/block/frame_02.png",
+      "res://assets/characters/latina/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/latina/special/frame_00.png",
+      "res://assets/characters/latina/special/frame_01.png",
+      "res://assets/characters/latina/special/frame_02.png",
+      "res://assets/characters/latina/special/frame_03.png",
+      "res://assets/characters/latina/special/frame_04.png",
+      "res://assets/characters/latina/special/frame_05.png",
+      "res://assets/characters/latina/special/frame_06.png",
+      "res://assets/characters/latina/special/frame_07.png",
+      "res://assets/characters/latina/special/frame_08.png",
+      "res://assets/characters/latina/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/latina/super/frame_00.png",
+      "res://assets/characters/latina/super/frame_01.png",
+      "res://assets/characters/latina/super/frame_02.png",
+      "res://assets/characters/latina/super/frame_03.png",
+      "res://assets/characters/latina/super/frame_04.png",
+      "res://assets/characters/latina/super/frame_05.png",
+      "res://assets/characters/latina/super/frame_06.png",
+      "res://assets/characters/latina/super/frame_07.png",
+      "res://assets/characters/latina/super/frame_08.png",
+      "res://assets/characters/latina/super/frame_09.png",
+      "res://assets/characters/latina/super/frame_10.png",
+      "res://assets/characters/latina/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/latina/fatality/frame_00.png",
+      "res://assets/characters/latina/fatality/frame_01.png",
+      "res://assets/characters/latina/fatality/frame_02.png",
+      "res://assets/characters/latina/fatality/frame_03.png",
+      "res://assets/characters/latina/fatality/frame_04.png",
+      "res://assets/characters/latina/fatality/frame_05.png",
+      "res://assets/characters/latina/fatality/frame_06.png",
+      "res://assets/characters/latina/fatality/frame_07.png",
+      "res://assets/characters/latina/fatality/frame_08.png",
+      "res://assets/characters/latina/fatality/frame_09.png",
+      "res://assets/characters/latina/fatality/frame_10.png",
+      "res://assets/characters/latina/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/latina/victory/frame_00.png",
+      "res://assets/characters/latina/victory/frame_01.png",
+      "res://assets/characters/latina/victory/frame_02.png",
+      "res://assets/characters/latina/victory/frame_03.png",
+      "res://assets/characters/latina/victory/frame_04.png",
+      "res://assets/characters/latina/victory/frame_05.png",
+      "res://assets/characters/latina/victory/frame_06.png",
+      "res://assets/characters/latina/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/latina/defeat/frame_00.png",
+      "res://assets/characters/latina/defeat/frame_01.png",
+      "res://assets/characters/latina/defeat/frame_02.png",
+      "res://assets/characters/latina/defeat/frame_03.png",
+      "res://assets/characters/latina/defeat/frame_04.png",
+      "res://assets/characters/latina/defeat/frame_05.png",
+      "res://assets/characters/latina/defeat/frame_06.png",
+      "res://assets/characters/latina/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/latina/hurt/frame_00.png",
+      "res://assets/characters/latina/hurt/frame_01.png",
+      "res://assets/characters/latina/hurt/frame_02.png",
+      "res://assets/characters/latina/hurt/frame_03.png",
+      "res://assets/characters/latina/hurt/frame_04.png",
+      "res://assets/characters/latina/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/latina/fatality_victim/frame_00.png",
+      "res://assets/characters/latina/fatality_victim/frame_01.png",
+      "res://assets/characters/latina/fatality_victim/frame_02.png",
+      "res://assets/characters/latina/fatality_victim/frame_03.png",
+      "res://assets/characters/latina/fatality_victim/frame_04.png",
+      "res://assets/characters/latina/fatality_victim/frame_05.png",
+      "res://assets/characters/latina/fatality_victim/frame_06.png",
+      "res://assets/characters/latina/fatality_victim/frame_07.png",
+      "res://assets/characters/latina/fatality_victim/frame_08.png",
+      "res://assets/characters/latina/fatality_victim/frame_09.png",
+      "res://assets/characters/latina/fatality_victim/frame_10.png",
+      "res://assets/characters/latina/fatality_victim/frame_11.png"
+    ]
+  },
+  "ojosazules": {
+    "punch_high": [
+      "res://assets/characters/ojosazules/punch_high/frame_00.png",
+      "res://assets/characters/ojosazules/punch_high/frame_01.png",
+      "res://assets/characters/ojosazules/punch_high/frame_02.png",
+      "res://assets/characters/ojosazules/punch_high/frame_03.png",
+      "res://assets/characters/ojosazules/punch_high/frame_04.png",
+      "res://assets/characters/ojosazules/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/ojosazules/punch_low/frame_00.png",
+      "res://assets/characters/ojosazules/punch_low/frame_01.png",
+      "res://assets/characters/ojosazules/punch_low/frame_02.png",
+      "res://assets/characters/ojosazules/punch_low/frame_03.png",
+      "res://assets/characters/ojosazules/punch_low/frame_04.png",
+      "res://assets/characters/ojosazules/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/ojosazules/kick_high/frame_00.png",
+      "res://assets/characters/ojosazules/kick_high/frame_01.png",
+      "res://assets/characters/ojosazules/kick_high/frame_02.png",
+      "res://assets/characters/ojosazules/kick_high/frame_03.png",
+      "res://assets/characters/ojosazules/kick_high/frame_04.png",
+      "res://assets/characters/ojosazules/kick_high/frame_05.png",
+      "res://assets/characters/ojosazules/kick_high/frame_06.png",
+      "res://assets/characters/ojosazules/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/ojosazules/kick_low/frame_00.png",
+      "res://assets/characters/ojosazules/kick_low/frame_01.png",
+      "res://assets/characters/ojosazules/kick_low/frame_02.png",
+      "res://assets/characters/ojosazules/kick_low/frame_03.png",
+      "res://assets/characters/ojosazules/kick_low/frame_04.png",
+      "res://assets/characters/ojosazules/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/ojosazules/walk_forward/frame_00.png",
+      "res://assets/characters/ojosazules/walk_forward/frame_01.png",
+      "res://assets/characters/ojosazules/walk_forward/frame_02.png",
+      "res://assets/characters/ojosazules/walk_forward/frame_03.png",
+      "res://assets/characters/ojosazules/walk_forward/frame_04.png",
+      "res://assets/characters/ojosazules/walk_forward/frame_05.png",
+      "res://assets/characters/ojosazules/walk_forward/frame_06.png",
+      "res://assets/characters/ojosazules/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/ojosazules/walk_backward/frame_00.png",
+      "res://assets/characters/ojosazules/walk_backward/frame_01.png",
+      "res://assets/characters/ojosazules/walk_backward/frame_02.png",
+      "res://assets/characters/ojosazules/walk_backward/frame_03.png",
+      "res://assets/characters/ojosazules/walk_backward/frame_04.png",
+      "res://assets/characters/ojosazules/walk_backward/frame_05.png",
+      "res://assets/characters/ojosazules/walk_backward/frame_06.png",
+      "res://assets/characters/ojosazules/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/ojosazules/jump/frame_00.png",
+      "res://assets/characters/ojosazules/jump/frame_01.png",
+      "res://assets/characters/ojosazules/jump/frame_02.png",
+      "res://assets/characters/ojosazules/jump/frame_03.png",
+      "res://assets/characters/ojosazules/jump/frame_04.png",
+      "res://assets/characters/ojosazules/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/ojosazules/crouch/frame_00.png",
+      "res://assets/characters/ojosazules/crouch/frame_01.png",
+      "res://assets/characters/ojosazules/crouch/frame_02.png",
+      "res://assets/characters/ojosazules/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/ojosazules/block/frame_00.png",
+      "res://assets/characters/ojosazules/block/frame_01.png",
+      "res://assets/characters/ojosazules/block/frame_02.png",
+      "res://assets/characters/ojosazules/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/ojosazules/special/frame_00.png",
+      "res://assets/characters/ojosazules/special/frame_01.png",
+      "res://assets/characters/ojosazules/special/frame_02.png",
+      "res://assets/characters/ojosazules/special/frame_03.png",
+      "res://assets/characters/ojosazules/special/frame_04.png",
+      "res://assets/characters/ojosazules/special/frame_05.png",
+      "res://assets/characters/ojosazules/special/frame_06.png",
+      "res://assets/characters/ojosazules/special/frame_07.png",
+      "res://assets/characters/ojosazules/special/frame_08.png",
+      "res://assets/characters/ojosazules/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/ojosazules/super/frame_00.png",
+      "res://assets/characters/ojosazules/super/frame_01.png",
+      "res://assets/characters/ojosazules/super/frame_02.png",
+      "res://assets/characters/ojosazules/super/frame_03.png",
+      "res://assets/characters/ojosazules/super/frame_04.png",
+      "res://assets/characters/ojosazules/super/frame_05.png",
+      "res://assets/characters/ojosazules/super/frame_06.png",
+      "res://assets/characters/ojosazules/super/frame_07.png",
+      "res://assets/characters/ojosazules/super/frame_08.png",
+      "res://assets/characters/ojosazules/super/frame_09.png",
+      "res://assets/characters/ojosazules/super/frame_10.png",
+      "res://assets/characters/ojosazules/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/ojosazules/fatality/frame_00.png",
+      "res://assets/characters/ojosazules/fatality/frame_01.png",
+      "res://assets/characters/ojosazules/fatality/frame_02.png",
+      "res://assets/characters/ojosazules/fatality/frame_03.png",
+      "res://assets/characters/ojosazules/fatality/frame_04.png",
+      "res://assets/characters/ojosazules/fatality/frame_05.png",
+      "res://assets/characters/ojosazules/fatality/frame_06.png",
+      "res://assets/characters/ojosazules/fatality/frame_07.png",
+      "res://assets/characters/ojosazules/fatality/frame_08.png",
+      "res://assets/characters/ojosazules/fatality/frame_09.png",
+      "res://assets/characters/ojosazules/fatality/frame_10.png",
+      "res://assets/characters/ojosazules/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/ojosazules/victory/frame_00.png",
+      "res://assets/characters/ojosazules/victory/frame_01.png",
+      "res://assets/characters/ojosazules/victory/frame_02.png",
+      "res://assets/characters/ojosazules/victory/frame_03.png",
+      "res://assets/characters/ojosazules/victory/frame_04.png",
+      "res://assets/characters/ojosazules/victory/frame_05.png",
+      "res://assets/characters/ojosazules/victory/frame_06.png",
+      "res://assets/characters/ojosazules/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/ojosazules/defeat/frame_00.png",
+      "res://assets/characters/ojosazules/defeat/frame_01.png",
+      "res://assets/characters/ojosazules/defeat/frame_02.png",
+      "res://assets/characters/ojosazules/defeat/frame_03.png",
+      "res://assets/characters/ojosazules/defeat/frame_04.png",
+      "res://assets/characters/ojosazules/defeat/frame_05.png",
+      "res://assets/characters/ojosazules/defeat/frame_06.png",
+      "res://assets/characters/ojosazules/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/ojosazules/hurt/frame_00.png",
+      "res://assets/characters/ojosazules/hurt/frame_01.png",
+      "res://assets/characters/ojosazules/hurt/frame_02.png",
+      "res://assets/characters/ojosazules/hurt/frame_03.png",
+      "res://assets/characters/ojosazules/hurt/frame_04.png",
+      "res://assets/characters/ojosazules/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/ojosazules/fatality_victim/frame_00.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_01.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_02.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_03.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_04.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_05.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_06.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_07.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_08.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_09.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_10.png",
+      "res://assets/characters/ojosazules/fatality_victim/frame_11.png"
+    ]
+  },
+  "pepeargento": {
+    "punch_high": [
+      "res://assets/characters/pepeargento/punch_high/frame_00.png",
+      "res://assets/characters/pepeargento/punch_high/frame_01.png",
+      "res://assets/characters/pepeargento/punch_high/frame_02.png",
+      "res://assets/characters/pepeargento/punch_high/frame_03.png",
+      "res://assets/characters/pepeargento/punch_high/frame_04.png",
+      "res://assets/characters/pepeargento/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/pepeargento/punch_low/frame_00.png",
+      "res://assets/characters/pepeargento/punch_low/frame_01.png",
+      "res://assets/characters/pepeargento/punch_low/frame_02.png",
+      "res://assets/characters/pepeargento/punch_low/frame_03.png",
+      "res://assets/characters/pepeargento/punch_low/frame_04.png",
+      "res://assets/characters/pepeargento/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/pepeargento/kick_high/frame_00.png",
+      "res://assets/characters/pepeargento/kick_high/frame_01.png",
+      "res://assets/characters/pepeargento/kick_high/frame_02.png",
+      "res://assets/characters/pepeargento/kick_high/frame_03.png",
+      "res://assets/characters/pepeargento/kick_high/frame_04.png",
+      "res://assets/characters/pepeargento/kick_high/frame_05.png",
+      "res://assets/characters/pepeargento/kick_high/frame_06.png",
+      "res://assets/characters/pepeargento/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/pepeargento/kick_low/frame_00.png",
+      "res://assets/characters/pepeargento/kick_low/frame_01.png",
+      "res://assets/characters/pepeargento/kick_low/frame_02.png",
+      "res://assets/characters/pepeargento/kick_low/frame_03.png",
+      "res://assets/characters/pepeargento/kick_low/frame_04.png",
+      "res://assets/characters/pepeargento/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/pepeargento/walk_forward/frame_00.png",
+      "res://assets/characters/pepeargento/walk_forward/frame_01.png",
+      "res://assets/characters/pepeargento/walk_forward/frame_02.png",
+      "res://assets/characters/pepeargento/walk_forward/frame_03.png",
+      "res://assets/characters/pepeargento/walk_forward/frame_04.png",
+      "res://assets/characters/pepeargento/walk_forward/frame_05.png",
+      "res://assets/characters/pepeargento/walk_forward/frame_06.png",
+      "res://assets/characters/pepeargento/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/pepeargento/walk_backward/frame_00.png",
+      "res://assets/characters/pepeargento/walk_backward/frame_01.png",
+      "res://assets/characters/pepeargento/walk_backward/frame_02.png",
+      "res://assets/characters/pepeargento/walk_backward/frame_03.png",
+      "res://assets/characters/pepeargento/walk_backward/frame_04.png",
+      "res://assets/characters/pepeargento/walk_backward/frame_05.png",
+      "res://assets/characters/pepeargento/walk_backward/frame_06.png",
+      "res://assets/characters/pepeargento/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/pepeargento/jump/frame_00.png",
+      "res://assets/characters/pepeargento/jump/frame_01.png",
+      "res://assets/characters/pepeargento/jump/frame_02.png",
+      "res://assets/characters/pepeargento/jump/frame_03.png",
+      "res://assets/characters/pepeargento/jump/frame_04.png",
+      "res://assets/characters/pepeargento/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/pepeargento/crouch/frame_00.png",
+      "res://assets/characters/pepeargento/crouch/frame_01.png",
+      "res://assets/characters/pepeargento/crouch/frame_02.png",
+      "res://assets/characters/pepeargento/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/pepeargento/block/frame_00.png",
+      "res://assets/characters/pepeargento/block/frame_01.png",
+      "res://assets/characters/pepeargento/block/frame_02.png",
+      "res://assets/characters/pepeargento/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/pepeargento/special/frame_00.png",
+      "res://assets/characters/pepeargento/special/frame_01.png",
+      "res://assets/characters/pepeargento/special/frame_02.png",
+      "res://assets/characters/pepeargento/special/frame_03.png",
+      "res://assets/characters/pepeargento/special/frame_04.png",
+      "res://assets/characters/pepeargento/special/frame_05.png",
+      "res://assets/characters/pepeargento/special/frame_06.png",
+      "res://assets/characters/pepeargento/special/frame_07.png",
+      "res://assets/characters/pepeargento/special/frame_08.png",
+      "res://assets/characters/pepeargento/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/pepeargento/super/frame_00.png",
+      "res://assets/characters/pepeargento/super/frame_01.png",
+      "res://assets/characters/pepeargento/super/frame_02.png",
+      "res://assets/characters/pepeargento/super/frame_03.png",
+      "res://assets/characters/pepeargento/super/frame_04.png",
+      "res://assets/characters/pepeargento/super/frame_05.png",
+      "res://assets/characters/pepeargento/super/frame_06.png",
+      "res://assets/characters/pepeargento/super/frame_07.png",
+      "res://assets/characters/pepeargento/super/frame_08.png",
+      "res://assets/characters/pepeargento/super/frame_09.png",
+      "res://assets/characters/pepeargento/super/frame_10.png",
+      "res://assets/characters/pepeargento/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/pepeargento/fatality/frame_00.png",
+      "res://assets/characters/pepeargento/fatality/frame_01.png",
+      "res://assets/characters/pepeargento/fatality/frame_02.png",
+      "res://assets/characters/pepeargento/fatality/frame_03.png",
+      "res://assets/characters/pepeargento/fatality/frame_04.png",
+      "res://assets/characters/pepeargento/fatality/frame_05.png",
+      "res://assets/characters/pepeargento/fatality/frame_06.png",
+      "res://assets/characters/pepeargento/fatality/frame_07.png",
+      "res://assets/characters/pepeargento/fatality/frame_08.png",
+      "res://assets/characters/pepeargento/fatality/frame_09.png",
+      "res://assets/characters/pepeargento/fatality/frame_10.png",
+      "res://assets/characters/pepeargento/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/pepeargento/victory/frame_00.png",
+      "res://assets/characters/pepeargento/victory/frame_01.png",
+      "res://assets/characters/pepeargento/victory/frame_02.png",
+      "res://assets/characters/pepeargento/victory/frame_03.png",
+      "res://assets/characters/pepeargento/victory/frame_04.png",
+      "res://assets/characters/pepeargento/victory/frame_05.png",
+      "res://assets/characters/pepeargento/victory/frame_06.png",
+      "res://assets/characters/pepeargento/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/pepeargento/defeat/frame_00.png",
+      "res://assets/characters/pepeargento/defeat/frame_01.png",
+      "res://assets/characters/pepeargento/defeat/frame_02.png",
+      "res://assets/characters/pepeargento/defeat/frame_03.png",
+      "res://assets/characters/pepeargento/defeat/frame_04.png",
+      "res://assets/characters/pepeargento/defeat/frame_05.png",
+      "res://assets/characters/pepeargento/defeat/frame_06.png",
+      "res://assets/characters/pepeargento/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/pepeargento/hurt/frame_00.png",
+      "res://assets/characters/pepeargento/hurt/frame_01.png",
+      "res://assets/characters/pepeargento/hurt/frame_02.png",
+      "res://assets/characters/pepeargento/hurt/frame_03.png",
+      "res://assets/characters/pepeargento/hurt/frame_04.png",
+      "res://assets/characters/pepeargento/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/pepeargento/fatality_victim/frame_00.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_01.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_02.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_03.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_04.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_05.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_06.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_07.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_08.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_09.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_10.png",
+      "res://assets/characters/pepeargento/fatality_victim/frame_11.png"
+    ]
+  },
+  "eleternauta": {
+    "punch_high": [
+      "res://assets/characters/eleternauta/punch_high/frame_00.png",
+      "res://assets/characters/eleternauta/punch_high/frame_01.png",
+      "res://assets/characters/eleternauta/punch_high/frame_02.png",
+      "res://assets/characters/eleternauta/punch_high/frame_03.png",
+      "res://assets/characters/eleternauta/punch_high/frame_04.png",
+      "res://assets/characters/eleternauta/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/eleternauta/punch_low/frame_00.png",
+      "res://assets/characters/eleternauta/punch_low/frame_01.png",
+      "res://assets/characters/eleternauta/punch_low/frame_02.png",
+      "res://assets/characters/eleternauta/punch_low/frame_03.png",
+      "res://assets/characters/eleternauta/punch_low/frame_04.png",
+      "res://assets/characters/eleternauta/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/eleternauta/kick_high/frame_00.png",
+      "res://assets/characters/eleternauta/kick_high/frame_01.png",
+      "res://assets/characters/eleternauta/kick_high/frame_02.png",
+      "res://assets/characters/eleternauta/kick_high/frame_03.png",
+      "res://assets/characters/eleternauta/kick_high/frame_04.png",
+      "res://assets/characters/eleternauta/kick_high/frame_05.png",
+      "res://assets/characters/eleternauta/kick_high/frame_06.png",
+      "res://assets/characters/eleternauta/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/eleternauta/kick_low/frame_00.png",
+      "res://assets/characters/eleternauta/kick_low/frame_01.png",
+      "res://assets/characters/eleternauta/kick_low/frame_02.png",
+      "res://assets/characters/eleternauta/kick_low/frame_03.png",
+      "res://assets/characters/eleternauta/kick_low/frame_04.png",
+      "res://assets/characters/eleternauta/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/eleternauta/walk_forward/frame_00.png",
+      "res://assets/characters/eleternauta/walk_forward/frame_01.png",
+      "res://assets/characters/eleternauta/walk_forward/frame_02.png",
+      "res://assets/characters/eleternauta/walk_forward/frame_03.png",
+      "res://assets/characters/eleternauta/walk_forward/frame_04.png",
+      "res://assets/characters/eleternauta/walk_forward/frame_05.png",
+      "res://assets/characters/eleternauta/walk_forward/frame_06.png",
+      "res://assets/characters/eleternauta/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/eleternauta/walk_backward/frame_00.png",
+      "res://assets/characters/eleternauta/walk_backward/frame_01.png",
+      "res://assets/characters/eleternauta/walk_backward/frame_02.png",
+      "res://assets/characters/eleternauta/walk_backward/frame_03.png",
+      "res://assets/characters/eleternauta/walk_backward/frame_04.png",
+      "res://assets/characters/eleternauta/walk_backward/frame_05.png",
+      "res://assets/characters/eleternauta/walk_backward/frame_06.png",
+      "res://assets/characters/eleternauta/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/eleternauta/jump/frame_00.png",
+      "res://assets/characters/eleternauta/jump/frame_01.png",
+      "res://assets/characters/eleternauta/jump/frame_02.png",
+      "res://assets/characters/eleternauta/jump/frame_03.png",
+      "res://assets/characters/eleternauta/jump/frame_04.png",
+      "res://assets/characters/eleternauta/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/eleternauta/crouch/frame_00.png",
+      "res://assets/characters/eleternauta/crouch/frame_01.png",
+      "res://assets/characters/eleternauta/crouch/frame_02.png",
+      "res://assets/characters/eleternauta/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/eleternauta/block/frame_00.png",
+      "res://assets/characters/eleternauta/block/frame_01.png",
+      "res://assets/characters/eleternauta/block/frame_02.png",
+      "res://assets/characters/eleternauta/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/eleternauta/special/frame_00.png",
+      "res://assets/characters/eleternauta/special/frame_01.png",
+      "res://assets/characters/eleternauta/special/frame_02.png",
+      "res://assets/characters/eleternauta/special/frame_03.png",
+      "res://assets/characters/eleternauta/special/frame_04.png",
+      "res://assets/characters/eleternauta/special/frame_05.png",
+      "res://assets/characters/eleternauta/special/frame_06.png",
+      "res://assets/characters/eleternauta/special/frame_07.png",
+      "res://assets/characters/eleternauta/special/frame_08.png",
+      "res://assets/characters/eleternauta/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/eleternauta/super/frame_00.png",
+      "res://assets/characters/eleternauta/super/frame_01.png",
+      "res://assets/characters/eleternauta/super/frame_02.png",
+      "res://assets/characters/eleternauta/super/frame_03.png",
+      "res://assets/characters/eleternauta/super/frame_04.png",
+      "res://assets/characters/eleternauta/super/frame_05.png",
+      "res://assets/characters/eleternauta/super/frame_06.png",
+      "res://assets/characters/eleternauta/super/frame_07.png",
+      "res://assets/characters/eleternauta/super/frame_08.png",
+      "res://assets/characters/eleternauta/super/frame_09.png",
+      "res://assets/characters/eleternauta/super/frame_10.png",
+      "res://assets/characters/eleternauta/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/eleternauta/fatality/frame_00.png",
+      "res://assets/characters/eleternauta/fatality/frame_01.png",
+      "res://assets/characters/eleternauta/fatality/frame_02.png",
+      "res://assets/characters/eleternauta/fatality/frame_03.png",
+      "res://assets/characters/eleternauta/fatality/frame_04.png",
+      "res://assets/characters/eleternauta/fatality/frame_05.png",
+      "res://assets/characters/eleternauta/fatality/frame_06.png",
+      "res://assets/characters/eleternauta/fatality/frame_07.png",
+      "res://assets/characters/eleternauta/fatality/frame_08.png",
+      "res://assets/characters/eleternauta/fatality/frame_09.png",
+      "res://assets/characters/eleternauta/fatality/frame_10.png",
+      "res://assets/characters/eleternauta/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/eleternauta/victory/frame_00.png",
+      "res://assets/characters/eleternauta/victory/frame_01.png",
+      "res://assets/characters/eleternauta/victory/frame_02.png",
+      "res://assets/characters/eleternauta/victory/frame_03.png",
+      "res://assets/characters/eleternauta/victory/frame_04.png",
+      "res://assets/characters/eleternauta/victory/frame_05.png",
+      "res://assets/characters/eleternauta/victory/frame_06.png",
+      "res://assets/characters/eleternauta/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/eleternauta/defeat/frame_00.png",
+      "res://assets/characters/eleternauta/defeat/frame_01.png",
+      "res://assets/characters/eleternauta/defeat/frame_02.png",
+      "res://assets/characters/eleternauta/defeat/frame_03.png",
+      "res://assets/characters/eleternauta/defeat/frame_04.png",
+      "res://assets/characters/eleternauta/defeat/frame_05.png",
+      "res://assets/characters/eleternauta/defeat/frame_06.png",
+      "res://assets/characters/eleternauta/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/eleternauta/hurt/frame_00.png",
+      "res://assets/characters/eleternauta/hurt/frame_01.png",
+      "res://assets/characters/eleternauta/hurt/frame_02.png",
+      "res://assets/characters/eleternauta/hurt/frame_03.png",
+      "res://assets/characters/eleternauta/hurt/frame_04.png",
+      "res://assets/characters/eleternauta/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/eleternauta/fatality_victim/frame_00.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_01.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_02.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_03.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_04.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_05.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_06.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_07.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_08.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_09.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_10.png",
+      "res://assets/characters/eleternauta/fatality_victim/frame_11.png"
+    ]
+  },
+  "elcomandante": {
+    "punch_high": [
+      "res://assets/characters/elcomandante/punch_high/frame_00.png",
+      "res://assets/characters/elcomandante/punch_high/frame_01.png",
+      "res://assets/characters/elcomandante/punch_high/frame_02.png",
+      "res://assets/characters/elcomandante/punch_high/frame_03.png",
+      "res://assets/characters/elcomandante/punch_high/frame_04.png",
+      "res://assets/characters/elcomandante/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/elcomandante/punch_low/frame_00.png",
+      "res://assets/characters/elcomandante/punch_low/frame_01.png",
+      "res://assets/characters/elcomandante/punch_low/frame_02.png",
+      "res://assets/characters/elcomandante/punch_low/frame_03.png",
+      "res://assets/characters/elcomandante/punch_low/frame_04.png",
+      "res://assets/characters/elcomandante/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/elcomandante/kick_high/frame_00.png",
+      "res://assets/characters/elcomandante/kick_high/frame_01.png",
+      "res://assets/characters/elcomandante/kick_high/frame_02.png",
+      "res://assets/characters/elcomandante/kick_high/frame_03.png",
+      "res://assets/characters/elcomandante/kick_high/frame_04.png",
+      "res://assets/characters/elcomandante/kick_high/frame_05.png",
+      "res://assets/characters/elcomandante/kick_high/frame_06.png",
+      "res://assets/characters/elcomandante/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/elcomandante/kick_low/frame_00.png",
+      "res://assets/characters/elcomandante/kick_low/frame_01.png",
+      "res://assets/characters/elcomandante/kick_low/frame_02.png",
+      "res://assets/characters/elcomandante/kick_low/frame_03.png",
+      "res://assets/characters/elcomandante/kick_low/frame_04.png",
+      "res://assets/characters/elcomandante/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/elcomandante/walk_forward/frame_00.png",
+      "res://assets/characters/elcomandante/walk_forward/frame_01.png",
+      "res://assets/characters/elcomandante/walk_forward/frame_02.png",
+      "res://assets/characters/elcomandante/walk_forward/frame_03.png",
+      "res://assets/characters/elcomandante/walk_forward/frame_04.png",
+      "res://assets/characters/elcomandante/walk_forward/frame_05.png",
+      "res://assets/characters/elcomandante/walk_forward/frame_06.png",
+      "res://assets/characters/elcomandante/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/elcomandante/walk_backward/frame_00.png",
+      "res://assets/characters/elcomandante/walk_backward/frame_01.png",
+      "res://assets/characters/elcomandante/walk_backward/frame_02.png",
+      "res://assets/characters/elcomandante/walk_backward/frame_03.png",
+      "res://assets/characters/elcomandante/walk_backward/frame_04.png",
+      "res://assets/characters/elcomandante/walk_backward/frame_05.png",
+      "res://assets/characters/elcomandante/walk_backward/frame_06.png",
+      "res://assets/characters/elcomandante/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/elcomandante/jump/frame_00.png",
+      "res://assets/characters/elcomandante/jump/frame_01.png",
+      "res://assets/characters/elcomandante/jump/frame_02.png",
+      "res://assets/characters/elcomandante/jump/frame_03.png",
+      "res://assets/characters/elcomandante/jump/frame_04.png",
+      "res://assets/characters/elcomandante/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/elcomandante/crouch/frame_00.png",
+      "res://assets/characters/elcomandante/crouch/frame_01.png",
+      "res://assets/characters/elcomandante/crouch/frame_02.png",
+      "res://assets/characters/elcomandante/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/elcomandante/block/frame_00.png",
+      "res://assets/characters/elcomandante/block/frame_01.png",
+      "res://assets/characters/elcomandante/block/frame_02.png",
+      "res://assets/characters/elcomandante/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/elcomandante/special/frame_00.png",
+      "res://assets/characters/elcomandante/special/frame_01.png",
+      "res://assets/characters/elcomandante/special/frame_02.png",
+      "res://assets/characters/elcomandante/special/frame_03.png",
+      "res://assets/characters/elcomandante/special/frame_04.png",
+      "res://assets/characters/elcomandante/special/frame_05.png",
+      "res://assets/characters/elcomandante/special/frame_06.png",
+      "res://assets/characters/elcomandante/special/frame_07.png",
+      "res://assets/characters/elcomandante/special/frame_08.png",
+      "res://assets/characters/elcomandante/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/elcomandante/super/frame_00.png",
+      "res://assets/characters/elcomandante/super/frame_01.png",
+      "res://assets/characters/elcomandante/super/frame_02.png",
+      "res://assets/characters/elcomandante/super/frame_03.png",
+      "res://assets/characters/elcomandante/super/frame_04.png",
+      "res://assets/characters/elcomandante/super/frame_05.png",
+      "res://assets/characters/elcomandante/super/frame_06.png",
+      "res://assets/characters/elcomandante/super/frame_07.png",
+      "res://assets/characters/elcomandante/super/frame_08.png",
+      "res://assets/characters/elcomandante/super/frame_09.png",
+      "res://assets/characters/elcomandante/super/frame_10.png",
+      "res://assets/characters/elcomandante/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/elcomandante/fatality/frame_00.png",
+      "res://assets/characters/elcomandante/fatality/frame_01.png",
+      "res://assets/characters/elcomandante/fatality/frame_02.png",
+      "res://assets/characters/elcomandante/fatality/frame_03.png",
+      "res://assets/characters/elcomandante/fatality/frame_04.png",
+      "res://assets/characters/elcomandante/fatality/frame_05.png",
+      "res://assets/characters/elcomandante/fatality/frame_06.png",
+      "res://assets/characters/elcomandante/fatality/frame_07.png",
+      "res://assets/characters/elcomandante/fatality/frame_08.png",
+      "res://assets/characters/elcomandante/fatality/frame_09.png",
+      "res://assets/characters/elcomandante/fatality/frame_10.png",
+      "res://assets/characters/elcomandante/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/elcomandante/victory/frame_00.png",
+      "res://assets/characters/elcomandante/victory/frame_01.png",
+      "res://assets/characters/elcomandante/victory/frame_02.png",
+      "res://assets/characters/elcomandante/victory/frame_03.png",
+      "res://assets/characters/elcomandante/victory/frame_04.png",
+      "res://assets/characters/elcomandante/victory/frame_05.png",
+      "res://assets/characters/elcomandante/victory/frame_06.png",
+      "res://assets/characters/elcomandante/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/elcomandante/defeat/frame_00.png",
+      "res://assets/characters/elcomandante/defeat/frame_01.png",
+      "res://assets/characters/elcomandante/defeat/frame_02.png",
+      "res://assets/characters/elcomandante/defeat/frame_03.png",
+      "res://assets/characters/elcomandante/defeat/frame_04.png",
+      "res://assets/characters/elcomandante/defeat/frame_05.png",
+      "res://assets/characters/elcomandante/defeat/frame_06.png",
+      "res://assets/characters/elcomandante/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/elcomandante/hurt/frame_00.png",
+      "res://assets/characters/elcomandante/hurt/frame_01.png",
+      "res://assets/characters/elcomandante/hurt/frame_02.png",
+      "res://assets/characters/elcomandante/hurt/frame_03.png",
+      "res://assets/characters/elcomandante/hurt/frame_04.png",
+      "res://assets/characters/elcomandante/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/elcomandante/fatality_victim/frame_00.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_01.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_02.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_03.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_04.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_05.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_06.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_07.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_08.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_09.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_10.png",
+      "res://assets/characters/elcomandante/fatality_victim/frame_11.png"
+    ]
+  },
+  "elmesias": {
+    "punch_high": [
+      "res://assets/characters/elmesias/punch_high/frame_00.png",
+      "res://assets/characters/elmesias/punch_high/frame_01.png",
+      "res://assets/characters/elmesias/punch_high/frame_02.png",
+      "res://assets/characters/elmesias/punch_high/frame_03.png",
+      "res://assets/characters/elmesias/punch_high/frame_04.png",
+      "res://assets/characters/elmesias/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/elmesias/punch_low/frame_00.png",
+      "res://assets/characters/elmesias/punch_low/frame_01.png",
+      "res://assets/characters/elmesias/punch_low/frame_02.png",
+      "res://assets/characters/elmesias/punch_low/frame_03.png",
+      "res://assets/characters/elmesias/punch_low/frame_04.png",
+      "res://assets/characters/elmesias/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/elmesias/kick_high/frame_00.png",
+      "res://assets/characters/elmesias/kick_high/frame_01.png",
+      "res://assets/characters/elmesias/kick_high/frame_02.png",
+      "res://assets/characters/elmesias/kick_high/frame_03.png",
+      "res://assets/characters/elmesias/kick_high/frame_04.png",
+      "res://assets/characters/elmesias/kick_high/frame_05.png",
+      "res://assets/characters/elmesias/kick_high/frame_06.png",
+      "res://assets/characters/elmesias/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/elmesias/kick_low/frame_00.png",
+      "res://assets/characters/elmesias/kick_low/frame_01.png",
+      "res://assets/characters/elmesias/kick_low/frame_02.png",
+      "res://assets/characters/elmesias/kick_low/frame_03.png",
+      "res://assets/characters/elmesias/kick_low/frame_04.png",
+      "res://assets/characters/elmesias/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/elmesias/walk_forward/frame_00.png",
+      "res://assets/characters/elmesias/walk_forward/frame_01.png",
+      "res://assets/characters/elmesias/walk_forward/frame_02.png",
+      "res://assets/characters/elmesias/walk_forward/frame_03.png",
+      "res://assets/characters/elmesias/walk_forward/frame_04.png",
+      "res://assets/characters/elmesias/walk_forward/frame_05.png",
+      "res://assets/characters/elmesias/walk_forward/frame_06.png",
+      "res://assets/characters/elmesias/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/elmesias/walk_backward/frame_00.png",
+      "res://assets/characters/elmesias/walk_backward/frame_01.png",
+      "res://assets/characters/elmesias/walk_backward/frame_02.png",
+      "res://assets/characters/elmesias/walk_backward/frame_03.png",
+      "res://assets/characters/elmesias/walk_backward/frame_04.png",
+      "res://assets/characters/elmesias/walk_backward/frame_05.png",
+      "res://assets/characters/elmesias/walk_backward/frame_06.png",
+      "res://assets/characters/elmesias/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/elmesias/jump/frame_00.png",
+      "res://assets/characters/elmesias/jump/frame_01.png",
+      "res://assets/characters/elmesias/jump/frame_02.png",
+      "res://assets/characters/elmesias/jump/frame_03.png",
+      "res://assets/characters/elmesias/jump/frame_04.png",
+      "res://assets/characters/elmesias/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/elmesias/crouch/frame_00.png",
+      "res://assets/characters/elmesias/crouch/frame_01.png",
+      "res://assets/characters/elmesias/crouch/frame_02.png",
+      "res://assets/characters/elmesias/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/elmesias/block/frame_00.png",
+      "res://assets/characters/elmesias/block/frame_01.png",
+      "res://assets/characters/elmesias/block/frame_02.png",
+      "res://assets/characters/elmesias/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/elmesias/special/frame_00.png",
+      "res://assets/characters/elmesias/special/frame_01.png",
+      "res://assets/characters/elmesias/special/frame_02.png",
+      "res://assets/characters/elmesias/special/frame_03.png",
+      "res://assets/characters/elmesias/special/frame_04.png",
+      "res://assets/characters/elmesias/special/frame_05.png",
+      "res://assets/characters/elmesias/special/frame_06.png",
+      "res://assets/characters/elmesias/special/frame_07.png",
+      "res://assets/characters/elmesias/special/frame_08.png",
+      "res://assets/characters/elmesias/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/elmesias/super/frame_00.png",
+      "res://assets/characters/elmesias/super/frame_01.png",
+      "res://assets/characters/elmesias/super/frame_02.png",
+      "res://assets/characters/elmesias/super/frame_03.png",
+      "res://assets/characters/elmesias/super/frame_04.png",
+      "res://assets/characters/elmesias/super/frame_05.png",
+      "res://assets/characters/elmesias/super/frame_06.png",
+      "res://assets/characters/elmesias/super/frame_07.png",
+      "res://assets/characters/elmesias/super/frame_08.png",
+      "res://assets/characters/elmesias/super/frame_09.png",
+      "res://assets/characters/elmesias/super/frame_10.png",
+      "res://assets/characters/elmesias/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/elmesias/fatality/frame_00.png",
+      "res://assets/characters/elmesias/fatality/frame_01.png",
+      "res://assets/characters/elmesias/fatality/frame_02.png",
+      "res://assets/characters/elmesias/fatality/frame_03.png",
+      "res://assets/characters/elmesias/fatality/frame_04.png",
+      "res://assets/characters/elmesias/fatality/frame_05.png",
+      "res://assets/characters/elmesias/fatality/frame_06.png",
+      "res://assets/characters/elmesias/fatality/frame_07.png",
+      "res://assets/characters/elmesias/fatality/frame_08.png",
+      "res://assets/characters/elmesias/fatality/frame_09.png",
+      "res://assets/characters/elmesias/fatality/frame_10.png",
+      "res://assets/characters/elmesias/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/elmesias/victory/frame_00.png",
+      "res://assets/characters/elmesias/victory/frame_01.png",
+      "res://assets/characters/elmesias/victory/frame_02.png",
+      "res://assets/characters/elmesias/victory/frame_03.png",
+      "res://assets/characters/elmesias/victory/frame_04.png",
+      "res://assets/characters/elmesias/victory/frame_05.png",
+      "res://assets/characters/elmesias/victory/frame_06.png",
+      "res://assets/characters/elmesias/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/elmesias/defeat/frame_00.png",
+      "res://assets/characters/elmesias/defeat/frame_01.png",
+      "res://assets/characters/elmesias/defeat/frame_02.png",
+      "res://assets/characters/elmesias/defeat/frame_03.png",
+      "res://assets/characters/elmesias/defeat/frame_04.png",
+      "res://assets/characters/elmesias/defeat/frame_05.png",
+      "res://assets/characters/elmesias/defeat/frame_06.png",
+      "res://assets/characters/elmesias/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/elmesias/hurt/frame_00.png",
+      "res://assets/characters/elmesias/hurt/frame_01.png",
+      "res://assets/characters/elmesias/hurt/frame_02.png",
+      "res://assets/characters/elmesias/hurt/frame_03.png",
+      "res://assets/characters/elmesias/hurt/frame_04.png",
+      "res://assets/characters/elmesias/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/elmesias/fatality_victim/frame_00.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_01.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_02.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_03.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_04.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_05.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_06.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_07.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_08.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_09.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_10.png",
+      "res://assets/characters/elmesias/fatality_victim/frame_11.png"
+    ]
+  },
+  "moria": {
+    "punch_high": [
+      "res://assets/characters/moria/punch_high/frame_00.png",
+      "res://assets/characters/moria/punch_high/frame_01.png",
+      "res://assets/characters/moria/punch_high/frame_02.png",
+      "res://assets/characters/moria/punch_high/frame_03.png",
+      "res://assets/characters/moria/punch_high/frame_04.png",
+      "res://assets/characters/moria/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/moria/punch_low/frame_00.png",
+      "res://assets/characters/moria/punch_low/frame_01.png",
+      "res://assets/characters/moria/punch_low/frame_02.png",
+      "res://assets/characters/moria/punch_low/frame_03.png",
+      "res://assets/characters/moria/punch_low/frame_04.png",
+      "res://assets/characters/moria/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/moria/kick_high/frame_00.png",
+      "res://assets/characters/moria/kick_high/frame_01.png",
+      "res://assets/characters/moria/kick_high/frame_02.png",
+      "res://assets/characters/moria/kick_high/frame_03.png",
+      "res://assets/characters/moria/kick_high/frame_04.png",
+      "res://assets/characters/moria/kick_high/frame_05.png",
+      "res://assets/characters/moria/kick_high/frame_06.png",
+      "res://assets/characters/moria/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/moria/kick_low/frame_00.png",
+      "res://assets/characters/moria/kick_low/frame_01.png",
+      "res://assets/characters/moria/kick_low/frame_02.png",
+      "res://assets/characters/moria/kick_low/frame_03.png",
+      "res://assets/characters/moria/kick_low/frame_04.png",
+      "res://assets/characters/moria/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/moria/walk_forward/frame_00.png",
+      "res://assets/characters/moria/walk_forward/frame_01.png",
+      "res://assets/characters/moria/walk_forward/frame_02.png",
+      "res://assets/characters/moria/walk_forward/frame_03.png",
+      "res://assets/characters/moria/walk_forward/frame_04.png",
+      "res://assets/characters/moria/walk_forward/frame_05.png",
+      "res://assets/characters/moria/walk_forward/frame_06.png",
+      "res://assets/characters/moria/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/moria/walk_backward/frame_00.png",
+      "res://assets/characters/moria/walk_backward/frame_01.png",
+      "res://assets/characters/moria/walk_backward/frame_02.png",
+      "res://assets/characters/moria/walk_backward/frame_03.png",
+      "res://assets/characters/moria/walk_backward/frame_04.png",
+      "res://assets/characters/moria/walk_backward/frame_05.png",
+      "res://assets/characters/moria/walk_backward/frame_06.png",
+      "res://assets/characters/moria/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/moria/jump/frame_00.png",
+      "res://assets/characters/moria/jump/frame_01.png",
+      "res://assets/characters/moria/jump/frame_02.png",
+      "res://assets/characters/moria/jump/frame_03.png",
+      "res://assets/characters/moria/jump/frame_04.png",
+      "res://assets/characters/moria/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/moria/crouch/frame_00.png",
+      "res://assets/characters/moria/crouch/frame_01.png",
+      "res://assets/characters/moria/crouch/frame_02.png",
+      "res://assets/characters/moria/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/moria/block/frame_00.png",
+      "res://assets/characters/moria/block/frame_01.png",
+      "res://assets/characters/moria/block/frame_02.png",
+      "res://assets/characters/moria/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/moria/special/frame_00.png",
+      "res://assets/characters/moria/special/frame_01.png",
+      "res://assets/characters/moria/special/frame_02.png",
+      "res://assets/characters/moria/special/frame_03.png",
+      "res://assets/characters/moria/special/frame_04.png",
+      "res://assets/characters/moria/special/frame_05.png",
+      "res://assets/characters/moria/special/frame_06.png",
+      "res://assets/characters/moria/special/frame_07.png",
+      "res://assets/characters/moria/special/frame_08.png",
+      "res://assets/characters/moria/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/moria/super/frame_00.png",
+      "res://assets/characters/moria/super/frame_01.png",
+      "res://assets/characters/moria/super/frame_02.png",
+      "res://assets/characters/moria/super/frame_03.png",
+      "res://assets/characters/moria/super/frame_04.png",
+      "res://assets/characters/moria/super/frame_05.png",
+      "res://assets/characters/moria/super/frame_06.png",
+      "res://assets/characters/moria/super/frame_07.png",
+      "res://assets/characters/moria/super/frame_08.png",
+      "res://assets/characters/moria/super/frame_09.png",
+      "res://assets/characters/moria/super/frame_10.png",
+      "res://assets/characters/moria/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/moria/fatality/frame_00.png",
+      "res://assets/characters/moria/fatality/frame_01.png",
+      "res://assets/characters/moria/fatality/frame_02.png",
+      "res://assets/characters/moria/fatality/frame_03.png",
+      "res://assets/characters/moria/fatality/frame_04.png",
+      "res://assets/characters/moria/fatality/frame_05.png",
+      "res://assets/characters/moria/fatality/frame_06.png",
+      "res://assets/characters/moria/fatality/frame_07.png",
+      "res://assets/characters/moria/fatality/frame_08.png",
+      "res://assets/characters/moria/fatality/frame_09.png",
+      "res://assets/characters/moria/fatality/frame_10.png",
+      "res://assets/characters/moria/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/moria/victory/frame_00.png",
+      "res://assets/characters/moria/victory/frame_01.png",
+      "res://assets/characters/moria/victory/frame_02.png",
+      "res://assets/characters/moria/victory/frame_03.png",
+      "res://assets/characters/moria/victory/frame_04.png",
+      "res://assets/characters/moria/victory/frame_05.png",
+      "res://assets/characters/moria/victory/frame_06.png",
+      "res://assets/characters/moria/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/moria/defeat/frame_00.png",
+      "res://assets/characters/moria/defeat/frame_01.png",
+      "res://assets/characters/moria/defeat/frame_02.png",
+      "res://assets/characters/moria/defeat/frame_03.png",
+      "res://assets/characters/moria/defeat/frame_04.png",
+      "res://assets/characters/moria/defeat/frame_05.png",
+      "res://assets/characters/moria/defeat/frame_06.png",
+      "res://assets/characters/moria/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/moria/hurt/frame_00.png",
+      "res://assets/characters/moria/hurt/frame_01.png",
+      "res://assets/characters/moria/hurt/frame_02.png",
+      "res://assets/characters/moria/hurt/frame_03.png",
+      "res://assets/characters/moria/hurt/frame_04.png",
+      "res://assets/characters/moria/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/moria/fatality_victim/frame_00.png",
+      "res://assets/characters/moria/fatality_victim/frame_01.png",
+      "res://assets/characters/moria/fatality_victim/frame_02.png",
+      "res://assets/characters/moria/fatality_victim/frame_03.png",
+      "res://assets/characters/moria/fatality_victim/frame_04.png",
+      "res://assets/characters/moria/fatality_victim/frame_05.png",
+      "res://assets/characters/moria/fatality_victim/frame_06.png",
+      "res://assets/characters/moria/fatality_victim/frame_07.png",
+      "res://assets/characters/moria/fatality_victim/frame_08.png",
+      "res://assets/characters/moria/fatality_victim/frame_09.png",
+      "res://assets/characters/moria/fatality_victim/frame_10.png",
+      "res://assets/characters/moria/fatality_victim/frame_11.png"
+    ]
+  },
+  "lasu": {
+    "punch_high": [
+      "res://assets/characters/lasu/punch_high/frame_00.png",
+      "res://assets/characters/lasu/punch_high/frame_01.png",
+      "res://assets/characters/lasu/punch_high/frame_02.png",
+      "res://assets/characters/lasu/punch_high/frame_03.png",
+      "res://assets/characters/lasu/punch_high/frame_04.png",
+      "res://assets/characters/lasu/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/lasu/punch_low/frame_00.png",
+      "res://assets/characters/lasu/punch_low/frame_01.png",
+      "res://assets/characters/lasu/punch_low/frame_02.png",
+      "res://assets/characters/lasu/punch_low/frame_03.png",
+      "res://assets/characters/lasu/punch_low/frame_04.png",
+      "res://assets/characters/lasu/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/lasu/kick_high/frame_00.png",
+      "res://assets/characters/lasu/kick_high/frame_01.png",
+      "res://assets/characters/lasu/kick_high/frame_02.png",
+      "res://assets/characters/lasu/kick_high/frame_03.png",
+      "res://assets/characters/lasu/kick_high/frame_04.png",
+      "res://assets/characters/lasu/kick_high/frame_05.png",
+      "res://assets/characters/lasu/kick_high/frame_06.png",
+      "res://assets/characters/lasu/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/lasu/kick_low/frame_00.png",
+      "res://assets/characters/lasu/kick_low/frame_01.png",
+      "res://assets/characters/lasu/kick_low/frame_02.png",
+      "res://assets/characters/lasu/kick_low/frame_03.png",
+      "res://assets/characters/lasu/kick_low/frame_04.png",
+      "res://assets/characters/lasu/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/lasu/walk_forward/frame_00.png",
+      "res://assets/characters/lasu/walk_forward/frame_01.png",
+      "res://assets/characters/lasu/walk_forward/frame_02.png",
+      "res://assets/characters/lasu/walk_forward/frame_03.png",
+      "res://assets/characters/lasu/walk_forward/frame_04.png",
+      "res://assets/characters/lasu/walk_forward/frame_05.png",
+      "res://assets/characters/lasu/walk_forward/frame_06.png",
+      "res://assets/characters/lasu/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/lasu/walk_backward/frame_00.png",
+      "res://assets/characters/lasu/walk_backward/frame_01.png",
+      "res://assets/characters/lasu/walk_backward/frame_02.png",
+      "res://assets/characters/lasu/walk_backward/frame_03.png",
+      "res://assets/characters/lasu/walk_backward/frame_04.png",
+      "res://assets/characters/lasu/walk_backward/frame_05.png",
+      "res://assets/characters/lasu/walk_backward/frame_06.png",
+      "res://assets/characters/lasu/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/lasu/jump/frame_00.png",
+      "res://assets/characters/lasu/jump/frame_01.png",
+      "res://assets/characters/lasu/jump/frame_02.png",
+      "res://assets/characters/lasu/jump/frame_03.png",
+      "res://assets/characters/lasu/jump/frame_04.png",
+      "res://assets/characters/lasu/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/lasu/crouch/frame_00.png",
+      "res://assets/characters/lasu/crouch/frame_01.png",
+      "res://assets/characters/lasu/crouch/frame_02.png",
+      "res://assets/characters/lasu/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/lasu/block/frame_00.png",
+      "res://assets/characters/lasu/block/frame_01.png",
+      "res://assets/characters/lasu/block/frame_02.png",
+      "res://assets/characters/lasu/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/lasu/special/frame_00.png",
+      "res://assets/characters/lasu/special/frame_01.png",
+      "res://assets/characters/lasu/special/frame_02.png",
+      "res://assets/characters/lasu/special/frame_03.png",
+      "res://assets/characters/lasu/special/frame_04.png",
+      "res://assets/characters/lasu/special/frame_05.png",
+      "res://assets/characters/lasu/special/frame_06.png",
+      "res://assets/characters/lasu/special/frame_07.png",
+      "res://assets/characters/lasu/special/frame_08.png",
+      "res://assets/characters/lasu/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/lasu/super/frame_00.png",
+      "res://assets/characters/lasu/super/frame_01.png",
+      "res://assets/characters/lasu/super/frame_02.png",
+      "res://assets/characters/lasu/super/frame_03.png",
+      "res://assets/characters/lasu/super/frame_04.png",
+      "res://assets/characters/lasu/super/frame_05.png",
+      "res://assets/characters/lasu/super/frame_06.png",
+      "res://assets/characters/lasu/super/frame_07.png",
+      "res://assets/characters/lasu/super/frame_08.png",
+      "res://assets/characters/lasu/super/frame_09.png",
+      "res://assets/characters/lasu/super/frame_10.png",
+      "res://assets/characters/lasu/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/lasu/fatality/frame_00.png",
+      "res://assets/characters/lasu/fatality/frame_01.png",
+      "res://assets/characters/lasu/fatality/frame_02.png",
+      "res://assets/characters/lasu/fatality/frame_03.png",
+      "res://assets/characters/lasu/fatality/frame_04.png",
+      "res://assets/characters/lasu/fatality/frame_05.png",
+      "res://assets/characters/lasu/fatality/frame_06.png",
+      "res://assets/characters/lasu/fatality/frame_07.png",
+      "res://assets/characters/lasu/fatality/frame_08.png",
+      "res://assets/characters/lasu/fatality/frame_09.png",
+      "res://assets/characters/lasu/fatality/frame_10.png",
+      "res://assets/characters/lasu/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/lasu/victory/frame_00.png",
+      "res://assets/characters/lasu/victory/frame_01.png",
+      "res://assets/characters/lasu/victory/frame_02.png",
+      "res://assets/characters/lasu/victory/frame_03.png",
+      "res://assets/characters/lasu/victory/frame_04.png",
+      "res://assets/characters/lasu/victory/frame_05.png",
+      "res://assets/characters/lasu/victory/frame_06.png",
+      "res://assets/characters/lasu/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/lasu/defeat/frame_00.png",
+      "res://assets/characters/lasu/defeat/frame_01.png",
+      "res://assets/characters/lasu/defeat/frame_02.png",
+      "res://assets/characters/lasu/defeat/frame_03.png",
+      "res://assets/characters/lasu/defeat/frame_04.png",
+      "res://assets/characters/lasu/defeat/frame_05.png",
+      "res://assets/characters/lasu/defeat/frame_06.png",
+      "res://assets/characters/lasu/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/lasu/hurt/frame_00.png",
+      "res://assets/characters/lasu/hurt/frame_01.png",
+      "res://assets/characters/lasu/hurt/frame_02.png",
+      "res://assets/characters/lasu/hurt/frame_03.png",
+      "res://assets/characters/lasu/hurt/frame_04.png",
+      "res://assets/characters/lasu/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/lasu/fatality_victim/frame_00.png",
+      "res://assets/characters/lasu/fatality_victim/frame_01.png",
+      "res://assets/characters/lasu/fatality_victim/frame_02.png",
+      "res://assets/characters/lasu/fatality_victim/frame_03.png",
+      "res://assets/characters/lasu/fatality_victim/frame_04.png",
+      "res://assets/characters/lasu/fatality_victim/frame_05.png",
+      "res://assets/characters/lasu/fatality_victim/frame_06.png",
+      "res://assets/characters/lasu/fatality_victim/frame_07.png",
+      "res://assets/characters/lasu/fatality_victim/frame_08.png",
+      "res://assets/characters/lasu/fatality_victim/frame_09.png",
+      "res://assets/characters/lasu/fatality_victim/frame_10.png",
+      "res://assets/characters/lasu/fatality_victim/frame_11.png"
+    ]
+  },
+  "hugo": {
+    "punch_high": [
+      "res://assets/characters/hugo/punch_high/frame_00.png",
+      "res://assets/characters/hugo/punch_high/frame_01.png",
+      "res://assets/characters/hugo/punch_high/frame_02.png",
+      "res://assets/characters/hugo/punch_high/frame_03.png",
+      "res://assets/characters/hugo/punch_high/frame_04.png",
+      "res://assets/characters/hugo/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/hugo/punch_low/frame_00.png",
+      "res://assets/characters/hugo/punch_low/frame_01.png",
+      "res://assets/characters/hugo/punch_low/frame_02.png",
+      "res://assets/characters/hugo/punch_low/frame_03.png",
+      "res://assets/characters/hugo/punch_low/frame_04.png",
+      "res://assets/characters/hugo/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/hugo/kick_high/frame_00.png",
+      "res://assets/characters/hugo/kick_high/frame_01.png",
+      "res://assets/characters/hugo/kick_high/frame_02.png",
+      "res://assets/characters/hugo/kick_high/frame_03.png",
+      "res://assets/characters/hugo/kick_high/frame_04.png",
+      "res://assets/characters/hugo/kick_high/frame_05.png",
+      "res://assets/characters/hugo/kick_high/frame_06.png",
+      "res://assets/characters/hugo/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/hugo/kick_low/frame_00.png",
+      "res://assets/characters/hugo/kick_low/frame_01.png",
+      "res://assets/characters/hugo/kick_low/frame_02.png",
+      "res://assets/characters/hugo/kick_low/frame_03.png",
+      "res://assets/characters/hugo/kick_low/frame_04.png",
+      "res://assets/characters/hugo/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/hugo/walk_forward/frame_00.png",
+      "res://assets/characters/hugo/walk_forward/frame_01.png",
+      "res://assets/characters/hugo/walk_forward/frame_02.png",
+      "res://assets/characters/hugo/walk_forward/frame_03.png",
+      "res://assets/characters/hugo/walk_forward/frame_04.png",
+      "res://assets/characters/hugo/walk_forward/frame_05.png",
+      "res://assets/characters/hugo/walk_forward/frame_06.png",
+      "res://assets/characters/hugo/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/hugo/walk_backward/frame_00.png",
+      "res://assets/characters/hugo/walk_backward/frame_01.png",
+      "res://assets/characters/hugo/walk_backward/frame_02.png",
+      "res://assets/characters/hugo/walk_backward/frame_03.png",
+      "res://assets/characters/hugo/walk_backward/frame_04.png",
+      "res://assets/characters/hugo/walk_backward/frame_05.png",
+      "res://assets/characters/hugo/walk_backward/frame_06.png",
+      "res://assets/characters/hugo/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/hugo/jump/frame_00.png",
+      "res://assets/characters/hugo/jump/frame_01.png",
+      "res://assets/characters/hugo/jump/frame_02.png",
+      "res://assets/characters/hugo/jump/frame_03.png",
+      "res://assets/characters/hugo/jump/frame_04.png",
+      "res://assets/characters/hugo/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/hugo/crouch/frame_00.png",
+      "res://assets/characters/hugo/crouch/frame_01.png",
+      "res://assets/characters/hugo/crouch/frame_02.png",
+      "res://assets/characters/hugo/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/hugo/block/frame_00.png",
+      "res://assets/characters/hugo/block/frame_01.png",
+      "res://assets/characters/hugo/block/frame_02.png",
+      "res://assets/characters/hugo/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/hugo/special/frame_00.png",
+      "res://assets/characters/hugo/special/frame_01.png",
+      "res://assets/characters/hugo/special/frame_02.png",
+      "res://assets/characters/hugo/special/frame_03.png",
+      "res://assets/characters/hugo/special/frame_04.png",
+      "res://assets/characters/hugo/special/frame_05.png",
+      "res://assets/characters/hugo/special/frame_06.png",
+      "res://assets/characters/hugo/special/frame_07.png",
+      "res://assets/characters/hugo/special/frame_08.png",
+      "res://assets/characters/hugo/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/hugo/super/frame_00.png",
+      "res://assets/characters/hugo/super/frame_01.png",
+      "res://assets/characters/hugo/super/frame_02.png",
+      "res://assets/characters/hugo/super/frame_03.png",
+      "res://assets/characters/hugo/super/frame_04.png",
+      "res://assets/characters/hugo/super/frame_05.png",
+      "res://assets/characters/hugo/super/frame_06.png",
+      "res://assets/characters/hugo/super/frame_07.png",
+      "res://assets/characters/hugo/super/frame_08.png",
+      "res://assets/characters/hugo/super/frame_09.png",
+      "res://assets/characters/hugo/super/frame_10.png",
+      "res://assets/characters/hugo/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/hugo/fatality/frame_00.png",
+      "res://assets/characters/hugo/fatality/frame_01.png",
+      "res://assets/characters/hugo/fatality/frame_02.png",
+      "res://assets/characters/hugo/fatality/frame_03.png",
+      "res://assets/characters/hugo/fatality/frame_04.png",
+      "res://assets/characters/hugo/fatality/frame_05.png",
+      "res://assets/characters/hugo/fatality/frame_06.png",
+      "res://assets/characters/hugo/fatality/frame_07.png",
+      "res://assets/characters/hugo/fatality/frame_08.png",
+      "res://assets/characters/hugo/fatality/frame_09.png",
+      "res://assets/characters/hugo/fatality/frame_10.png",
+      "res://assets/characters/hugo/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/hugo/victory/frame_00.png",
+      "res://assets/characters/hugo/victory/frame_01.png",
+      "res://assets/characters/hugo/victory/frame_02.png",
+      "res://assets/characters/hugo/victory/frame_03.png",
+      "res://assets/characters/hugo/victory/frame_04.png",
+      "res://assets/characters/hugo/victory/frame_05.png",
+      "res://assets/characters/hugo/victory/frame_06.png",
+      "res://assets/characters/hugo/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/hugo/defeat/frame_00.png",
+      "res://assets/characters/hugo/defeat/frame_01.png",
+      "res://assets/characters/hugo/defeat/frame_02.png",
+      "res://assets/characters/hugo/defeat/frame_03.png",
+      "res://assets/characters/hugo/defeat/frame_04.png",
+      "res://assets/characters/hugo/defeat/frame_05.png",
+      "res://assets/characters/hugo/defeat/frame_06.png",
+      "res://assets/characters/hugo/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/hugo/hurt/frame_00.png",
+      "res://assets/characters/hugo/hurt/frame_01.png",
+      "res://assets/characters/hugo/hurt/frame_02.png",
+      "res://assets/characters/hugo/hurt/frame_03.png",
+      "res://assets/characters/hugo/hurt/frame_04.png",
+      "res://assets/characters/hugo/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/hugo/fatality_victim/frame_00.png",
+      "res://assets/characters/hugo/fatality_victim/frame_01.png",
+      "res://assets/characters/hugo/fatality_victim/frame_02.png",
+      "res://assets/characters/hugo/fatality_victim/frame_03.png",
+      "res://assets/characters/hugo/fatality_victim/frame_04.png",
+      "res://assets/characters/hugo/fatality_victim/frame_05.png",
+      "res://assets/characters/hugo/fatality_victim/frame_06.png",
+      "res://assets/characters/hugo/fatality_victim/frame_07.png",
+      "res://assets/characters/hugo/fatality_victim/frame_08.png",
+      "res://assets/characters/hugo/fatality_victim/frame_09.png",
+      "res://assets/characters/hugo/fatality_victim/frame_10.png",
+      "res://assets/characters/hugo/fatality_victim/frame_11.png"
+    ]
+  },
+  "pergolas": {
+    "punch_high": [
+      "res://assets/characters/pergolas/punch_high/frame_00.png",
+      "res://assets/characters/pergolas/punch_high/frame_01.png",
+      "res://assets/characters/pergolas/punch_high/frame_02.png",
+      "res://assets/characters/pergolas/punch_high/frame_03.png",
+      "res://assets/characters/pergolas/punch_high/frame_04.png",
+      "res://assets/characters/pergolas/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/pergolas/punch_low/frame_00.png",
+      "res://assets/characters/pergolas/punch_low/frame_01.png",
+      "res://assets/characters/pergolas/punch_low/frame_02.png",
+      "res://assets/characters/pergolas/punch_low/frame_03.png",
+      "res://assets/characters/pergolas/punch_low/frame_04.png",
+      "res://assets/characters/pergolas/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/pergolas/kick_high/frame_00.png",
+      "res://assets/characters/pergolas/kick_high/frame_01.png",
+      "res://assets/characters/pergolas/kick_high/frame_02.png",
+      "res://assets/characters/pergolas/kick_high/frame_03.png",
+      "res://assets/characters/pergolas/kick_high/frame_04.png",
+      "res://assets/characters/pergolas/kick_high/frame_05.png",
+      "res://assets/characters/pergolas/kick_high/frame_06.png",
+      "res://assets/characters/pergolas/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/pergolas/kick_low/frame_00.png",
+      "res://assets/characters/pergolas/kick_low/frame_01.png",
+      "res://assets/characters/pergolas/kick_low/frame_02.png",
+      "res://assets/characters/pergolas/kick_low/frame_03.png",
+      "res://assets/characters/pergolas/kick_low/frame_04.png",
+      "res://assets/characters/pergolas/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/pergolas/walk_forward/frame_00.png",
+      "res://assets/characters/pergolas/walk_forward/frame_01.png",
+      "res://assets/characters/pergolas/walk_forward/frame_02.png",
+      "res://assets/characters/pergolas/walk_forward/frame_03.png",
+      "res://assets/characters/pergolas/walk_forward/frame_04.png",
+      "res://assets/characters/pergolas/walk_forward/frame_05.png",
+      "res://assets/characters/pergolas/walk_forward/frame_06.png",
+      "res://assets/characters/pergolas/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/pergolas/walk_backward/frame_00.png",
+      "res://assets/characters/pergolas/walk_backward/frame_01.png",
+      "res://assets/characters/pergolas/walk_backward/frame_02.png",
+      "res://assets/characters/pergolas/walk_backward/frame_03.png",
+      "res://assets/characters/pergolas/walk_backward/frame_04.png",
+      "res://assets/characters/pergolas/walk_backward/frame_05.png",
+      "res://assets/characters/pergolas/walk_backward/frame_06.png",
+      "res://assets/characters/pergolas/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/pergolas/jump/frame_00.png",
+      "res://assets/characters/pergolas/jump/frame_01.png",
+      "res://assets/characters/pergolas/jump/frame_02.png",
+      "res://assets/characters/pergolas/jump/frame_03.png",
+      "res://assets/characters/pergolas/jump/frame_04.png",
+      "res://assets/characters/pergolas/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/pergolas/crouch/frame_00.png",
+      "res://assets/characters/pergolas/crouch/frame_01.png",
+      "res://assets/characters/pergolas/crouch/frame_02.png",
+      "res://assets/characters/pergolas/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/pergolas/block/frame_00.png",
+      "res://assets/characters/pergolas/block/frame_01.png",
+      "res://assets/characters/pergolas/block/frame_02.png",
+      "res://assets/characters/pergolas/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/pergolas/special/frame_00.png",
+      "res://assets/characters/pergolas/special/frame_01.png",
+      "res://assets/characters/pergolas/special/frame_02.png",
+      "res://assets/characters/pergolas/special/frame_03.png",
+      "res://assets/characters/pergolas/special/frame_04.png",
+      "res://assets/characters/pergolas/special/frame_05.png",
+      "res://assets/characters/pergolas/special/frame_06.png",
+      "res://assets/characters/pergolas/special/frame_07.png",
+      "res://assets/characters/pergolas/special/frame_08.png",
+      "res://assets/characters/pergolas/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/pergolas/super/frame_00.png",
+      "res://assets/characters/pergolas/super/frame_01.png",
+      "res://assets/characters/pergolas/super/frame_02.png",
+      "res://assets/characters/pergolas/super/frame_03.png",
+      "res://assets/characters/pergolas/super/frame_04.png",
+      "res://assets/characters/pergolas/super/frame_05.png",
+      "res://assets/characters/pergolas/super/frame_06.png",
+      "res://assets/characters/pergolas/super/frame_07.png",
+      "res://assets/characters/pergolas/super/frame_08.png",
+      "res://assets/characters/pergolas/super/frame_09.png",
+      "res://assets/characters/pergolas/super/frame_10.png",
+      "res://assets/characters/pergolas/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/pergolas/fatality/frame_00.png",
+      "res://assets/characters/pergolas/fatality/frame_01.png",
+      "res://assets/characters/pergolas/fatality/frame_02.png",
+      "res://assets/characters/pergolas/fatality/frame_03.png",
+      "res://assets/characters/pergolas/fatality/frame_04.png",
+      "res://assets/characters/pergolas/fatality/frame_05.png",
+      "res://assets/characters/pergolas/fatality/frame_06.png",
+      "res://assets/characters/pergolas/fatality/frame_07.png",
+      "res://assets/characters/pergolas/fatality/frame_08.png",
+      "res://assets/characters/pergolas/fatality/frame_09.png",
+      "res://assets/characters/pergolas/fatality/frame_10.png",
+      "res://assets/characters/pergolas/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/pergolas/victory/frame_00.png",
+      "res://assets/characters/pergolas/victory/frame_01.png",
+      "res://assets/characters/pergolas/victory/frame_02.png",
+      "res://assets/characters/pergolas/victory/frame_03.png",
+      "res://assets/characters/pergolas/victory/frame_04.png",
+      "res://assets/characters/pergolas/victory/frame_05.png",
+      "res://assets/characters/pergolas/victory/frame_06.png",
+      "res://assets/characters/pergolas/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/pergolas/defeat/frame_00.png",
+      "res://assets/characters/pergolas/defeat/frame_01.png",
+      "res://assets/characters/pergolas/defeat/frame_02.png",
+      "res://assets/characters/pergolas/defeat/frame_03.png",
+      "res://assets/characters/pergolas/defeat/frame_04.png",
+      "res://assets/characters/pergolas/defeat/frame_05.png",
+      "res://assets/characters/pergolas/defeat/frame_06.png",
+      "res://assets/characters/pergolas/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/pergolas/hurt/frame_00.png",
+      "res://assets/characters/pergolas/hurt/frame_01.png",
+      "res://assets/characters/pergolas/hurt/frame_02.png",
+      "res://assets/characters/pergolas/hurt/frame_03.png",
+      "res://assets/characters/pergolas/hurt/frame_04.png",
+      "res://assets/characters/pergolas/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/pergolas/fatality_victim/frame_00.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_01.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_02.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_03.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_04.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_05.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_06.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_07.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_08.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_09.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_10.png",
+      "res://assets/characters/pergolas/fatality_victim/frame_11.png"
+    ]
+  },
+  "sangrejaponesa": {
+    "punch_high": [
+      "res://assets/characters/sangrejaponesa/punch_high/frame_00.png",
+      "res://assets/characters/sangrejaponesa/punch_high/frame_01.png",
+      "res://assets/characters/sangrejaponesa/punch_high/frame_02.png",
+      "res://assets/characters/sangrejaponesa/punch_high/frame_03.png",
+      "res://assets/characters/sangrejaponesa/punch_high/frame_04.png",
+      "res://assets/characters/sangrejaponesa/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/sangrejaponesa/punch_low/frame_00.png",
+      "res://assets/characters/sangrejaponesa/punch_low/frame_01.png",
+      "res://assets/characters/sangrejaponesa/punch_low/frame_02.png",
+      "res://assets/characters/sangrejaponesa/punch_low/frame_03.png",
+      "res://assets/characters/sangrejaponesa/punch_low/frame_04.png",
+      "res://assets/characters/sangrejaponesa/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/sangrejaponesa/kick_high/frame_00.png",
+      "res://assets/characters/sangrejaponesa/kick_high/frame_01.png",
+      "res://assets/characters/sangrejaponesa/kick_high/frame_02.png",
+      "res://assets/characters/sangrejaponesa/kick_high/frame_03.png",
+      "res://assets/characters/sangrejaponesa/kick_high/frame_04.png",
+      "res://assets/characters/sangrejaponesa/kick_high/frame_05.png",
+      "res://assets/characters/sangrejaponesa/kick_high/frame_06.png",
+      "res://assets/characters/sangrejaponesa/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/sangrejaponesa/kick_low/frame_00.png",
+      "res://assets/characters/sangrejaponesa/kick_low/frame_01.png",
+      "res://assets/characters/sangrejaponesa/kick_low/frame_02.png",
+      "res://assets/characters/sangrejaponesa/kick_low/frame_03.png",
+      "res://assets/characters/sangrejaponesa/kick_low/frame_04.png",
+      "res://assets/characters/sangrejaponesa/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_00.png",
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_01.png",
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_02.png",
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_03.png",
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_04.png",
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_05.png",
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_06.png",
+      "res://assets/characters/sangrejaponesa/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_00.png",
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_01.png",
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_02.png",
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_03.png",
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_04.png",
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_05.png",
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_06.png",
+      "res://assets/characters/sangrejaponesa/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/sangrejaponesa/jump/frame_00.png",
+      "res://assets/characters/sangrejaponesa/jump/frame_01.png",
+      "res://assets/characters/sangrejaponesa/jump/frame_02.png",
+      "res://assets/characters/sangrejaponesa/jump/frame_03.png",
+      "res://assets/characters/sangrejaponesa/jump/frame_04.png",
+      "res://assets/characters/sangrejaponesa/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/sangrejaponesa/crouch/frame_00.png",
+      "res://assets/characters/sangrejaponesa/crouch/frame_01.png",
+      "res://assets/characters/sangrejaponesa/crouch/frame_02.png",
+      "res://assets/characters/sangrejaponesa/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/sangrejaponesa/block/frame_00.png",
+      "res://assets/characters/sangrejaponesa/block/frame_01.png",
+      "res://assets/characters/sangrejaponesa/block/frame_02.png",
+      "res://assets/characters/sangrejaponesa/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/sangrejaponesa/special/frame_00.png",
+      "res://assets/characters/sangrejaponesa/special/frame_01.png",
+      "res://assets/characters/sangrejaponesa/special/frame_02.png",
+      "res://assets/characters/sangrejaponesa/special/frame_03.png",
+      "res://assets/characters/sangrejaponesa/special/frame_04.png",
+      "res://assets/characters/sangrejaponesa/special/frame_05.png",
+      "res://assets/characters/sangrejaponesa/special/frame_06.png",
+      "res://assets/characters/sangrejaponesa/special/frame_07.png",
+      "res://assets/characters/sangrejaponesa/special/frame_08.png",
+      "res://assets/characters/sangrejaponesa/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/sangrejaponesa/super/frame_00.png",
+      "res://assets/characters/sangrejaponesa/super/frame_01.png",
+      "res://assets/characters/sangrejaponesa/super/frame_02.png",
+      "res://assets/characters/sangrejaponesa/super/frame_03.png",
+      "res://assets/characters/sangrejaponesa/super/frame_04.png",
+      "res://assets/characters/sangrejaponesa/super/frame_05.png",
+      "res://assets/characters/sangrejaponesa/super/frame_06.png",
+      "res://assets/characters/sangrejaponesa/super/frame_07.png",
+      "res://assets/characters/sangrejaponesa/super/frame_08.png",
+      "res://assets/characters/sangrejaponesa/super/frame_09.png",
+      "res://assets/characters/sangrejaponesa/super/frame_10.png",
+      "res://assets/characters/sangrejaponesa/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/sangrejaponesa/fatality/frame_00.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_01.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_02.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_03.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_04.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_05.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_06.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_07.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_08.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_09.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_10.png",
+      "res://assets/characters/sangrejaponesa/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/sangrejaponesa/victory/frame_00.png",
+      "res://assets/characters/sangrejaponesa/victory/frame_01.png",
+      "res://assets/characters/sangrejaponesa/victory/frame_02.png",
+      "res://assets/characters/sangrejaponesa/victory/frame_03.png",
+      "res://assets/characters/sangrejaponesa/victory/frame_04.png",
+      "res://assets/characters/sangrejaponesa/victory/frame_05.png",
+      "res://assets/characters/sangrejaponesa/victory/frame_06.png",
+      "res://assets/characters/sangrejaponesa/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/sangrejaponesa/defeat/frame_00.png",
+      "res://assets/characters/sangrejaponesa/defeat/frame_01.png",
+      "res://assets/characters/sangrejaponesa/defeat/frame_02.png",
+      "res://assets/characters/sangrejaponesa/defeat/frame_03.png",
+      "res://assets/characters/sangrejaponesa/defeat/frame_04.png",
+      "res://assets/characters/sangrejaponesa/defeat/frame_05.png",
+      "res://assets/characters/sangrejaponesa/defeat/frame_06.png",
+      "res://assets/characters/sangrejaponesa/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/sangrejaponesa/hurt/frame_00.png",
+      "res://assets/characters/sangrejaponesa/hurt/frame_01.png",
+      "res://assets/characters/sangrejaponesa/hurt/frame_02.png",
+      "res://assets/characters/sangrejaponesa/hurt/frame_03.png",
+      "res://assets/characters/sangrejaponesa/hurt/frame_04.png",
+      "res://assets/characters/sangrejaponesa/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_00.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_01.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_02.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_03.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_04.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_05.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_06.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_07.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_08.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_09.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_10.png",
+      "res://assets/characters/sangrejaponesa/fatality_victim/frame_11.png"
+    ]
+  },
+  "lafaraona": {
+    "punch_high": [
+      "res://assets/characters/lafaraona/punch_high/frame_00.png",
+      "res://assets/characters/lafaraona/punch_high/frame_01.png",
+      "res://assets/characters/lafaraona/punch_high/frame_02.png",
+      "res://assets/characters/lafaraona/punch_high/frame_03.png",
+      "res://assets/characters/lafaraona/punch_high/frame_04.png",
+      "res://assets/characters/lafaraona/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/lafaraona/punch_low/frame_00.png",
+      "res://assets/characters/lafaraona/punch_low/frame_01.png",
+      "res://assets/characters/lafaraona/punch_low/frame_02.png",
+      "res://assets/characters/lafaraona/punch_low/frame_03.png",
+      "res://assets/characters/lafaraona/punch_low/frame_04.png",
+      "res://assets/characters/lafaraona/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/lafaraona/kick_high/frame_00.png",
+      "res://assets/characters/lafaraona/kick_high/frame_01.png",
+      "res://assets/characters/lafaraona/kick_high/frame_02.png",
+      "res://assets/characters/lafaraona/kick_high/frame_03.png",
+      "res://assets/characters/lafaraona/kick_high/frame_04.png",
+      "res://assets/characters/lafaraona/kick_high/frame_05.png",
+      "res://assets/characters/lafaraona/kick_high/frame_06.png",
+      "res://assets/characters/lafaraona/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/lafaraona/kick_low/frame_00.png",
+      "res://assets/characters/lafaraona/kick_low/frame_01.png",
+      "res://assets/characters/lafaraona/kick_low/frame_02.png",
+      "res://assets/characters/lafaraona/kick_low/frame_03.png",
+      "res://assets/characters/lafaraona/kick_low/frame_04.png",
+      "res://assets/characters/lafaraona/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/lafaraona/walk_forward/frame_00.png",
+      "res://assets/characters/lafaraona/walk_forward/frame_01.png",
+      "res://assets/characters/lafaraona/walk_forward/frame_02.png",
+      "res://assets/characters/lafaraona/walk_forward/frame_03.png",
+      "res://assets/characters/lafaraona/walk_forward/frame_04.png",
+      "res://assets/characters/lafaraona/walk_forward/frame_05.png",
+      "res://assets/characters/lafaraona/walk_forward/frame_06.png",
+      "res://assets/characters/lafaraona/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/lafaraona/walk_backward/frame_00.png",
+      "res://assets/characters/lafaraona/walk_backward/frame_01.png",
+      "res://assets/characters/lafaraona/walk_backward/frame_02.png",
+      "res://assets/characters/lafaraona/walk_backward/frame_03.png",
+      "res://assets/characters/lafaraona/walk_backward/frame_04.png",
+      "res://assets/characters/lafaraona/walk_backward/frame_05.png",
+      "res://assets/characters/lafaraona/walk_backward/frame_06.png",
+      "res://assets/characters/lafaraona/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/lafaraona/jump/frame_00.png",
+      "res://assets/characters/lafaraona/jump/frame_01.png",
+      "res://assets/characters/lafaraona/jump/frame_02.png",
+      "res://assets/characters/lafaraona/jump/frame_03.png",
+      "res://assets/characters/lafaraona/jump/frame_04.png",
+      "res://assets/characters/lafaraona/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/lafaraona/crouch/frame_00.png",
+      "res://assets/characters/lafaraona/crouch/frame_01.png",
+      "res://assets/characters/lafaraona/crouch/frame_02.png",
+      "res://assets/characters/lafaraona/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/lafaraona/block/frame_00.png",
+      "res://assets/characters/lafaraona/block/frame_01.png",
+      "res://assets/characters/lafaraona/block/frame_02.png",
+      "res://assets/characters/lafaraona/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/lafaraona/special/frame_00.png",
+      "res://assets/characters/lafaraona/special/frame_01.png",
+      "res://assets/characters/lafaraona/special/frame_02.png",
+      "res://assets/characters/lafaraona/special/frame_03.png",
+      "res://assets/characters/lafaraona/special/frame_04.png",
+      "res://assets/characters/lafaraona/special/frame_05.png",
+      "res://assets/characters/lafaraona/special/frame_06.png",
+      "res://assets/characters/lafaraona/special/frame_07.png",
+      "res://assets/characters/lafaraona/special/frame_08.png",
+      "res://assets/characters/lafaraona/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/lafaraona/super/frame_00.png",
+      "res://assets/characters/lafaraona/super/frame_01.png",
+      "res://assets/characters/lafaraona/super/frame_02.png",
+      "res://assets/characters/lafaraona/super/frame_03.png",
+      "res://assets/characters/lafaraona/super/frame_04.png",
+      "res://assets/characters/lafaraona/super/frame_05.png",
+      "res://assets/characters/lafaraona/super/frame_06.png",
+      "res://assets/characters/lafaraona/super/frame_07.png",
+      "res://assets/characters/lafaraona/super/frame_08.png",
+      "res://assets/characters/lafaraona/super/frame_09.png",
+      "res://assets/characters/lafaraona/super/frame_10.png",
+      "res://assets/characters/lafaraona/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/lafaraona/fatality/frame_00.png",
+      "res://assets/characters/lafaraona/fatality/frame_01.png",
+      "res://assets/characters/lafaraona/fatality/frame_02.png",
+      "res://assets/characters/lafaraona/fatality/frame_03.png",
+      "res://assets/characters/lafaraona/fatality/frame_04.png",
+      "res://assets/characters/lafaraona/fatality/frame_05.png",
+      "res://assets/characters/lafaraona/fatality/frame_06.png",
+      "res://assets/characters/lafaraona/fatality/frame_07.png",
+      "res://assets/characters/lafaraona/fatality/frame_08.png",
+      "res://assets/characters/lafaraona/fatality/frame_09.png",
+      "res://assets/characters/lafaraona/fatality/frame_10.png",
+      "res://assets/characters/lafaraona/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/lafaraona/victory/frame_00.png",
+      "res://assets/characters/lafaraona/victory/frame_01.png",
+      "res://assets/characters/lafaraona/victory/frame_02.png",
+      "res://assets/characters/lafaraona/victory/frame_03.png",
+      "res://assets/characters/lafaraona/victory/frame_04.png",
+      "res://assets/characters/lafaraona/victory/frame_05.png",
+      "res://assets/characters/lafaraona/victory/frame_06.png",
+      "res://assets/characters/lafaraona/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/lafaraona/defeat/frame_00.png",
+      "res://assets/characters/lafaraona/defeat/frame_01.png",
+      "res://assets/characters/lafaraona/defeat/frame_02.png",
+      "res://assets/characters/lafaraona/defeat/frame_03.png",
+      "res://assets/characters/lafaraona/defeat/frame_04.png",
+      "res://assets/characters/lafaraona/defeat/frame_05.png",
+      "res://assets/characters/lafaraona/defeat/frame_06.png",
+      "res://assets/characters/lafaraona/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/lafaraona/hurt/frame_00.png",
+      "res://assets/characters/lafaraona/hurt/frame_01.png",
+      "res://assets/characters/lafaraona/hurt/frame_02.png",
+      "res://assets/characters/lafaraona/hurt/frame_03.png",
+      "res://assets/characters/lafaraona/hurt/frame_04.png",
+      "res://assets/characters/lafaraona/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/lafaraona/fatality_victim/frame_00.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_01.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_02.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_03.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_04.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_05.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_06.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_07.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_08.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_09.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_10.png",
+      "res://assets/characters/lafaraona/fatality_victim/frame_11.png"
+    ]
+  },
+  "badbitch": {
+    "punch_high": [
+      "res://assets/characters/badbitch/punch_high/frame_00.png",
+      "res://assets/characters/badbitch/punch_high/frame_01.png",
+      "res://assets/characters/badbitch/punch_high/frame_02.png",
+      "res://assets/characters/badbitch/punch_high/frame_03.png",
+      "res://assets/characters/badbitch/punch_high/frame_04.png",
+      "res://assets/characters/badbitch/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/badbitch/punch_low/frame_00.png",
+      "res://assets/characters/badbitch/punch_low/frame_01.png",
+      "res://assets/characters/badbitch/punch_low/frame_02.png",
+      "res://assets/characters/badbitch/punch_low/frame_03.png",
+      "res://assets/characters/badbitch/punch_low/frame_04.png",
+      "res://assets/characters/badbitch/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/badbitch/kick_high/frame_00.png",
+      "res://assets/characters/badbitch/kick_high/frame_01.png",
+      "res://assets/characters/badbitch/kick_high/frame_02.png",
+      "res://assets/characters/badbitch/kick_high/frame_03.png",
+      "res://assets/characters/badbitch/kick_high/frame_04.png",
+      "res://assets/characters/badbitch/kick_high/frame_05.png",
+      "res://assets/characters/badbitch/kick_high/frame_06.png",
+      "res://assets/characters/badbitch/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/badbitch/kick_low/frame_00.png",
+      "res://assets/characters/badbitch/kick_low/frame_01.png",
+      "res://assets/characters/badbitch/kick_low/frame_02.png",
+      "res://assets/characters/badbitch/kick_low/frame_03.png",
+      "res://assets/characters/badbitch/kick_low/frame_04.png",
+      "res://assets/characters/badbitch/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/badbitch/walk_forward/frame_00.png",
+      "res://assets/characters/badbitch/walk_forward/frame_01.png",
+      "res://assets/characters/badbitch/walk_forward/frame_02.png",
+      "res://assets/characters/badbitch/walk_forward/frame_03.png",
+      "res://assets/characters/badbitch/walk_forward/frame_04.png",
+      "res://assets/characters/badbitch/walk_forward/frame_05.png",
+      "res://assets/characters/badbitch/walk_forward/frame_06.png",
+      "res://assets/characters/badbitch/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/badbitch/walk_backward/frame_00.png",
+      "res://assets/characters/badbitch/walk_backward/frame_01.png",
+      "res://assets/characters/badbitch/walk_backward/frame_02.png",
+      "res://assets/characters/badbitch/walk_backward/frame_03.png",
+      "res://assets/characters/badbitch/walk_backward/frame_04.png",
+      "res://assets/characters/badbitch/walk_backward/frame_05.png",
+      "res://assets/characters/badbitch/walk_backward/frame_06.png",
+      "res://assets/characters/badbitch/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/badbitch/jump/frame_00.png",
+      "res://assets/characters/badbitch/jump/frame_01.png",
+      "res://assets/characters/badbitch/jump/frame_02.png",
+      "res://assets/characters/badbitch/jump/frame_03.png",
+      "res://assets/characters/badbitch/jump/frame_04.png",
+      "res://assets/characters/badbitch/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/badbitch/crouch/frame_00.png",
+      "res://assets/characters/badbitch/crouch/frame_01.png",
+      "res://assets/characters/badbitch/crouch/frame_02.png",
+      "res://assets/characters/badbitch/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/badbitch/block/frame_00.png",
+      "res://assets/characters/badbitch/block/frame_01.png",
+      "res://assets/characters/badbitch/block/frame_02.png",
+      "res://assets/characters/badbitch/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/badbitch/special/frame_00.png",
+      "res://assets/characters/badbitch/special/frame_01.png",
+      "res://assets/characters/badbitch/special/frame_02.png",
+      "res://assets/characters/badbitch/special/frame_03.png",
+      "res://assets/characters/badbitch/special/frame_04.png",
+      "res://assets/characters/badbitch/special/frame_05.png",
+      "res://assets/characters/badbitch/special/frame_06.png",
+      "res://assets/characters/badbitch/special/frame_07.png",
+      "res://assets/characters/badbitch/special/frame_08.png",
+      "res://assets/characters/badbitch/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/badbitch/super/frame_00.png",
+      "res://assets/characters/badbitch/super/frame_01.png",
+      "res://assets/characters/badbitch/super/frame_02.png",
+      "res://assets/characters/badbitch/super/frame_03.png",
+      "res://assets/characters/badbitch/super/frame_04.png",
+      "res://assets/characters/badbitch/super/frame_05.png",
+      "res://assets/characters/badbitch/super/frame_06.png",
+      "res://assets/characters/badbitch/super/frame_07.png",
+      "res://assets/characters/badbitch/super/frame_08.png",
+      "res://assets/characters/badbitch/super/frame_09.png",
+      "res://assets/characters/badbitch/super/frame_10.png",
+      "res://assets/characters/badbitch/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/badbitch/fatality/frame_00.png",
+      "res://assets/characters/badbitch/fatality/frame_01.png",
+      "res://assets/characters/badbitch/fatality/frame_02.png",
+      "res://assets/characters/badbitch/fatality/frame_03.png",
+      "res://assets/characters/badbitch/fatality/frame_04.png",
+      "res://assets/characters/badbitch/fatality/frame_05.png",
+      "res://assets/characters/badbitch/fatality/frame_06.png",
+      "res://assets/characters/badbitch/fatality/frame_07.png",
+      "res://assets/characters/badbitch/fatality/frame_08.png",
+      "res://assets/characters/badbitch/fatality/frame_09.png",
+      "res://assets/characters/badbitch/fatality/frame_10.png",
+      "res://assets/characters/badbitch/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/badbitch/victory/frame_00.png",
+      "res://assets/characters/badbitch/victory/frame_01.png",
+      "res://assets/characters/badbitch/victory/frame_02.png",
+      "res://assets/characters/badbitch/victory/frame_03.png",
+      "res://assets/characters/badbitch/victory/frame_04.png",
+      "res://assets/characters/badbitch/victory/frame_05.png",
+      "res://assets/characters/badbitch/victory/frame_06.png",
+      "res://assets/characters/badbitch/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/badbitch/defeat/frame_00.png",
+      "res://assets/characters/badbitch/defeat/frame_01.png",
+      "res://assets/characters/badbitch/defeat/frame_02.png",
+      "res://assets/characters/badbitch/defeat/frame_03.png",
+      "res://assets/characters/badbitch/defeat/frame_04.png",
+      "res://assets/characters/badbitch/defeat/frame_05.png",
+      "res://assets/characters/badbitch/defeat/frame_06.png",
+      "res://assets/characters/badbitch/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/badbitch/hurt/frame_00.png",
+      "res://assets/characters/badbitch/hurt/frame_01.png",
+      "res://assets/characters/badbitch/hurt/frame_02.png",
+      "res://assets/characters/badbitch/hurt/frame_03.png",
+      "res://assets/characters/badbitch/hurt/frame_04.png",
+      "res://assets/characters/badbitch/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/badbitch/fatality_victim/frame_00.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_01.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_02.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_03.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_04.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_05.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_06.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_07.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_08.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_09.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_10.png",
+      "res://assets/characters/badbitch/fatality_victim/frame_11.png"
+    ]
+  },
+  "oidoabsoluto": {
+    "punch_high": [
+      "res://assets/characters/oidoabsoluto/punch_high/frame_00.png",
+      "res://assets/characters/oidoabsoluto/punch_high/frame_01.png",
+      "res://assets/characters/oidoabsoluto/punch_high/frame_02.png",
+      "res://assets/characters/oidoabsoluto/punch_high/frame_03.png",
+      "res://assets/characters/oidoabsoluto/punch_high/frame_04.png",
+      "res://assets/characters/oidoabsoluto/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/oidoabsoluto/punch_low/frame_00.png",
+      "res://assets/characters/oidoabsoluto/punch_low/frame_01.png",
+      "res://assets/characters/oidoabsoluto/punch_low/frame_02.png",
+      "res://assets/characters/oidoabsoluto/punch_low/frame_03.png",
+      "res://assets/characters/oidoabsoluto/punch_low/frame_04.png",
+      "res://assets/characters/oidoabsoluto/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/oidoabsoluto/kick_high/frame_00.png",
+      "res://assets/characters/oidoabsoluto/kick_high/frame_01.png",
+      "res://assets/characters/oidoabsoluto/kick_high/frame_02.png",
+      "res://assets/characters/oidoabsoluto/kick_high/frame_03.png",
+      "res://assets/characters/oidoabsoluto/kick_high/frame_04.png",
+      "res://assets/characters/oidoabsoluto/kick_high/frame_05.png",
+      "res://assets/characters/oidoabsoluto/kick_high/frame_06.png",
+      "res://assets/characters/oidoabsoluto/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/oidoabsoluto/kick_low/frame_00.png",
+      "res://assets/characters/oidoabsoluto/kick_low/frame_01.png",
+      "res://assets/characters/oidoabsoluto/kick_low/frame_02.png",
+      "res://assets/characters/oidoabsoluto/kick_low/frame_03.png",
+      "res://assets/characters/oidoabsoluto/kick_low/frame_04.png",
+      "res://assets/characters/oidoabsoluto/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_00.png",
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_01.png",
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_02.png",
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_03.png",
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_04.png",
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_05.png",
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_06.png",
+      "res://assets/characters/oidoabsoluto/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_00.png",
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_01.png",
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_02.png",
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_03.png",
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_04.png",
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_05.png",
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_06.png",
+      "res://assets/characters/oidoabsoluto/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/oidoabsoluto/jump/frame_00.png",
+      "res://assets/characters/oidoabsoluto/jump/frame_01.png",
+      "res://assets/characters/oidoabsoluto/jump/frame_02.png",
+      "res://assets/characters/oidoabsoluto/jump/frame_03.png",
+      "res://assets/characters/oidoabsoluto/jump/frame_04.png",
+      "res://assets/characters/oidoabsoluto/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/oidoabsoluto/crouch/frame_00.png",
+      "res://assets/characters/oidoabsoluto/crouch/frame_01.png",
+      "res://assets/characters/oidoabsoluto/crouch/frame_02.png",
+      "res://assets/characters/oidoabsoluto/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/oidoabsoluto/block/frame_00.png",
+      "res://assets/characters/oidoabsoluto/block/frame_01.png",
+      "res://assets/characters/oidoabsoluto/block/frame_02.png",
+      "res://assets/characters/oidoabsoluto/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/oidoabsoluto/special/frame_00.png",
+      "res://assets/characters/oidoabsoluto/special/frame_01.png",
+      "res://assets/characters/oidoabsoluto/special/frame_02.png",
+      "res://assets/characters/oidoabsoluto/special/frame_03.png",
+      "res://assets/characters/oidoabsoluto/special/frame_04.png",
+      "res://assets/characters/oidoabsoluto/special/frame_05.png",
+      "res://assets/characters/oidoabsoluto/special/frame_06.png",
+      "res://assets/characters/oidoabsoluto/special/frame_07.png",
+      "res://assets/characters/oidoabsoluto/special/frame_08.png",
+      "res://assets/characters/oidoabsoluto/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/oidoabsoluto/super/frame_00.png",
+      "res://assets/characters/oidoabsoluto/super/frame_01.png",
+      "res://assets/characters/oidoabsoluto/super/frame_02.png",
+      "res://assets/characters/oidoabsoluto/super/frame_03.png",
+      "res://assets/characters/oidoabsoluto/super/frame_04.png",
+      "res://assets/characters/oidoabsoluto/super/frame_05.png",
+      "res://assets/characters/oidoabsoluto/super/frame_06.png",
+      "res://assets/characters/oidoabsoluto/super/frame_07.png",
+      "res://assets/characters/oidoabsoluto/super/frame_08.png",
+      "res://assets/characters/oidoabsoluto/super/frame_09.png",
+      "res://assets/characters/oidoabsoluto/super/frame_10.png",
+      "res://assets/characters/oidoabsoluto/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/oidoabsoluto/fatality/frame_00.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_01.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_02.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_03.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_04.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_05.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_06.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_07.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_08.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_09.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_10.png",
+      "res://assets/characters/oidoabsoluto/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/oidoabsoluto/victory/frame_00.png",
+      "res://assets/characters/oidoabsoluto/victory/frame_01.png",
+      "res://assets/characters/oidoabsoluto/victory/frame_02.png",
+      "res://assets/characters/oidoabsoluto/victory/frame_03.png",
+      "res://assets/characters/oidoabsoluto/victory/frame_04.png",
+      "res://assets/characters/oidoabsoluto/victory/frame_05.png",
+      "res://assets/characters/oidoabsoluto/victory/frame_06.png",
+      "res://assets/characters/oidoabsoluto/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/oidoabsoluto/defeat/frame_00.png",
+      "res://assets/characters/oidoabsoluto/defeat/frame_01.png",
+      "res://assets/characters/oidoabsoluto/defeat/frame_02.png",
+      "res://assets/characters/oidoabsoluto/defeat/frame_03.png",
+      "res://assets/characters/oidoabsoluto/defeat/frame_04.png",
+      "res://assets/characters/oidoabsoluto/defeat/frame_05.png",
+      "res://assets/characters/oidoabsoluto/defeat/frame_06.png",
+      "res://assets/characters/oidoabsoluto/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/oidoabsoluto/hurt/frame_00.png",
+      "res://assets/characters/oidoabsoluto/hurt/frame_01.png",
+      "res://assets/characters/oidoabsoluto/hurt/frame_02.png",
+      "res://assets/characters/oidoabsoluto/hurt/frame_03.png",
+      "res://assets/characters/oidoabsoluto/hurt/frame_04.png",
+      "res://assets/characters/oidoabsoluto/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_00.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_01.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_02.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_03.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_04.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_05.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_06.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_07.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_08.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_09.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_10.png",
+      "res://assets/characters/oidoabsoluto/fatality_victim/frame_11.png"
+    ]
+  },
+  "inmortal": {
+    "punch_high": [
+      "res://assets/characters/inmortal/punch_high/frame_00.png",
+      "res://assets/characters/inmortal/punch_high/frame_01.png",
+      "res://assets/characters/inmortal/punch_high/frame_02.png",
+      "res://assets/characters/inmortal/punch_high/frame_03.png",
+      "res://assets/characters/inmortal/punch_high/frame_04.png",
+      "res://assets/characters/inmortal/punch_high/frame_05.png"
+    ],
+    "punch_low": [
+      "res://assets/characters/inmortal/punch_low/frame_00.png",
+      "res://assets/characters/inmortal/punch_low/frame_01.png",
+      "res://assets/characters/inmortal/punch_low/frame_02.png",
+      "res://assets/characters/inmortal/punch_low/frame_03.png",
+      "res://assets/characters/inmortal/punch_low/frame_04.png",
+      "res://assets/characters/inmortal/punch_low/frame_05.png"
+    ],
+    "kick_high": [
+      "res://assets/characters/inmortal/kick_high/frame_00.png",
+      "res://assets/characters/inmortal/kick_high/frame_01.png",
+      "res://assets/characters/inmortal/kick_high/frame_02.png",
+      "res://assets/characters/inmortal/kick_high/frame_03.png",
+      "res://assets/characters/inmortal/kick_high/frame_04.png",
+      "res://assets/characters/inmortal/kick_high/frame_05.png",
+      "res://assets/characters/inmortal/kick_high/frame_06.png",
+      "res://assets/characters/inmortal/kick_high/frame_07.png"
+    ],
+    "kick_low": [
+      "res://assets/characters/inmortal/kick_low/frame_00.png",
+      "res://assets/characters/inmortal/kick_low/frame_01.png",
+      "res://assets/characters/inmortal/kick_low/frame_02.png",
+      "res://assets/characters/inmortal/kick_low/frame_03.png",
+      "res://assets/characters/inmortal/kick_low/frame_04.png",
+      "res://assets/characters/inmortal/kick_low/frame_05.png"
+    ],
+    "walk_forward": [
+      "res://assets/characters/inmortal/walk_forward/frame_00.png",
+      "res://assets/characters/inmortal/walk_forward/frame_01.png",
+      "res://assets/characters/inmortal/walk_forward/frame_02.png",
+      "res://assets/characters/inmortal/walk_forward/frame_03.png",
+      "res://assets/characters/inmortal/walk_forward/frame_04.png",
+      "res://assets/characters/inmortal/walk_forward/frame_05.png",
+      "res://assets/characters/inmortal/walk_forward/frame_06.png",
+      "res://assets/characters/inmortal/walk_forward/frame_07.png"
+    ],
+    "walk_backward": [
+      "res://assets/characters/inmortal/walk_backward/frame_00.png",
+      "res://assets/characters/inmortal/walk_backward/frame_01.png",
+      "res://assets/characters/inmortal/walk_backward/frame_02.png",
+      "res://assets/characters/inmortal/walk_backward/frame_03.png",
+      "res://assets/characters/inmortal/walk_backward/frame_04.png",
+      "res://assets/characters/inmortal/walk_backward/frame_05.png",
+      "res://assets/characters/inmortal/walk_backward/frame_06.png",
+      "res://assets/characters/inmortal/walk_backward/frame_07.png"
+    ],
+    "jump": [
+      "res://assets/characters/inmortal/jump/frame_00.png",
+      "res://assets/characters/inmortal/jump/frame_01.png",
+      "res://assets/characters/inmortal/jump/frame_02.png",
+      "res://assets/characters/inmortal/jump/frame_03.png",
+      "res://assets/characters/inmortal/jump/frame_04.png",
+      "res://assets/characters/inmortal/jump/frame_05.png"
+    ],
+    "crouch": [
+      "res://assets/characters/inmortal/crouch/frame_00.png",
+      "res://assets/characters/inmortal/crouch/frame_01.png",
+      "res://assets/characters/inmortal/crouch/frame_02.png",
+      "res://assets/characters/inmortal/crouch/frame_03.png"
+    ],
+    "block": [
+      "res://assets/characters/inmortal/block/frame_00.png",
+      "res://assets/characters/inmortal/block/frame_01.png",
+      "res://assets/characters/inmortal/block/frame_02.png",
+      "res://assets/characters/inmortal/block/frame_03.png"
+    ],
+    "special": [
+      "res://assets/characters/inmortal/special/frame_00.png",
+      "res://assets/characters/inmortal/special/frame_01.png",
+      "res://assets/characters/inmortal/special/frame_02.png",
+      "res://assets/characters/inmortal/special/frame_03.png",
+      "res://assets/characters/inmortal/special/frame_04.png",
+      "res://assets/characters/inmortal/special/frame_05.png",
+      "res://assets/characters/inmortal/special/frame_06.png",
+      "res://assets/characters/inmortal/special/frame_07.png",
+      "res://assets/characters/inmortal/special/frame_08.png",
+      "res://assets/characters/inmortal/special/frame_09.png"
+    ],
+    "super": [
+      "res://assets/characters/inmortal/super/frame_00.png",
+      "res://assets/characters/inmortal/super/frame_01.png",
+      "res://assets/characters/inmortal/super/frame_02.png",
+      "res://assets/characters/inmortal/super/frame_03.png",
+      "res://assets/characters/inmortal/super/frame_04.png",
+      "res://assets/characters/inmortal/super/frame_05.png",
+      "res://assets/characters/inmortal/super/frame_06.png",
+      "res://assets/characters/inmortal/super/frame_07.png",
+      "res://assets/characters/inmortal/super/frame_08.png",
+      "res://assets/characters/inmortal/super/frame_09.png",
+      "res://assets/characters/inmortal/super/frame_10.png",
+      "res://assets/characters/inmortal/super/frame_11.png"
+    ],
+    "fatality": [
+      "res://assets/characters/inmortal/fatality/frame_00.png",
+      "res://assets/characters/inmortal/fatality/frame_01.png",
+      "res://assets/characters/inmortal/fatality/frame_02.png",
+      "res://assets/characters/inmortal/fatality/frame_03.png",
+      "res://assets/characters/inmortal/fatality/frame_04.png",
+      "res://assets/characters/inmortal/fatality/frame_05.png",
+      "res://assets/characters/inmortal/fatality/frame_06.png",
+      "res://assets/characters/inmortal/fatality/frame_07.png",
+      "res://assets/characters/inmortal/fatality/frame_08.png",
+      "res://assets/characters/inmortal/fatality/frame_09.png",
+      "res://assets/characters/inmortal/fatality/frame_10.png",
+      "res://assets/characters/inmortal/fatality/frame_11.png"
+    ],
+    "victory": [
+      "res://assets/characters/inmortal/victory/frame_00.png",
+      "res://assets/characters/inmortal/victory/frame_01.png",
+      "res://assets/characters/inmortal/victory/frame_02.png",
+      "res://assets/characters/inmortal/victory/frame_03.png",
+      "res://assets/characters/inmortal/victory/frame_04.png",
+      "res://assets/characters/inmortal/victory/frame_05.png",
+      "res://assets/characters/inmortal/victory/frame_06.png",
+      "res://assets/characters/inmortal/victory/frame_07.png"
+    ],
+    "defeat": [
+      "res://assets/characters/inmortal/defeat/frame_00.png",
+      "res://assets/characters/inmortal/defeat/frame_01.png",
+      "res://assets/characters/inmortal/defeat/frame_02.png",
+      "res://assets/characters/inmortal/defeat/frame_03.png",
+      "res://assets/characters/inmortal/defeat/frame_04.png",
+      "res://assets/characters/inmortal/defeat/frame_05.png",
+      "res://assets/characters/inmortal/defeat/frame_06.png",
+      "res://assets/characters/inmortal/defeat/frame_07.png"
+    ],
+    "hurt": [
+      "res://assets/characters/inmortal/hurt/frame_00.png",
+      "res://assets/characters/inmortal/hurt/frame_01.png",
+      "res://assets/characters/inmortal/hurt/frame_02.png",
+      "res://assets/characters/inmortal/hurt/frame_03.png",
+      "res://assets/characters/inmortal/hurt/frame_04.png",
+      "res://assets/characters/inmortal/hurt/frame_05.png"
+    ],
+    "fatality_victim": [
+      "res://assets/characters/inmortal/fatality_victim/frame_00.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_01.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_02.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_03.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_04.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_05.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_06.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_07.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_08.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_09.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_10.png",
+      "res://assets/characters/inmortal/fatality_victim/frame_11.png"
+    ]
+  }
+}

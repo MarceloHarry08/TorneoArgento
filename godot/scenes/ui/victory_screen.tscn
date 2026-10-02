@@ -1,0 +1,185 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/victory_screen.gd" id="1_vic"]
+[ext_resource type="FontFile" path="res://assets/ui/PressStart2P.ttf" id="2_font"]
+[ext_resource type="Shader" path="res://scripts/crt_shader.gdshader" id="3_crt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_box"]
+bg_color = Color(0.04, 0.03, 0.08, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.95, 0.75, 0.1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.95, 0.75, 0.1, 0.3)
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fatality"]
+bg_color = Color(0.7, 0, 0.15, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.4, 0.4, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_crt"]
+shader = ExtResource("3_crt")
+shader_parameter/scanline_count = 180.0
+shader_parameter/scanline_intensity = 0.12
+shader_parameter/vignette_intensity = 0.18
+
+[node name="VictoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vic")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.02, 0.06, 0.96)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VictoryBox" type="Panel" parent="Center"]
+custom_minimum_size = Vector2(360, 310)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_box")
+
+[node name="Margin" type="MarginContainer" parent="Center/VictoryBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="VBox" type="VBoxContainer" parent="Center/VictoryBox/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Center/VictoryBox/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.1, 0.25, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 20
+text = "¡VICTORIA!"
+horizontal_alignment = 1
+
+[node name="PortraitBox" type="CenterContainer" parent="Center/VictoryBox/Margin/VBox"]
+layout_mode = 2
+
+[node name="Portrait" type="TextureRect" parent="Center/VictoryBox/Margin/VBox/PortraitBox"]
+custom_minimum_size = Vector2(90, 100)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+texture_filter = 1
+
+[node name="WinnerName" type="Label" parent="Center/VictoryBox/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 14
+text = "LEON"
+horizontal_alignment = 1
+
+[node name="QuoteLabel" type="Label" parent="Center/VictoryBox/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.3, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "\"¡Viva la libertad carajo!\""
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="FatalityBadge" type="PanelContainer" parent="Center/VictoryBox/Margin/VBox"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_fatality")
+
+[node name="Label" type="Label" parent="Center/VictoryBox/Margin/VBox/FatalityBadge"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "¡FATALITY EJECUTADO CON ÉXITO!"
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="Center/VictoryBox/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="BtnNextTower" type="Button" parent="Center/VictoryBox/Margin/VBox/Buttons"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+text = "CONTINUAR EN LA TORRE"
+
+[node name="BtnRematch" type="Button" parent="Center/VictoryBox/Margin/VBox/Buttons"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+text = "REVANCHA"
+
+[node name="BtnCharSelect" type="Button" parent="Center/VictoryBox/Margin/VBox/Buttons"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 8
+text = "ELEGIR PERSONAJES"
+
+[node name="BtnMainMenu" type="Button" parent="Center/VictoryBox/Margin/VBox/Buttons"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 7
+text = "MENÚ PRINCIPAL"
+
+[node name="CRT_Overlay" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_crt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
